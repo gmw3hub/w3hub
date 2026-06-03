@@ -37,7 +37,7 @@ export default function NewsletterSignup() {
 
   return (
     <section className="w-full bg-paper py-16 md:py-20 lg:py-24">
-      <div className="mx-auto max-w-[1136px] px-5 md:px-8">
+      <div className="mx-auto max-w-[800px] px-5">
         <SectionReveal className="mx-auto max-w-[1040px] rounded-[28px] bg-white ring-1 ring-black/[0.04] shadow-[0_24px_60px_-28px_rgba(16,20,34,0.22)] p-4 md:p-5">
           <div className="grid items-stretch gap-4 md:gap-6 lg:grid-cols-[minmax(0,360px)_1fr]">
             {/* Left: green "Community Alpha" panel */}

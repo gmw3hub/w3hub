@@ -59,7 +59,7 @@ const BUILDING = [
 export default function LocationDetails() {
   return (
     <section className="w-full bg-paper py-16 md:py-20 lg:py-24">
-      <div className="mx-auto max-w-[1136px] px-5">
+      <div className="mx-auto max-w-[800px] px-5">
         <SectionReveal className="mb-10 text-center">
           <h2 className="font-display font-extrabold text-ink text-[30px] sm:text-[36px] lg:text-[40px] leading-[1.1] lg:leading-[44px]">
             Location Details
