@@ -63,9 +63,6 @@ function Deco({
 export default function PartnersSection() {
   return (
     <section className="relative w-full overflow-hidden bg-paper">
-      {/* Mint cap behind the panel's rounded top corners (connects to the marquee) */}
-      <div aria-hidden className="absolute inset-x-0 top-0 h-14 bg-mint" />
-
       <div className="relative px-4 md:px-8">
         <div className="relative mx-auto max-w-[1120px] rounded-t-[48px] border-2 border-b-0 border-[#96908D]/50 bg-paper px-6 pb-20 pt-16 md:pt-20">
           {/* Decorative stickers (desktop only) */}
