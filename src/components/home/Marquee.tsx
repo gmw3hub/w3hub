@@ -4,16 +4,16 @@ type Slide = { src: string; label: string };
 
 // Order + label→image mapping taken 1:1 from the live site (w3hub.berlin) DOM.
 const SLIDES: Slide[] = [
-  { label: "Vibesssssssssssssss", src: "/images/8Ker8a1FRuhIEqC0rFGyb2MkQl0.jpg" },
-  { label: "Pizza", src: "/images/rnEEO3rHHo5G8CliwGuivikKdw.jpg" },
-  { label: "Hackathons", src: "/images/ecneLlb9Xo6pASOuPTO3OsXhofY.png" },
-  { label: "Community Space", src: "/images/H69gPIdjmzE6nldkKuVvXC6y24.png" },
-  { label: "Flowers", src: "/images/5gABx7UPH7L7H9PpMq4jXgEKsE.jpg" },
-  { label: "Meetups", src: "/images/skItqYbVgaMCembjkYHB10LoXG0.png" },
-  { label: "Hairy Friends", src: "/images/10DDGneymTgn8oNBYjdEspoUnY.jpg" },
-  { label: "Demo Days", src: "/images/9Mxghj1zWlS0fA8Vy0gI16E3eQ.jpg" },
-  { label: "More Pizza", src: "/images/wpWGF8xbSZMgswn2MRKXSx5TRTQ.jpg" },
-  { label: "Winners", src: "/images/dq9cm3tB7WN0Bwzccv1s2RGGF8.jpg" },
+  { label: "Vibesssssssssssssss", src: "/images/marquee/vibes.jpg" },
+  { label: "Pizza", src: "/images/marquee/pizza.jpg" },
+  { label: "Hackathons", src: "/images/marquee/hackathons.png" },
+  { label: "Community Space", src: "/images/marquee/community-space.png" },
+  { label: "Flowers", src: "/images/marquee/flowers.jpg" },
+  { label: "Meetups", src: "/images/marquee/meetups.png" },
+  { label: "Hairy Friends", src: "/images/marquee/hairy-friends.jpg" },
+  { label: "Demo Days", src: "/images/marquee/demo-days.jpg" },
+  { label: "More Pizza", src: "/images/marquee/more-pizza.jpg" },
+  { label: "Winners", src: "/images/marquee/winners.jpg" },
 ];
 
 // Second row uses the same photos but rotated, so the two tracks never line up

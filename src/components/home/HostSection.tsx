@@ -30,7 +30,7 @@ export default function HostSection() {
           <div className="flex flex-col overflow-hidden rounded-3xl bg-white p-2 shadow-[0px_3px_0px_#DDD8D4] ring-1 ring-black/10 md:flex-row md:items-stretch">
             <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl md:aspect-auto md:w-[472px] md:shrink-0">
               <Image
-                src="/images/JALlzNO0QwsmOaHL6qWDlv6twbA.jpg"
+                src="/images/host-w3group.jpg"
                 alt="The w3.group team in Berlin"
                 fill
                 sizes="(min-width: 768px) 472px, 100vw"

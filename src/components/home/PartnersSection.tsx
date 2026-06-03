@@ -8,9 +8,9 @@ type Partner = { src: string; alt: string; w: number; h: number };
 
 // Logos + order taken 1:1 from the live site (w3hub.berlin) DOM.
 const PARTNERS: Partner[] = [
-  { src: "/images/oWLRwFAsMARSZ6yrh1uXKNgIg.png", alt: "Ledger", w: 171, h: 59 },
-  { src: "/images/ThV0KoK1V9k0D4UqGuf7KXz6kTY.png", alt: "Jägermeister", w: 214, h: 81 },
-  { src: "/images/yivG1RPjQ9i4s5aldStDzSG5E.png", alt: "w3.labs", w: 155, h: 56 },
+  { src: "/images/partners/ledger.png", alt: "Ledger", w: 171, h: 59 },
+  { src: "/images/partners/jagermeister.png", alt: "Jägermeister", w: 214, h: 81 },
+  { src: "/images/partners/w3-labs.png", alt: "w3.labs", w: 155, h: 56 },
 ];
 
 const DOTTED: React.CSSProperties = {
