@@ -67,7 +67,7 @@ export default function PartnersSection() {
           panel so the paper panel "emerges" from the green (matches Figma). */}
       <div
         aria-hidden
-        className="absolute inset-x-0 top-0 h-[420px]"
+        className="absolute inset-0"
         style={{
           backgroundColor: "#AEEFBD",
           backgroundImage: "url(/images/features/bg-doodle.webp)",
