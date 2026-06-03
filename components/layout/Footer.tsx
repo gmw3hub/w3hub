@@ -92,7 +92,7 @@ function SocialIcon({ icon }: { icon: "x" | "linkedin" }) {
 export default function Footer() {
   return (
     <footer className="w-full bg-[#FFFEFC] border-t border-black/[0.06]">
-      <div className="mx-auto w-full max-w-[1152px] px-6 py-10">
+      <div className="mx-auto w-full max-w-[1400px] px-5 md:px-8 lg:px-12 py-10">
         <div className="flex flex-col gap-12">
           {/* Row 1: brand + link columns + socials */}
           <div className="flex flex-col gap-10 md:flex-row md:gap-6">
