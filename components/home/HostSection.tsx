@@ -14,7 +14,7 @@ const DOTTED: React.CSSProperties = {
 export default function HostSection() {
   return (
     <section className="w-full bg-paper py-16 md:py-20 lg:py-24">
-      <div className="mx-auto flex max-w-[800px] flex-col items-center px-5">
+      <div className="mx-auto flex max-w-[1136px] flex-col items-center px-5 md:px-8">
         {/* Header: mint badge + heading, centered */}
         <SectionReveal className="flex flex-col items-center gap-5 text-center">
           <span className="inline-flex items-center rounded-full bg-mint px-3 py-1 font-body text-[14px] font-bold uppercase leading-6 tracking-[0.05em] text-black/80">
