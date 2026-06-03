@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import SectionReveal from "@/components/ui/SectionReveal";
 import PillButton from "@/components/ui/PillButton";
@@ -7,40 +5,57 @@ import PillButton from "@/components/ui/PillButton";
 export default function HostSection() {
   return (
     <section className="w-full bg-paper py-16 md:py-20 lg:py-28">
-      <div className="mx-auto max-w-[1400px] px-5 md:px-8 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-[1.05fr,1fr] gap-10 lg:gap-16 items-center">
-          <SectionReveal>
-            <p className="text-[12px] md:text-[14px] font-bold uppercase tracking-[0.08em] text-ink/80">
-              part of w3.group
-            </p>
-            <h2 className="mt-3 font-display font-extrabold text-ink text-[32px] sm:text-[36px] lg:text-[40px] leading-[1.1] lg:leading-[48px] tracking-tight">
-              About the host
-            </h2>
+      <div className="mx-auto flex max-w-[800px] flex-col items-center px-5 md:px-8">
+        {/* Header: mint badge + heading, centered */}
+        <SectionReveal className="flex flex-col items-center gap-5 text-center">
+          <span className="inline-flex items-center rounded-full bg-mint px-3 py-1 font-body text-[14px] font-bold uppercase leading-6 tracking-[0.7px] text-black/80">
+            part of w3.group
+          </span>
+          <h2 className="font-display font-extrabold text-ink text-[32px] sm:text-[36px] lg:text-[40px] leading-[1.1] lg:leading-[48px]">
+            About the host
+          </h2>
+        </SectionReveal>
 
-            <h3 className="mt-8 font-display font-extrabold text-ink text-[22px] md:text-[24px] leading-[1.15] md:leading-8">
-              Fueling Web3<br className="hidden md:block" /> from Berlin
-            </h3>
-            <p className="mt-4 font-body text-[16px] leading-6 text-ink max-w-[44ch]">
-              w3.group is the leading Web3 ecosystem in Germany and is comprised of an investment arm, an infrastructure provider as well as a media house with strong network effects.
-            </p>
-
-            <div className="mt-8">
-              <PillButton href="https://w3.group" variant="dark">
-                Learn about w3.group
-              </PillButton>
+        {/* Card: image left, text right */}
+        <SectionReveal className="mt-10 w-full" delay={0.05}>
+          <div className="relative flex flex-col gap-4 rounded-3xl border border-black/10 bg-white p-2 shadow-[0_3px_0_#DDD8D4] md:flex-row md:items-center">
+            <div className="relative aspect-[468/323] w-full shrink-0 overflow-hidden rounded-2xl md:aspect-auto md:h-[323px] md:w-[468px]">
+              <Image
+                src="/images/JALlzNO0QwsmOaHL6qWDlv6twbA.jpg"
+                alt="The w3.group team in Berlin"
+                fill
+                sizes="(min-width: 768px) 468px, 100vw"
+                className="object-cover"
+              />
             </div>
-          </SectionReveal>
 
-          <SectionReveal className="relative overflow-hidden rounded-3xl ring-1 ring-black/[0.04] shadow-[0_8px_32px_-16px_rgba(16,20,34,0.12)] aspect-[5/4] lg:aspect-[4/5]">
-            <Image
-              src="/images/GC3dbv0bQoQI5cZ7Afsvmc0vlM.png"
-              alt="w3.group hosting Web3 events in Berlin"
-              fill
-              sizes="(min-width: 1200px) 600px, 100vw"
-              className="object-cover"
-            />
-          </SectionReveal>
-        </div>
+            <div className="flex w-full shrink-0 flex-col justify-center gap-3 px-3 py-6 md:w-[300px] md:py-10">
+              <h3 className="font-display font-extrabold text-ink text-[24px] leading-8">
+                Fueling Web3
+                <br />
+                from Berlin
+              </h3>
+
+              {/* dotted divider — Figma: 4px dots, black/30, ~12px spacing */}
+              <div
+                aria-hidden
+                className="h-[5px] w-full bg-[radial-gradient(circle,_rgba(0,0,0,0.30)_2px,_transparent_2.2px)] bg-repeat-x [background-size:11.87px_5px]"
+              />
+
+              <p className="font-body text-[16px] leading-6 text-ink">
+                w3.group is the leading Web3 ecosystem in Germany and is comprised
+                of an investment arm, an infrastructure provider as well as a media
+                house with strong network effects.
+              </p>
+
+              <div className="mt-1">
+                <PillButton href="https://w3.group" variant="dark">
+                  Learn about w3.group
+                </PillButton>
+              </div>
+            </div>
+          </div>
+        </SectionReveal>
       </div>
     </section>
   );

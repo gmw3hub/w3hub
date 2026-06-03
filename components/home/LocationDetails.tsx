@@ -1,97 +1,138 @@
 "use client";
 
-import Image from "next/image";
 import SectionReveal from "@/components/ui/SectionReveal";
 
-export default function LocationDetails() {
-  const mapsHref =
-    "https://www.google.com/maps/place/M%C3%B6ckernstra%C3%9Fe+120,+10963+Berlin/";
+// Click target for "Open in Maps" (the real w3.hub place on Google Maps).
+const MAPS_URL =
+  "https://www.google.com/maps?ll=52.497989,13.380294&z=15&t=m&hl=en&gl=DE&mapclient=embed&cid=1832120701558086668";
 
+// Embedded map centered on the w3.hub coordinates with a labelled pin.
+const MAP_EMBED =
+  "https://maps.google.com/maps?q=52.497989,13.380294(w3.hub)&z=15&hl=en&output=embed";
+
+function BuildingIcon() {
   return (
-    <section className="w-full bg-paper py-16 md:py-20 lg:py-28">
-      <div className="mx-auto max-w-[1400px] px-5 md:px-8 lg:px-12">
-        <SectionReveal className="mb-10 md:mb-14">
-          <h2 className="font-display font-extrabold text-ink text-[30px] sm:text-[36px] lg:text-[40px] leading-[1.1] lg:leading-[44px] tracking-tight">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+      <rect x="4" y="3" width="11" height="18" rx="1.5" />
+      <rect x="14" y="8" width="6" height="13" rx="1.5" />
+      <g fill="#fff">
+        <rect x="6.4" y="6" width="2" height="2" rx="0.3" />
+        <rect x="10.4" y="6" width="2" height="2" rx="0.3" />
+        <rect x="6.4" y="10" width="2" height="2" rx="0.3" />
+        <rect x="10.4" y="10" width="2" height="2" rx="0.3" />
+        <rect x="6.4" y="14" width="2" height="2" rx="0.3" />
+        <rect x="10.4" y="14" width="2" height="2" rx="0.3" />
+        <rect x="16.2" y="11" width="1.8" height="1.8" rx="0.3" />
+        <rect x="16.2" y="14.6" width="1.8" height="1.8" rx="0.3" />
+      </g>
+    </svg>
+  );
+}
+
+function TramIcon() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+      <path d="M5 5a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3l1.4 2.3a1 1 0 1 1-1.7 1L14 17h-4l-1.1 3.6a1 1 0 1 1-1.7-1L8 17a3 3 0 0 1-3-3V5Z" />
+      <path d="M8 6h8a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1Z" fill="#B5F7C4" />
+      <circle cx="9" cy="14" r="1.2" fill="#B5F7C4" />
+      <circle cx="15" cy="14" r="1.2" fill="#B5F7C4" />
+    </svg>
+  );
+}
+
+function ExternalIcon() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden>
+      <path
+        d="M5 3h6v6M11 3 4.5 9.5"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export default function LocationDetails() {
+  return (
+    <section className="w-full bg-paper py-16 md:py-20 lg:py-24">
+      <div className="mx-auto max-w-[1120px] px-5">
+        <SectionReveal className="mb-10 text-center">
+          <h2 className="font-display font-extrabold text-ink text-[30px] sm:text-[36px] lg:text-[40px] leading-[1.1] lg:leading-[48px]">
             Location Details
           </h2>
         </SectionReveal>
 
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr,1.1fr] gap-8 md:gap-10">
-          <SectionReveal className="rounded-3xl bg-white ring-1 ring-black/[0.04] shadow-[0_8px_32px_-16px_rgba(16,20,34,0.12)] p-7 md:p-9 lg:p-10 flex flex-col gap-7">
+        <SectionReveal className="grid grid-cols-1 gap-2 rounded-[28px] bg-white p-2 shadow-[0px_3px_0px_#DDD8D4] ring-1 ring-black/10 lg:grid-cols-2">
+          {/* Left: building info + transport */}
+          <div className="flex flex-col gap-4 p-5 md:p-6">
             <div>
-              <h3 className="font-display font-extrabold text-ink text-[16px] leading-6">
-                Building &amp; Surroundings
-              </h3>
-              <ul className="mt-4 space-y-2 font-body text-[16px] leading-6 text-ink">
-                <li className="flex gap-2">
-                  <span aria-hidden className="text-accent">•</span>
-                  3 floors, 500sqm each
-                </li>
-                <li className="flex gap-2">
-                  <span aria-hidden className="text-accent">•</span>
-                  Historic building constructed in 1905
-                </li>
-                <li className="flex gap-2">
-                  <span aria-hidden className="text-accent">•</span>
-                  Renovated in 2022
-                </li>
-                <li className="flex gap-2">
-                  <span aria-hidden className="text-accent">•</span>
-                  Located at Gleisdreieck Park
-                </li>
+              <div className="flex items-center gap-2 text-ink">
+                <BuildingIcon />
+                <h3 className="font-display text-[18px] font-extrabold leading-6 text-ink">
+                  Building &amp; Surroundings
+                </h3>
+              </div>
+              <ul className="mt-4 flex flex-col gap-2.5 font-body text-[16px] leading-6 text-ink">
+                {[
+                  "3 floors, 500sqm each",
+                  "Historic building constructed in 1905",
+                  "Renovated in 2022",
+                  "Located at Gleisdreieck Park",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <span
+                      aria-hidden
+                      className="mt-[9px] h-1 w-1 shrink-0 rounded-full bg-[#B2B2B2]"
+                    />
+                    {item}
+                  </li>
+                ))}
               </ul>
             </div>
 
-            <div>
-              <h3 className="font-display font-extrabold text-ink text-[16px] leading-6">
-                Public Transportation
-              </h3>
-              <ul className="mt-4 space-y-2 font-body text-[16px] leading-6 text-ink">
-                <li>
-                  <span className="font-bold">U-Bahn:</span> U1, U7 at Möckernbrücke / U2, U3 from Gleisdreieck Park
-                </li>
-                <li>
-                  <span className="font-bold">S-Bahn:</span> S1, S2, S25, S26 at Anhalter Bahnhof
-                </li>
-              </ul>
+            <div className="mt-auto rounded-2xl bg-mint p-5 md:p-6">
+              <div className="flex items-center gap-2 text-ink">
+                <TramIcon />
+                <h3 className="font-display text-[18px] font-extrabold leading-6 text-ink">
+                  Public Transportation
+                </h3>
+              </div>
+              <div className="mt-4 flex flex-col gap-3 font-body text-[16px] leading-6 text-ink">
+                <p>
+                  <span className="font-bold">U-Bahn:</span> U1, U7 at Möckernbrücke /
+                  U2, U3 from Gleisdreieck Park
+                </p>
+                <p>
+                  <span className="font-bold">S-Bahn:</span> S1, S2, S25, S26 at
+                  Anhalter Bahnhof
+                </p>
+              </div>
             </div>
+          </div>
 
+          {/* Right: live Google map */}
+          <div className="relative min-h-[360px] overflow-hidden rounded-2xl bg-warm-grey">
+            <iframe
+              title="w3.hub location – Möckernstraße 120, Berlin"
+              src={MAP_EMBED}
+              className="absolute inset-0 h-full w-full border-0"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
             <a
-              href={mapsHref}
+              href={MAPS_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="self-start inline-flex items-center gap-1 text-[14px] font-medium text-[#1A73E8] hover:underline"
+              className="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-lg bg-white px-3 py-2 text-[14px] font-medium text-[#1A73E8] shadow-[0_1px_4px_rgba(0,0,0,0.3)] hover:bg-white"
               style={{ fontFamily: "Roboto, Arial, sans-serif" }}
             >
               Open in Maps
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden>
-                <path d="M5 3h6v6M11 3L4 10" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
+              <ExternalIcon />
             </a>
-          </SectionReveal>
-
-          <SectionReveal className="relative overflow-hidden rounded-3xl ring-1 ring-black/[0.04] shadow-[0_8px_32px_-16px_rgba(16,20,34,0.12)] aspect-[16/12] lg:aspect-auto min-h-[320px]">
-            {/* Static map / building image placeholder until an embed is wired */}
-            <Image
-              src="/images/a7NKBJLRjWtU9cJavEWbiFR4Cc.png"
-              alt="w3.hub building at Möckernstraße 120, Berlin"
-              fill
-              sizes="(min-width: 1200px) 720px, 100vw"
-              className="object-cover"
-            />
-            <a
-              href={mapsHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="absolute bottom-4 right-4 inline-flex items-center gap-2 rounded-full bg-white/95 backdrop-blur px-4 py-2 text-[14px] font-medium text-ink shadow-md hover:bg-white"
-            >
-              Berlin, Möckernstraße 120
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden>
-                <path d="M5 3h6v6M11 3L4 10" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </a>
-          </SectionReveal>
-        </div>
+          </div>
+        </SectionReveal>
       </div>
     </section>
   );
