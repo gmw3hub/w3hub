@@ -91,4 +91,4 @@ first pass.
   per-breakpoint grid column counts, and exact card styling. Everything else is
   specified in `CLAUDE.md`.
 
-You're set. Good luck!
+You're set. Good luck!.
