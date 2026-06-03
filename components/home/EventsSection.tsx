@@ -9,7 +9,7 @@ const LUMA_SRC =
 export default function EventsSection() {
   return (
     <section className="w-full bg-paper py-16 md:py-20 lg:py-24">
-      <div className="mx-auto max-w-[1400px] px-5 md:px-8 lg:px-12">
+      <div className="mx-auto max-w-[1136px] px-5 md:px-8">
         <SectionReveal>
           <p className="text-center font-body text-[16px] font-medium text-muted mb-8 md:mb-10">
             Part of the w3.hub Family

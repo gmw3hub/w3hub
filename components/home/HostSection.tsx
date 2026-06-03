@@ -1,14 +1,23 @@
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
 import SectionReveal from "@/components/ui/SectionReveal";
-import PillButton from "@/components/ui/PillButton";
+
+const DOTTED: React.CSSProperties = {
+  backgroundImage: "radial-gradient(circle, rgba(0,0,0,0.30) 2px, transparent 2.3px)",
+  backgroundSize: "11.87px 5px",
+  backgroundRepeat: "repeat-x",
+  backgroundPosition: "left center",
+};
 
 export default function HostSection() {
   return (
-    <section className="w-full bg-paper py-16 md:py-20 lg:py-28">
-      <div className="mx-auto flex max-w-[800px] flex-col items-center px-5 md:px-8">
+    <section className="w-full bg-paper py-16 md:py-20 lg:py-24">
+      <div className="mx-auto flex max-w-[800px] flex-col items-center px-5">
         {/* Header: mint badge + heading, centered */}
         <SectionReveal className="flex flex-col items-center gap-5 text-center">
-          <span className="inline-flex items-center rounded-full bg-mint px-3 py-1 font-body text-[14px] font-bold uppercase leading-6 tracking-[0.7px] text-black/80">
+          <span className="inline-flex items-center rounded-full bg-mint px-3 py-1 font-body text-[14px] font-bold uppercase leading-6 tracking-[0.05em] text-black/80">
             part of w3.group
           </span>
           <h2 className="font-display font-extrabold text-ink text-[32px] sm:text-[36px] lg:text-[40px] leading-[1.1] lg:leading-[48px]">
@@ -16,31 +25,27 @@ export default function HostSection() {
           </h2>
         </SectionReveal>
 
-        {/* Card: image left, text right */}
-        <SectionReveal className="mt-10 w-full" delay={0.05}>
-          <div className="relative flex flex-col gap-4 rounded-3xl border border-black/10 bg-white p-2 shadow-[0_3px_0_#DDD8D4] md:flex-row md:items-center">
-            <div className="relative aspect-[468/323] w-full shrink-0 overflow-hidden rounded-2xl md:aspect-auto md:h-[323px] md:w-[468px]">
+        {/* Card: image left (fills height), text right */}
+        <SectionReveal className="mt-10 w-full">
+          <div className="flex flex-col overflow-hidden rounded-3xl bg-white p-2 shadow-[0px_3px_0px_#DDD8D4] ring-1 ring-black/10 md:flex-row md:items-stretch">
+            <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl md:aspect-auto md:w-[472px] md:shrink-0">
               <Image
                 src="/images/JALlzNO0QwsmOaHL6qWDlv6twbA.jpg"
                 alt="The w3.group team in Berlin"
                 fill
-                sizes="(min-width: 768px) 468px, 100vw"
+                sizes="(min-width: 768px) 472px, 100vw"
                 className="object-cover"
               />
             </div>
 
-            <div className="flex w-full shrink-0 flex-col justify-center gap-3 px-3 py-6 md:w-[300px] md:py-10">
-              <h3 className="font-display font-extrabold text-ink text-[24px] leading-8">
+            <div className="flex flex-1 flex-col justify-center gap-4 px-4 py-6 md:px-6 md:py-8">
+              <h3 className="font-display font-extrabold text-ink text-[26px] sm:text-[30px] leading-[1.12]">
                 Fueling Web3
                 <br />
                 from Berlin
               </h3>
 
-              {/* dotted divider — Figma: 4px dots, black/30, ~12px spacing */}
-              <div
-                aria-hidden
-                className="h-[5px] w-full bg-[radial-gradient(circle,_rgba(0,0,0,0.30)_2px,_transparent_2.2px)] bg-repeat-x [background-size:11.87px_5px]"
-              />
+              <div className="h-[5px] w-full" style={DOTTED} aria-hidden />
 
               <p className="font-body text-[16px] leading-6 text-ink">
                 w3.group is the leading Web3 ecosystem in Germany and is comprised
@@ -48,11 +53,27 @@ export default function HostSection() {
                 house with strong network effects.
               </p>
 
-              <div className="mt-1">
-                <PillButton href="https://w3.group" variant="dark">
+              <Link
+                href="https://w3.group"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group mt-1 inline-flex items-center gap-3.5 self-start rounded-full bg-[#181A1C] py-[3px] pl-5 pr-[3px] transition-colors hover:bg-black"
+              >
+                <span className="font-body text-[16px] font-medium leading-5 text-white">
                   Learn about w3.group
-                </PillButton>
-              </div>
+                </span>
+                <span className="flex h-[34px] w-[34px] items-center justify-center rounded-full bg-white text-[#181A1C]">
+                  <svg width="7" height="12" viewBox="0 0 7 12" fill="none" aria-hidden>
+                    <path
+                      d="M1 1l5 5-5 5"
+                      stroke="currentColor"
+                      strokeWidth="1.6"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </span>
+              </Link>
             </div>
           </div>
         </SectionReveal>
