@@ -127,7 +127,7 @@ export default function Footer() {
                   </ul>
                 </div>
               ))}
-              <div className="col-span-2 flex flex-1 items-start gap-4 sm:col-span-3 lg:col-span-1">
+              <div className="col-span-2 flex flex-1 items-start gap-4 sm:col-span-3 lg:col-span-1 lg:justify-end">
                 {SOCIALS.map((s) => (
                   <a
                     key={s.href}

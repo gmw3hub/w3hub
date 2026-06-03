@@ -1,71 +1,132 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import Link from "next/link";
 import SectionReveal from "@/components/ui/SectionReveal";
-import { easeOutSoft } from "@/lib/animations";
-import PillButton from "@/components/ui/PillButton";
 
-// Smallest downloaded images are logo-shaped. Mapping to real partner names
-// pending — these are picked by file size to keep the layout populated.
-const PARTNER_LOGOS = [
-  "/images/11KSGbIZoRSg4pjdnUoif6MKHI.svg",
-  "/images/6tTbkXggWgQCAJ4DO2QEdXXmgM.svg",
-  "/images/mKkHg4zjWie0a2gErYvJ0G9nk.png",
-  "/images/wgestw1MeQtJzy04RZQ5ziRfVmg.png",
-  "/images/m0ZNZsXT1VHqNLq8H8XAIfNhui8.png",
-  "/images/U3hL1B5bTvMeUcJpHhiUeDIt6g.png",
-  "/images/VaEkvzHMO4lj1llh1jQtUphkipg.png",
-  "/images/oWLRwFAsMARSZ6yrh1uXKNgIg.png",
-  "/images/bfQYajgAUFGPNmzTcMlrbH6JIU.png",
-  "/images/GjHiSp0xprENq98tKiwGxrrfebs.png",
-  "/images/Ic9uuri1WjHCFylIornEa6au4.png",
-  "/images/7trINXt5xoZZuyyZ9LxU2fuOFMc.png",
+type Partner = { src: string; alt: string; w: number; h: number };
+
+// Logos + order taken 1:1 from the live site (w3hub.berlin) DOM.
+const PARTNERS: Partner[] = [
+  { src: "/images/oWLRwFAsMARSZ6yrh1uXKNgIg.png", alt: "Ledger", w: 171, h: 59 },
+  { src: "/images/ThV0KoK1V9k0D4UqGuf7KXz6kTY.png", alt: "Jägermeister", w: 214, h: 81 },
+  { src: "/images/yivG1RPjQ9i4s5aldStDzSG5E.png", alt: "w3.labs", w: 155, h: 56 },
 ];
+
+const DOTTED: React.CSSProperties = {
+  backgroundImage: "radial-gradient(circle, rgba(0,0,0,0.30) 2px, transparent 2.3px)",
+  backgroundSize: "7.07px 5px",
+  backgroundRepeat: "repeat-x",
+  backgroundPosition: "left center",
+};
+
+function PartnerCard({ p }: { p: Partner }) {
+  return (
+    <div className="relative flex h-[163px] w-[280px] flex-col items-center gap-3 overflow-hidden rounded-3xl bg-white p-6 shadow-[0px_3px_0px_#DDD8D4] ring-1 ring-black/10">
+      <div className="flex h-20 w-full items-center justify-center px-2.5">
+        <Image
+          src={p.src}
+          alt={p.alt}
+          width={p.w}
+          height={p.h}
+          className="h-auto max-h-[68px] w-auto object-contain"
+        />
+      </div>
+      <div className="h-[5px] w-[216px]" style={DOTTED} aria-hidden />
+    </div>
+  );
+}
+
+function Deco({
+  src,
+  className,
+  width,
+  height,
+}: {
+  src: string;
+  className: string;
+  width: number;
+  height: number;
+}) {
+  return (
+    <Image
+      src={src}
+      alt=""
+      aria-hidden
+      width={width}
+      height={height}
+      className={`pointer-events-none absolute select-none ${className}`}
+    />
+  );
+}
 
 export default function PartnersSection() {
   return (
-    <section className="w-full bg-paper py-16 md:py-20 lg:py-28">
-      <div className="mx-auto max-w-[1400px] px-5 md:px-8 lg:px-12">
-        <SectionReveal className="max-w-[820px] mb-10 md:mb-14">
-          <h2 className="font-display font-extrabold text-ink text-[30px] sm:text-[36px] lg:text-[40px] leading-[1.1] lg:leading-[44px] tracking-tight">
-            Our House Partners
-          </h2>
-          <p className="mt-4 font-body text-[16px] leading-6 font-medium text-muted">
-            Meet our house partners who, together with our community, form the backbone of the w3.hub, bringing expertise and opportunities to the ecosystem.
-          </p>
-        </SectionReveal>
+    <section className="relative w-full overflow-hidden bg-paper">
+      {/* Mint cap behind the panel's rounded top corners (connects to the marquee) */}
+      <div aria-hidden className="absolute inset-x-0 top-0 h-14 bg-mint" />
 
-        <SectionReveal className="rounded-3xl bg-white shadow-[0_8px_32px_-16px_rgba(16,20,34,0.12)] ring-1 ring-black/[0.04] p-6 md:p-10 lg:p-14">
-          <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-x-6 gap-y-10 items-center">
-            {PARTNER_LOGOS.map((src, i) => (
-              <motion.li
-                key={src}
-                initial={{ opacity: 0, y: 12 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.45, ease: easeOutSoft, delay: i * 0.04 }}
-                className="flex items-center justify-center"
-              >
-                <div className="relative h-10 w-full opacity-80 hover:opacity-100 transition-opacity">
-                  <Image
-                    src={src}
-                    alt="House partner"
-                    fill
-                    sizes="(min-width: 1400px) 160px, (min-width: 1200px) 200px, 30vw"
-                    className="object-contain"
-                  />
-                </div>
-              </motion.li>
+      <div className="relative px-4 md:px-8">
+        <div className="relative mx-auto max-w-[1120px] rounded-t-[48px] border-2 border-b-0 border-[#96908D]/50 bg-paper px-6 pb-20 pt-16 md:pt-20">
+          {/* Decorative stickers (desktop only) */}
+          <Deco
+            src="/images/features/building.webp"
+            width={160}
+            height={164}
+            className="hidden lg:block bottom-0 left-[-33px] z-0 w-[160px]"
+          />
+          <Deco
+            src="/images/features/cactus-slim.webp"
+            width={188}
+            height={282}
+            className="hidden lg:block right-[-6px] bottom-0 z-0 w-[188px]"
+          />
+          <Deco
+            src="/images/features/flower-agave.webp"
+            width={175}
+            height={175}
+            className="hidden lg:block right-[64px] bottom-0 z-0 w-[175px]"
+          />
+
+          <SectionReveal className="relative z-10 flex flex-col items-center gap-3 text-center">
+            <h2 className="font-display font-extrabold text-ink text-[30px] sm:text-[36px] lg:text-[40px] leading-[1.1] lg:leading-[44px]">
+              Our House Partners
+            </h2>
+            <p className="max-w-[800px] font-body text-[16px] font-medium leading-6 text-muted">
+              Meet our house partners who, together with our community, form the
+              backbone of the w3.hub, bringing expertise and opportunities to the
+              ecosystem.
+            </p>
+          </SectionReveal>
+
+          <SectionReveal className="relative z-10 mt-10 flex flex-wrap items-center justify-center gap-8">
+            {PARTNERS.map((p) => (
+              <PartnerCard key={p.alt} p={p} />
             ))}
-          </ul>
-        </SectionReveal>
+          </SectionReveal>
 
-        <SectionReveal className="mt-10 md:mt-12 flex justify-center">
-          <PillButton href="/about-us" variant="dark">
-            Become a house partner
-          </PillButton>
-        </SectionReveal>
+          <SectionReveal className="relative z-10 mt-10 flex justify-center">
+            <Link
+              href="/about-us"
+              className="group inline-flex items-center gap-3.5 rounded-full bg-[#181A1C] py-[3px] pl-5 pr-[3px] transition-colors hover:bg-black"
+            >
+              <span className="font-body text-[16px] font-medium leading-5 text-white">
+                Become a house partner
+              </span>
+              <span className="flex h-[34px] w-[34px] items-center justify-center rounded-full bg-white text-[#181A1C]">
+                <svg width="7" height="12" viewBox="0 0 7 12" fill="none" aria-hidden>
+                  <path
+                    d="M1 1l5 5-5 5"
+                    stroke="currentColor"
+                    strokeWidth="1.6"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </span>
+            </Link>
+          </SectionReveal>
+        </div>
       </div>
     </section>
   );
