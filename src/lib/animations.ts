@@ -12,6 +12,20 @@ export const fadeUp: Variants = {
   },
 };
 
+export const heroStagger: Variants = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.08, delayChildren: 0.1 } },
+};
+
+export function staggerFadeUp(index: number, y = 18, step = 0.06) {
+  return {
+    initial: { opacity: 0, y },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true, amount: 0.2 },
+    transition: { duration: 0.55, ease: easeOutSoft, delay: index * step },
+  } as const;
+}
+
 export const dropdownMotion: Variants = {
   hidden: { opacity: 0, y: -6, scale: 0.98 },
   show: {

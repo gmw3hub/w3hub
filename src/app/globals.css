@@ -35,6 +35,9 @@
   --color-muted: #5d5e67;
   --color-muted-2: #96908d;
   --color-muted-3: #b2b2b2;
+
+  /* Signature 3px drop shadow on white cards */
+  --shadow-card: 0px 3px 0px var(--color-warm-grey);
 }
 
 :root {

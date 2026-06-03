@@ -1,6 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
+import SmartLink from "@/components/ui/SmartLink";
 
-type Item = { label: string; href: string; external?: boolean };
+type Item = { label: string; href: string };
 type Column = { heading: string; items: Item[] };
 
 const COLUMNS: Column[] = [
@@ -18,16 +20,16 @@ const COLUMNS: Column[] = [
     items: [
       { label: "Event Calendar", href: "/event-calendar" },
       { label: "Event Space", href: "/event-space" },
-      { label: "Berlin Blockchain Week", href: "https://blockchainfestival.berlin/", external: true },
+      { label: "Berlin Blockchain Week", href: "https://blockchainfestival.berlin/" },
     ],
   },
   {
     heading: "Companies",
     items: [
-      { label: "w3.group", href: "https://w3.group", external: true },
-      { label: "w3.fund", href: "https://www.w3.fund/", external: true },
-      { label: "w3.labs", href: "https://w3labs.xyz", external: true },
-      { label: "w3.vision", href: "https://www.w3.vision/", external: true },
+      { label: "w3.group", href: "https://w3.group" },
+      { label: "w3.fund", href: "https://www.w3.fund/" },
+      { label: "w3.labs", href: "https://w3labs.xyz" },
+      { label: "w3.vision", href: "https://www.w3.vision/" },
     ],
   },
 ];
@@ -37,23 +39,8 @@ const SOCIALS: { label: string; href: string; icon: "x" | "linkedin" }[] = [
   { label: "LinkedIn", href: "https://de.linkedin.com/company/w3-hub", icon: "linkedin" },
 ];
 
-function FooterLink({ item }: { item: Item }) {
-  // Live site: Inter 500 / 14px / 0.01em / #4D4A69
-  const className =
-    "text-[14px] font-medium leading-5 tracking-[0.01em] text-slate-violet-700 hover:text-ink transition-colors";
-  if (item.external) {
-    return (
-      <a href={item.href} target="_blank" rel="noopener noreferrer" className={className}>
-        {item.label}
-      </a>
-    );
-  }
-  return (
-    <Link href={item.href} className={className}>
-      {item.label}
-    </Link>
-  );
-}
+const FOOTER_LINK_CLS =
+  "text-[14px] font-medium leading-5 tracking-[0.01em] text-slate-violet-700 hover:text-ink transition-colors";
 
 function SocialIcon({ icon }: { icon: "x" | "linkedin" }) {
   if (icon === "x") {
@@ -91,15 +78,14 @@ function SocialIcon({ icon }: { icon: "x" | "linkedin" }) {
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#FFFEFC] border-t border-black/[0.06]">
+    <footer className="w-full bg-[#FFFEFC] border-t border-black/6">
       <div className="mx-auto w-full max-w-[1400px] px-5 md:px-8 lg:px-12 py-10">
         <div className="flex flex-col gap-12">
           {/* Row 1: brand + link columns + socials */}
           <div className="flex flex-col gap-10 md:flex-row md:gap-6">
             <div className="md:w-[556px] flex flex-col gap-6">
               <Link href="/" className="inline-flex items-center" aria-label="w3.hub home">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <Image
                   src="/images/logo-w3hub.svg"
                   alt="w3.hub"
                   width={137}
@@ -121,7 +107,9 @@ export default function Footer() {
                   <ul className="flex flex-col gap-2">
                     {col.items.map((it) => (
                       <li key={it.label + it.href}>
-                        <FooterLink item={it} />
+                        <SmartLink href={it.href} className={FOOTER_LINK_CLS}>
+                          {it.label}
+                        </SmartLink>
                       </li>
                     ))}
                   </ul>
@@ -129,16 +117,14 @@ export default function Footer() {
               ))}
               <div className="col-span-2 flex flex-1 items-start gap-4 sm:col-span-3 lg:col-span-1 lg:justify-end">
                 {SOCIALS.map((s) => (
-                  <a
+                  <SmartLink
                     key={s.href}
                     href={s.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     aria-label={s.label}
                     className="opacity-50 hover:opacity-100 transition-opacity"
                   >
                     <SocialIcon icon={s.icon} />
-                  </a>
+                  </SmartLink>
                 ))}
               </div>
             </div>

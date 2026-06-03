@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import SectionReveal from "@/components/ui/SectionReveal";
 import ArrowCircle from "@/components/ui/ArrowCircle";
 
@@ -8,7 +9,7 @@ const WEBHOOK_URL = "https://hook.eu1.make.com/8k2nrs83id1yo9pal2ruqiafqgi7f6q7"
 
 type Status = "idle" | "loading" | "success" | "error";
 
-export default function NewsletterSignup() {
+export default function Newsletter() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<Status>("idle");
 
@@ -53,8 +54,7 @@ export default function NewsletterSignup() {
 
               <div className="mt-8 flex items-center gap-3">
                 <span className="inline-flex h-[52px] w-[52px] items-center justify-center overflow-hidden rounded-[14px] bg-gradient-to-br from-white to-[#E7E3F6] ring-1 ring-black/[0.06]">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
+                  <Image
                     src="/images/logo-mark.png"
                     alt="w3.hub"
                     width={28}

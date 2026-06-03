@@ -1,12 +1,8 @@
-"use client";
-
 import SectionReveal from "@/components/ui/SectionReveal";
 
-// Click target for "Open in Maps" (the real w3.hub place on Google Maps).
 const MAPS_URL =
   "https://www.google.com/maps?ll=52.497989,13.380294&z=15&t=m&hl=en&gl=DE&mapclient=embed&cid=1832120701558086668";
 
-// Embedded map centered on the w3.hub coordinates with a labelled pin.
 const MAP_EMBED =
   "https://maps.google.com/maps?q=52.497989,13.380294(w3.hub)&z=15&hl=en&output=embed";
 
@@ -40,14 +36,7 @@ function TramIcon() {
   );
 }
 
-function Bullet() {
-  return (
-    <span
-      aria-hidden
-      className="mt-[10px] h-1 w-1 shrink-0 rounded-full bg-[#B2B2B2]"
-    />
-  );
-}
+const BULLET_CLS = "mt-[10px] h-1 w-1 shrink-0 rounded-full bg-muted-3";
 
 const BUILDING = [
   "3 floors, 500sqm each",
@@ -56,7 +45,7 @@ const BUILDING = [
   "Located at Gleisdreieck Park",
 ];
 
-export default function LocationDetails() {
+export default function Location() {
   return (
     <section className="w-full bg-paper py-16 md:py-20 lg:py-24">
       <div className="mx-auto max-w-[1136px] px-5 md:px-8">
@@ -66,9 +55,8 @@ export default function LocationDetails() {
           </h2>
         </SectionReveal>
 
-        <SectionReveal className="mx-auto grid w-full max-w-[1080px] grid-cols-1 overflow-hidden rounded-3xl shadow-[0px_3px_0px_#DDD8D4] ring-1 ring-[#DDD8D4] md:h-[418px] md:grid-cols-2">
-          {/* Left: building info + public transport */}
-          <div className="flex flex-col gap-4 border-b border-[#DDD8D4] bg-white p-2 md:border-b-0 md:border-r">
+        <SectionReveal className="mx-auto grid w-full max-w-[1080px] grid-cols-1 overflow-hidden rounded-3xl shadow-card ring-1 ring-warm-grey md:h-[418px] md:grid-cols-2">
+          <div className="flex flex-col gap-4 border-b border-warm-grey bg-white p-2 md:border-b-0 md:border-r">
             <div className="flex flex-1 flex-col gap-2.5 rounded-[19px] p-4">
               <div className="flex items-center gap-2 text-ink">
                 <BuildingIcon />
@@ -79,7 +67,7 @@ export default function LocationDetails() {
               <ul className="flex flex-col gap-1 font-body text-[16px] leading-6 text-ink">
                 {BUILDING.map((item) => (
                   <li key={item} className="flex items-start gap-3">
-                    <Bullet />
+                    <span aria-hidden className={BULLET_CLS} />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -95,14 +83,14 @@ export default function LocationDetails() {
               </div>
               <div className="flex flex-col gap-1 font-body text-[16px] leading-6 text-ink">
                 <div className="flex items-start gap-3">
-                  <Bullet />
+                  <span aria-hidden className={BULLET_CLS} />
                   <p>
                     <span className="font-bold">U-Bahn:</span> U1, U7 at Möckernbrücke
                     / U2, U3 from Gleisdreieck Park
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Bullet />
+                  <span aria-hidden className={BULLET_CLS} />
                   <p>
                     <span className="font-bold">S-Bahn:</span> S1, S2, S25, S26 at
                     Anhalter Bahnhof
@@ -112,7 +100,6 @@ export default function LocationDetails() {
             </div>
           </div>
 
-          {/* Right: live Google map */}
           <div className="bg-white p-2">
             <div className="relative h-[320px] w-full overflow-hidden rounded-2xl bg-warm-grey md:h-full">
               <iframe

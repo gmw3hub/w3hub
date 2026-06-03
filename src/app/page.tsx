@@ -1,27 +1,27 @@
-import Hero from "@/components/home/Hero";
-import EventsSection from "@/components/home/EventsSection";
-import FeatureGrid from "@/components/home/FeatureGrid";
-import SolutionsCards from "@/components/home/SolutionsCards";
-import Marquee from "@/components/home/Marquee";
-import PartnersSection from "@/components/home/PartnersSection";
-import NewsletterSignup from "@/components/home/NewsletterSignup";
-import LocationDetails from "@/components/home/LocationDetails";
-import HostSection from "@/components/home/HostSection";
-import FaqAccordion from "@/components/home/FaqAccordion";
+import Hero from "@/components/sections/Hero";
+import Events from "@/components/sections/Events";
+import Benefits from "@/components/sections/Benefits";
+import Solutions from "@/components/sections/Solutions";
+import VibesMarquee from "@/components/sections/VibesMarquee";
+import HousePartners from "@/components/sections/HousePartners";
+import Newsletter from "@/components/sections/Newsletter";
+import Location from "@/components/sections/Location";
+import AboutHost from "@/components/sections/AboutHost";
+import Faq from "@/components/sections/Faq";
 
 export default function Home() {
   return (
     <main className="flex flex-col flex-1">
       <Hero />
-      <EventsSection />
-      <FeatureGrid />
-      <SolutionsCards />
-      <Marquee />
-      <PartnersSection />
-      <NewsletterSignup />
-      <LocationDetails />
-      <HostSection />
-      <FaqAccordion />
+      <Events />
+      <Benefits />
+      <Solutions />
+      <VibesMarquee />
+      <HousePartners />
+      <Newsletter />
+      <Location />
+      <AboutHost />
+      <Faq />
     </main>
   );
 }

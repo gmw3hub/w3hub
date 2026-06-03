@@ -3,15 +3,16 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import SectionReveal from "@/components/ui/SectionReveal";
-import { easeOutSoft } from "@/lib/animations";
+import DoodleBackdrop from "@/components/ui/DoodleBackdrop";
+import DottedDivider from "@/components/ui/DottedDivider";
+import { staggerFadeUp } from "@/lib/animations";
 
-type Feature = {
+type Benefit = {
   title: string;
   body: string;
   icon: React.ReactNode;
 };
 
-/* ---- Card icons (filled black glyphs, ~30px) ---- */
 function IconBlocks() {
   return (
     <svg width="30" height="30" viewBox="0 0 33 33" fill="currentColor" aria-hidden>
@@ -50,7 +51,7 @@ function IconMonitor() {
   );
 }
 
-const FEATURES: Feature[] = [
+const BENEFITS: Benefit[] = [
   {
     title: "Web3 Native Space",
     body: "Be exclusively surrounded by Web3 professionals and events. Work alongside peers who speak your language.",
@@ -73,16 +74,9 @@ const FEATURES: Feature[] = [
   },
 ];
 
-/* Decorative stickers — positions (in px) match the Figma 1440 frame,
-   measured relative to the centered 800px content block. Shown on lg+ only;
-   they overflow into the side margins and clip gracefully below 1440px. */
-type Sticker = {
-  src: string;
-  w: number;
-  h: number;
-  left: number;
-  top: number;
-};
+// Positions (in px) measured against the centered 800px content block at
+// Figma 1440; they overflow into side margins and clip below 1440.
+type Sticker = { src: string; w: number; h: number; left: number; top: number };
 const STICKERS: Sticker[] = [
   { src: "rat-brush", w: 93, h: 93, left: -61, top: 100 },
   { src: "cat", w: 120, h: 120, left: 834, top: 28 },
@@ -92,42 +86,24 @@ const STICKERS: Sticker[] = [
   { src: "monkey", w: 329, h: 462, left: 719, top: 246.81 },
 ];
 
-const DOTTED: React.CSSProperties = {
-  backgroundImage: "radial-gradient(circle, #B2B2B2 1.6px, transparent 1.8px)",
-  backgroundSize: "11px 4px",
-  backgroundRepeat: "repeat-x",
-  backgroundPosition: "left center",
-};
-
-export default function FeatureGrid() {
+export default function Benefits() {
   return (
-    <section
-      className="relative w-full overflow-hidden py-16 md:py-20 lg:py-24"
-      style={{
-        backgroundColor: "#AEEFBD",
-        backgroundImage: "url(/images/features/bg-doodle.webp)",
-        backgroundRepeat: "repeat",
-        backgroundSize: "500px",
-      }}
-    >
+    <section className="relative w-full overflow-hidden py-16 md:py-20 lg:py-24">
+      <DoodleBackdrop />
       <div className="relative mx-auto w-full max-w-[800px] px-5 lg:min-h-[740px]">
-        {/* Decorative stickers (desktop only) */}
         <div className="pointer-events-none absolute inset-0 z-0 hidden lg:block" aria-hidden>
           {STICKERS.map((s) => (
             <motion.div
               key={s.src}
-              initial={{ opacity: 0, scale: 0.92 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.6, ease: easeOutSoft }}
+              {...staggerFadeUp(0, 0)}
               className="absolute"
               style={{ left: s.left, top: s.top, width: s.w, height: s.h }}
             >
               <Image
                 src={`/images/features/${s.src}.webp`}
                 alt=""
-                width={s.w * 2}
-                height={Math.round(s.h * 2)}
+                width={s.w}
+                height={s.h}
                 className="h-full w-full select-none object-contain"
                 draggable={false}
               />
@@ -135,7 +111,6 @@ export default function FeatureGrid() {
           ))}
         </div>
 
-        {/* Header */}
         <SectionReveal className="relative z-10 flex flex-col items-center text-center">
           <h2 className="font-display font-extrabold text-ink text-[28px] sm:text-[34px] lg:text-[40px] leading-[1.1] lg:leading-[44px]">
             Berlin&apos;s Premier Coworking &amp; Event
@@ -148,18 +123,13 @@ export default function FeatureGrid() {
           </p>
         </SectionReveal>
 
-        {/* Cards */}
         <div className="relative z-10 mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
-          {FEATURES.map((f, i) => (
+          {BENEFITS.map((f, i) => (
             <motion.div
               key={f.title}
-              initial={{ opacity: 0, y: 18 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.5, ease: easeOutSoft, delay: i * 0.07 }}
-              className="relative flex flex-col gap-2 rounded-3xl bg-white p-5 shadow-[0px_3px_0px_#DDD8D4]"
+              {...staggerFadeUp(i, 18, 0.07)}
+              className="relative flex flex-col gap-2 rounded-3xl bg-white p-5 shadow-card"
             >
-              {/* Paperclip on the last card */}
               {i === 3 && (
                 <Image
                   src="/images/features/paperclip.webp"
@@ -179,7 +149,7 @@ export default function FeatureGrid() {
                   {f.title}
                 </h3>
               </div>
-              <div className="h-1 w-full" style={DOTTED} aria-hidden />
+              <DottedDivider variant="light" />
               <p className="font-body text-[16px] leading-6 text-ink">{f.body}</p>
             </motion.div>
           ))}

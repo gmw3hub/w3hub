@@ -4,16 +4,12 @@ type Props = {
   invert?: boolean;
 };
 
-export default function ArrowCircle({ size = 28, className, invert }: Props) {
+export default function ArrowCircle({ size = 28, className = "", invert }: Props) {
+  const color = invert ? "bg-black text-white" : "bg-white text-black";
   return (
     <span
       aria-hidden
-      className={
-        "inline-flex items-center justify-center rounded-full transition-colors group-hover:bg-mint group-hover:text-black " +
-        (invert ? "bg-black text-white" : "bg-white text-black") +
-        " " +
-        (className ?? "")
-      }
+      className={`inline-flex items-center justify-center rounded-full transition-colors group-hover:bg-mint group-hover:text-black ${color} ${className}`}
       style={{ width: size, height: size }}
     >
       <svg

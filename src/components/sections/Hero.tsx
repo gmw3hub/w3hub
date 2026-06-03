@@ -2,12 +2,11 @@
 
 import { motion } from "framer-motion";
 import PillButton from "@/components/ui/PillButton";
-import { easeOutSoft, fadeUp } from "@/lib/animations";
+import { easeOutSoft, fadeUp, heroStagger } from "@/lib/animations";
 
 export default function Hero() {
   return (
     <section className="relative w-full h-screen min-h-[640px] overflow-hidden text-white">
-      {/* Background video */}
       <video
         className="absolute inset-0 h-full w-full object-cover"
         src="/videos/hero.mp4"
@@ -18,21 +17,16 @@ export default function Hero() {
         poster="/images/og-image.png"
         aria-hidden
       />
-      {/* Subtle scrim for text legibility */}
       <div
         aria-hidden
         className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/15 to-black/10"
       />
 
-      {/* Overlay: text block bottom-left, scroll cue bottom-right at CTA level */}
       <div className="relative z-10 h-full mx-auto max-w-[1400px] px-5 md:px-8 lg:px-12 flex flex-col justify-end pb-16 md:pb-20 lg:pb-24">
         <motion.div
           initial="hidden"
           animate="show"
-          variants={{
-            hidden: {},
-            show: { transition: { staggerChildren: 0.08, delayChildren: 0.1 } },
-          }}
+          variants={heroStagger}
           className="max-w-[1080px]"
         >
           <motion.p variants={fadeUp}>
@@ -72,7 +66,6 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* Scroll cue — right side, vertically aligned with the CTA row */}
         <motion.div
           aria-hidden
           initial={{ opacity: 0 }}

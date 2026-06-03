@@ -3,7 +3,8 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import SectionReveal from "@/components/ui/SectionReveal";
-import { easeOutSoft } from "@/lib/animations";
+import DottedDivider from "@/components/ui/DottedDivider";
+import { easeOutSoft, staggerFadeUp } from "@/lib/animations";
 
 type QA = { q: string; a: string };
 
@@ -38,11 +39,8 @@ function AccordionItem({ qa, index }: { qa: QA; index: number }) {
   const [open, setOpen] = useState(false);
   return (
     <motion.div
-      initial={{ opacity: 0, y: 12 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.45, ease: easeOutSoft, delay: index * 0.04 }}
-      className="rounded-3xl bg-white px-6 md:px-7 shadow-[0_3px_0_#DDD8D4] backdrop-blur-[2px]"
+      {...staggerFadeUp(index, 12, 0.04)}
+      className="rounded-3xl bg-white px-6 md:px-7 shadow-card backdrop-blur-[2px]"
     >
       <button
         type="button"
@@ -74,10 +72,7 @@ function AccordionItem({ qa, index }: { qa: QA; index: number }) {
             transition={{ duration: 0.28, ease: easeOutSoft }}
             className="overflow-hidden"
           >
-            <div
-              aria-hidden
-              className="h-[2px] w-full bg-[radial-gradient(circle,_#C9C4BF_1px,_transparent_1.2px)] bg-repeat-x [background-size:12px_2px]"
-            />
+            <DottedDivider variant="light" className="h-[2px] w-full" />
             <p className="pt-4 pb-4 font-body text-[16px] leading-6 text-ink/80 max-w-[68ch]">
               {qa.a}
             </p>
@@ -88,7 +83,7 @@ function AccordionItem({ qa, index }: { qa: QA; index: number }) {
   );
 }
 
-export default function FaqAccordion() {
+export default function Faq() {
   return (
     <section className="w-full bg-paper py-16 md:py-20 lg:py-28">
       <div className="mx-auto max-w-[1136px] px-5 md:px-8">

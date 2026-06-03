@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import SmartLink from "@/components/ui/SmartLink";
 import { dropdownMotion, mobileMenuMotion } from "@/lib/animations";
 
 type DropItem = { label: string; href: string };
@@ -46,40 +47,6 @@ const NAV: NavItem[] = [
   { type: "link", label: "About Us", href: "/about-us" },
 ];
 
-function SmartLink({
-  href,
-  className,
-  children,
-  onClick,
-  ...rest
-}: {
-  href: string;
-  className?: string;
-  children: React.ReactNode;
-  onClick?: () => void;
-} & Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, "href" | "onClick">) {
-  const isExternal = /^https?:\/\//.test(href);
-  if (isExternal) {
-    return (
-      <a
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={className}
-        onClick={onClick}
-        {...rest}
-      >
-        {children}
-      </a>
-    );
-  }
-  return (
-    <Link href={href} className={className} onClick={onClick} {...rest}>
-      {children}
-    </Link>
-  );
-}
-
 function Caret() {
   return (
     <svg
@@ -108,7 +75,7 @@ function DesktopMenu({ items }: { items: DropItem[] }) {
       initial="hidden"
       animate="show"
       exit="exit"
-      className="absolute left-1/2 top-[calc(100%+8px)] -translate-x-1/2 min-w-[220px] rounded-2xl bg-white shadow-[0_12px_40px_-12px_rgba(16,20,34,0.18)] ring-1 ring-black/[0.04] p-2"
+      className="absolute left-1/2 top-[calc(100%+8px)] -translate-x-1/2 min-w-[220px] rounded-2xl bg-white shadow-[0_12px_40px_-12px_rgba(16,20,34,0.18)] ring-1 ring-black/4 p-2"
     >
       <ul className="flex flex-col">
         {items.map((it) => (
@@ -136,7 +103,7 @@ export default function Navbar() {
         {/* Center: pill nav (desktop) */}
         <nav
           aria-label="Primary"
-          className="hidden lg:flex items-stretch rounded-full bg-white shadow-[0_8px_32px_-12px_rgba(16,20,34,0.22)] ring-1 ring-black/[0.04] px-2 py-1.5"
+          className="hidden lg:flex items-stretch rounded-full bg-white shadow-[0_8px_32px_-12px_rgba(16,20,34,0.22)] ring-1 ring-black/4 px-2 py-1.5"
         >
           {NAV.map((item, idx) => {
             const isLast = idx === NAV.length - 1;
@@ -187,7 +154,7 @@ export default function Navbar() {
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileOpen}
             onClick={() => setMobileOpen((v) => !v)}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-[0_6px_24px_-8px_rgba(16,20,34,0.25)] ring-1 ring-black/[0.04]"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-[0_6px_24px_-8px_rgba(16,20,34,0.25)] ring-1 ring-black/4"
           >
             <span className="sr-only">Toggle menu</span>
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden>
@@ -219,7 +186,7 @@ export default function Navbar() {
             exit="exit"
             className="lg:hidden mx-auto mt-3 max-w-[1400px] px-4 md:px-6 pointer-events-auto"
           >
-            <div className="rounded-3xl bg-white shadow-[0_18px_48px_-16px_rgba(16,20,34,0.25)] ring-1 ring-black/[0.04] p-4">
+            <div className="rounded-3xl bg-white shadow-[0_18px_48px_-16px_rgba(16,20,34,0.25)] ring-1 ring-black/4 p-4">
               <ul className="flex flex-col">
                 {NAV.flatMap((item) =>
                   item.type === "link"
