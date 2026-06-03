@@ -1,59 +1,12 @@
 import Link from "next/link";
 
-type Item = { label: string; href: string; external?: boolean };
-type Column = { heading: string; items: Item[] };
-
-const COLUMNS: Column[] = [
-  {
-    heading: "Work",
-    items: [
-      { label: "Work Solutions", href: "/co-working" },
-      { label: "Meeting Rooms", href: "/meeting-rooms" },
-      { label: "Community", href: "/community" },
-      { label: "About Us", href: "/about-us" },
-    ],
-  },
-  {
-    heading: "Events",
-    items: [
-      { label: "Event Calendar", href: "/event-calendar" },
-      { label: "Event Space", href: "/event-space" },
-      { label: "Berlin Blockchain Week", href: "https://blockchainfestival.berlin/", external: true },
-    ],
-  },
-  {
-    heading: "Companies",
-    items: [
-      { label: "w3.group", href: "https://w3.group", external: true },
-      { label: "w3.fund", href: "https://www.w3.fund/", external: true },
-      { label: "w3.labs", href: "https://w3labs.xyz", external: true },
-      { label: "w3.vision", href: "https://www.w3.vision/", external: true },
-    ],
-  },
-];
+// Live site footer shows the three column headings only (no sub-links).
+const COLUMN_HEADINGS = ["Work", "Events", "Companies"];
 
 const SOCIALS: { label: string; href: string; icon: "x" | "linkedin" }[] = [
   { label: "X (Twitter)", href: "https://x.com/w3_hub", icon: "x" },
   { label: "LinkedIn", href: "https://de.linkedin.com/company/w3-hub", icon: "linkedin" },
 ];
-
-function FooterLink({ item }: { item: Item }) {
-  // Live site: Inter 500 / 14px / 0.01em / #4D4A69
-  const className =
-    "text-[14px] font-medium leading-5 tracking-[0.01em] text-slate-violet-700 hover:text-ink transition-colors";
-  if (item.external) {
-    return (
-      <a href={item.href} target="_blank" rel="noopener noreferrer" className={className}>
-        {item.label}
-      </a>
-    );
-  }
-  return (
-    <Link href={item.href} className={className}>
-      {item.label}
-    </Link>
-  );
-}
 
 function SocialIcon({ icon }: { icon: "x" | "linkedin" }) {
   if (icon === "x") {
@@ -113,18 +66,11 @@ export default function Footer() {
             </div>
 
             <div className="flex-1 md:pl-4 grid grid-cols-2 gap-8 sm:grid-cols-3 lg:flex lg:gap-4">
-              {COLUMNS.map((col) => (
-                <div key={col.heading} className="flex flex-1 flex-col gap-2">
+              {COLUMN_HEADINGS.map((heading) => (
+                <div key={heading} className="flex flex-1 flex-col gap-2">
                   <h4 className="text-[12px] font-medium leading-4 text-slate-violet-500">
-                    {col.heading}
+                    {heading}
                   </h4>
-                  <ul className="flex flex-col gap-2">
-                    {col.items.map((it) => (
-                      <li key={it.label + it.href}>
-                        <FooterLink item={it} />
-                      </li>
-                    ))}
-                  </ul>
                 </div>
               ))}
               <div className="col-span-2 flex flex-1 items-start gap-4 sm:col-span-3 lg:col-span-1">
