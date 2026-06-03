@@ -89,9 +89,9 @@ export default function Footer() {
                 <img
                   src="/images/logo-wordmark.svg"
                   alt="w3.hub"
-                  width={137}
+                  width={121}
                   height={32}
-                  className="h-8 w-auto"
+                  className="h-8 w-auto [filter:brightness(0)]"
                 />
               </Link>
               <p className="text-[14px] font-semibold leading-5 text-slate-violet-700">

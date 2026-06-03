@@ -28,7 +28,7 @@ function Bullets({ items }: { items: React.ReactNode[] }) {
 }
 
 const mail = (
-  <a href="mailto:gm@w3hub.berlin" className="text-accent hover:underline">
+  <a href="mailto:gm@w3hub.berlin" className="underline">
     gm@w3hub.berlin
   </a>
 );
@@ -47,7 +47,7 @@ export default function PrivacyPolicyPage() {
           data when you visit our website at{" "}
           <a
             href="https://w3hub.berlin"
-            className="text-accent hover:underline"
+            className="underline"
           >
             https://w3hub.berlin
           </a>

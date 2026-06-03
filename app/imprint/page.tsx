@@ -37,7 +37,7 @@ export default function ImprintPage() {
 
           <Section title="Kontakt">
             <p>
-              <a href="mailto:gm@w3hub.berlin" className="text-accent hover:underline">
+              <a href="mailto:gm@w3hub.berlin" className="underline">
                 gm@w3hub.berlin
               </a>
             </p>
@@ -55,7 +55,7 @@ export default function ImprintPage() {
                 href="https://ec.europa.eu/consumers/odr"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-accent hover:underline"
+                className="underline"
               >
                 https://ec.europa.eu/consumers/odr
               </a>

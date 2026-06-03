@@ -42,13 +42,13 @@ function AccordionItem({ qa, index }: { qa: QA; index: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.45, ease: easeOutSoft, delay: index * 0.04 }}
-      className="border-b border-black/10 last:border-b-0"
+      className="rounded-3xl bg-white px-6 md:px-7 shadow-[0_3px_0_#DDD8D4] backdrop-blur-[2px]"
     >
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
-        className="w-full flex items-center justify-between gap-6 py-5 md:py-6 text-left"
+        className="w-full flex items-center justify-between gap-6 py-4 text-left"
       >
         <span className="font-display font-extrabold text-ink text-[16px] leading-6">
           {qa.q}
@@ -78,7 +78,7 @@ function AccordionItem({ qa, index }: { qa: QA; index: number }) {
               aria-hidden
               className="h-[2px] w-full bg-[radial-gradient(circle,_#C9C4BF_1px,_transparent_1.2px)] bg-repeat-x [background-size:12px_2px]"
             />
-            <p className="pt-4 pb-5 md:pb-6 font-body text-[16px] leading-6 text-ink/80 max-w-[68ch]">
+            <p className="pt-4 pb-4 font-body text-[16px] leading-6 text-ink/80 max-w-[68ch]">
               {qa.a}
             </p>
           </motion.div>
@@ -101,7 +101,7 @@ export default function FaqAccordion() {
           </p>
         </SectionReveal>
 
-        <div className="rounded-3xl bg-white ring-1 ring-black/[0.04] shadow-[0_8px_32px_-16px_rgba(16,20,34,0.12)] px-6 md:px-8 lg:px-10">
+        <div className="flex flex-col gap-5">
           {FAQS.map((qa, i) => (
             <AccordionItem key={qa.q} qa={qa} index={i} />
           ))}

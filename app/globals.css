@@ -41,6 +41,21 @@
   color-scheme: light;
 }
 
+/* Tailwind v4 Preflight resets button cursors to default — restore pointer
+   on everything that's actually clickable. */
+button:not(:disabled),
+[role="button"]:not([aria-disabled="true"]),
+a[href],
+label[for],
+summary,
+select,
+input[type="checkbox"],
+input[type="radio"],
+input[type="submit"],
+input[type="button"] {
+  cursor: pointer;
+}
+
 html,
 body {
   background: var(--color-paper);
