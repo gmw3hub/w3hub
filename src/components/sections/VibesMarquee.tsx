@@ -31,7 +31,7 @@ function Card({ slide }: { slide: Slide }) {
           sizes="350px"
           className="object-cover"
         />
-        <div className="absolute inset-0 flex items-end justify-end bg-gradient-to-b from-transparent to-black/60 p-4">
+        <div className="absolute inset-0 flex items-end justify-end bg-linear-to-b from-transparent to-black/60 p-4">
           <span className="text-right font-body text-[14px] leading-[18px] text-white">
             {slide.label}
           </span>

@@ -1,6 +1,6 @@
 import SectionReveal from "@/components/ui/SectionReveal";
 import PillButton from "@/components/ui/PillButton";
-import Eyebrow from "@/components/ui/Eyebrow";
+import { Badge } from "@/components/ui/badge";
 
 const LUMA_SRC =
   "https://lu.ma/embed/calendar/cal-K1JcFGP2bDDKmmj/events?compact=true&lt=light";
@@ -17,7 +17,7 @@ export default function Events() {
           <div className="relative flex flex-col md:flex-row overflow-hidden rounded-3xl bg-white border border-warm-grey shadow-card">
             <div className="shrink-0 md:w-[320px] p-6 md:p-8 flex flex-col gap-6">
               <div>
-                <Eyebrow variant="dot">Events</Eyebrow>
+                <Badge variant="eyebrow-dot">Events</Badge>
                 <h2 className="mt-2.5 font-display text-[28px] sm:text-[32px] font-extrabold leading-[1.15] md:leading-[40px] text-ink">
                   All upcoming
                   <br />

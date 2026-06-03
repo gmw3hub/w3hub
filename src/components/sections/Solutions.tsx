@@ -1,5 +1,5 @@
 import SectionReveal from "@/components/ui/SectionReveal";
-import Eyebrow from "@/components/ui/Eyebrow";
+import { Badge } from "@/components/ui/badge";
 import SolutionCard, { type Solution } from "./SolutionCard";
 
 const SOLUTIONS: Solution[] = [
@@ -53,7 +53,7 @@ export default function Solutions() {
           <h2 className="font-display font-extrabold text-ink text-[30px] sm:text-[36px] lg:text-[40px] leading-[1.1] lg:leading-[48px]">
             Our Custom Solutions
           </h2>
-          <Eyebrow>Tailored to your needs</Eyebrow>
+          <Badge variant="eyebrow-mint">Tailored to your needs</Badge>
         </SectionReveal>
 
         <div className="mt-10 flex flex-col gap-10">

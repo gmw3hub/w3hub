@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import ArrowCircle from "@/components/ui/ArrowCircle";
+import { Input } from "@/components/ui/input";
 
 const WEBHOOK_URL = "https://hook.eu1.make.com/8k2nrs83id1yo9pal2ruqiafqgi7f6q7";
 
@@ -43,10 +44,11 @@ export default function NewsletterForm() {
         <label htmlFor="newsletter-email" className="sr-only">
           Email Address
         </label>
-        <input
+        <Input
           id="newsletter-email"
           type="email"
           required
+          variant="pill"
           value={email}
           onChange={(e) => {
             setEmail(e.target.value);
@@ -55,7 +57,7 @@ export default function NewsletterForm() {
           placeholder="Email Address"
           disabled={status === "success"}
           aria-describedby="newsletter-status"
-          className="flex-1 rounded-full bg-paper px-5 py-3 text-[16px] text-ink ring-1 ring-black/6 placeholder:text-black/45 focus:outline-none focus:ring-2 focus:ring-ink/30 sm:bg-transparent sm:ring-0 sm:focus:ring-0"
+          className="flex-1 sm:bg-transparent sm:ring-0 sm:focus:ring-0"
         />
         <button
           type="submit"

@@ -1,7 +1,8 @@
 import Image from "next/image";
 import SectionReveal from "@/components/ui/SectionReveal";
 import PillButton from "@/components/ui/PillButton";
-import Eyebrow from "@/components/ui/Eyebrow";
+import { Badge } from "@/components/ui/badge";
+import { Card } from "@/components/ui/card";
 import DottedDivider from "@/components/ui/DottedDivider";
 
 export default function AboutHost() {
@@ -9,14 +10,14 @@ export default function AboutHost() {
     <section className="w-full bg-paper py-16 md:py-20 lg:py-24">
       <div className="mx-auto flex max-w-[1136px] flex-col items-center px-5 md:px-8">
         <SectionReveal className="flex flex-col items-center gap-5 text-center">
-          <Eyebrow>part of w3.group</Eyebrow>
+          <Badge variant="eyebrow-mint">part of w3.group</Badge>
           <h2 className="font-display font-extrabold text-ink text-[32px] sm:text-[36px] lg:text-[40px] leading-[1.1] lg:leading-[48px]">
             About the host
           </h2>
         </SectionReveal>
 
         <SectionReveal className="mt-10 w-full">
-          <div className="flex flex-col overflow-hidden rounded-3xl bg-white p-2 shadow-card ring-1 ring-black/10 md:flex-row md:items-stretch">
+          <Card className="flex flex-col overflow-hidden p-2 md:flex-row md:items-stretch">
             <div className="relative aspect-16/10 w-full overflow-hidden rounded-2xl md:aspect-auto md:w-[472px] md:shrink-0">
               <Image
                 src="/images/host-w3group.jpg"
@@ -46,7 +47,7 @@ export default function AboutHost() {
                 Learn about w3.group
               </PillButton>
             </div>
-          </div>
+          </Card>
         </SectionReveal>
       </div>
     </section>
