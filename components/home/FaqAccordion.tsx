@@ -74,7 +74,11 @@ function AccordionItem({ qa, index }: { qa: QA; index: number }) {
             transition={{ duration: 0.28, ease: easeOutSoft }}
             className="overflow-hidden"
           >
-            <p className="pb-5 md:pb-6 font-body text-[16px] leading-6 text-ink/80 max-w-[68ch]">
+            <div
+              aria-hidden
+              className="h-[2px] w-full bg-[radial-gradient(circle,_#C9C4BF_1px,_transparent_1.2px)] bg-repeat-x [background-size:12px_2px]"
+            />
+            <p className="pt-4 pb-5 md:pb-6 font-body text-[16px] leading-6 text-ink/80 max-w-[68ch]">
               {qa.a}
             </p>
           </motion.div>

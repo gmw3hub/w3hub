@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -133,21 +132,7 @@ export default function Navbar() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 pointer-events-none">
-      <div className="mx-auto max-w-[1400px] px-4 md:px-6 pt-4 md:pt-6 flex items-center justify-between gap-4 pointer-events-auto">
-        {/* Left: logo mark */}
-        <Link href="/" aria-label="w3.hub home" className="shrink-0">
-          <span className="inline-flex h-10 w-10 md:h-11 md:w-11 items-center justify-center rounded-full bg-white shadow-[0_6px_24px_-8px_rgba(16,20,34,0.25)] ring-1 ring-black/[0.04]">
-            <Image
-              src="/images/logo-mark.png"
-              alt="w3.hub"
-              width={28}
-              height={28}
-              priority
-              className="h-6 w-6 md:h-7 md:w-7 object-contain"
-            />
-          </span>
-        </Link>
-
+      <div className="relative mx-auto max-w-[1400px] px-4 md:px-6 pt-4 md:pt-6 flex items-center justify-center gap-4 pointer-events-auto">
         {/* Center: pill nav (desktop) */}
         <nav
           aria-label="Primary"
@@ -195,20 +180,14 @@ export default function Navbar() {
           })}
         </nav>
 
-        {/* Right: CTA (desktop) + hamburger (mobile/tablet) */}
-        <div className="shrink-0 flex items-center gap-2">
-          <Link
-            href="/co-working"
-            className="hidden lg:inline-flex items-center rounded-full bg-ink text-white text-[14px] font-medium px-4 py-2.5 hover:bg-ink-800 transition-colors"
-          >
-            Become a member
-          </Link>
+        {/* Hamburger (mobile/tablet) */}
+        <div className="lg:hidden absolute right-4 md:right-6 top-4 md:top-6">
           <button
             type="button"
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileOpen}
             onClick={() => setMobileOpen((v) => !v)}
-            className="lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-[0_6px_24px_-8px_rgba(16,20,34,0.25)] ring-1 ring-black/[0.04]"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-[0_6px_24px_-8px_rgba(16,20,34,0.25)] ring-1 ring-black/[0.04]"
           >
             <span className="sr-only">Toggle menu</span>
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden>
