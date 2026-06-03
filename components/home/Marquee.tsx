@@ -72,7 +72,15 @@ function Row({
 
 export default function Marquee() {
   return (
-    <section className="w-full overflow-hidden bg-mint py-10 md:py-14">
+    <section
+      className="w-full overflow-hidden py-10 md:py-14"
+      style={{
+        backgroundColor: "#AEEFBD",
+        backgroundImage: "url(/images/features/bg-doodle.webp)",
+        backgroundRepeat: "repeat",
+        backgroundSize: "500px",
+      }}
+    >
       <div className="flex flex-col gap-4">
         <Row slides={ROW_1} duration={80} />
         <Row slides={ROW_2} duration={92} reverse />

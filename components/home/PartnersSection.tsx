@@ -63,7 +63,19 @@ function Deco({
 export default function PartnersSection() {
   return (
     <section className="relative w-full overflow-hidden bg-paper">
-      <div className="relative px-4 md:px-8">
+      {/* Green textured backdrop: continues the marquee green and flanks the
+          panel so the paper panel "emerges" from the green (matches Figma). */}
+      <div
+        aria-hidden
+        className="absolute inset-x-0 top-0 h-[420px]"
+        style={{
+          backgroundColor: "#AEEFBD",
+          backgroundImage: "url(/images/features/bg-doodle.webp)",
+          backgroundRepeat: "repeat",
+          backgroundSize: "500px",
+        }}
+      />
+      <div className="relative mx-auto max-w-[1136px] px-4 pt-14 sm:px-6 md:pt-20">
         <div className="relative mx-auto max-w-[1120px] rounded-t-[48px] border-2 border-b-0 border-[#96908D]/50 bg-paper px-6 pb-20 pt-16 md:pt-20">
           {/* Decorative stickers (desktop only) */}
           <Deco
