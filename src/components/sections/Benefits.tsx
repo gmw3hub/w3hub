@@ -1,11 +1,7 @@
-"use client";
-
 import Image from "next/image";
-import { motion } from "framer-motion";
 import SectionReveal from "@/components/ui/SectionReveal";
 import DoodleBackdrop from "@/components/ui/DoodleBackdrop";
 import DottedDivider from "@/components/ui/DottedDivider";
-import { staggerFadeUp } from "@/lib/animations";
 
 type Benefit = {
   title: string;
@@ -93,11 +89,11 @@ export default function Benefits() {
       <div className="relative mx-auto w-full max-w-[800px] px-5 lg:min-h-[740px]">
         <div className="pointer-events-none absolute inset-0 z-0 hidden lg:block" aria-hidden>
           {STICKERS.map((s) => (
-            <motion.div
+            <SectionReveal
               key={s.src}
-              {...staggerFadeUp(0, 0)}
               className="absolute"
               style={{ left: s.left, top: s.top, width: s.w, height: s.h }}
+              y={0}
             >
               <Image
                 src={`/images/features/${s.src}.webp`}
@@ -107,7 +103,7 @@ export default function Benefits() {
                 className="h-full w-full select-none object-contain"
                 draggable={false}
               />
-            </motion.div>
+            </SectionReveal>
           ))}
         </div>
 
@@ -125,9 +121,12 @@ export default function Benefits() {
 
         <div className="relative z-10 mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
           {BENEFITS.map((f, i) => (
-            <motion.div
+            <SectionReveal
               key={f.title}
-              {...staggerFadeUp(i, 18, 0.07)}
+              as="article"
+              index={i}
+              step={0.07}
+              y={18}
               className="relative flex flex-col gap-2 rounded-3xl bg-white p-5 shadow-card"
             >
               {i === 3 && (
@@ -151,7 +150,7 @@ export default function Benefits() {
               </div>
               <DottedDivider variant="light" />
               <p className="font-body text-[16px] leading-6 text-ink">{f.body}</p>
-            </motion.div>
+            </SectionReveal>
           ))}
         </div>
       </div>
