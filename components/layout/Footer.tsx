@@ -100,11 +100,11 @@ export default function Footer() {
               <Link href="/" className="inline-flex items-center" aria-label="w3.hub home">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/images/logo-wordmark.svg"
+                  src="/images/logo-w3hub.svg"
                   alt="w3.hub"
-                  width={121}
+                  width={137}
                   height={32}
-                  className="h-8 w-auto [filter:brightness(0)]"
+                  className="h-8 w-auto"
                 />
               </Link>
               <p className="text-[14px] font-semibold leading-5 text-slate-violet-700">
