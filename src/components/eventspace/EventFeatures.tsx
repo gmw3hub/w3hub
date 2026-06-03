@@ -1,0 +1,117 @@
+import SectionReveal from "@/components/ui/SectionReveal";
+import PillButton from "@/components/ui/PillButton";
+import DottedDivider from "@/components/ui/DottedDivider";
+
+const TYPEFORM_URL = "https://form.typeform.com/to/upEoDN4G";
+
+type Feature = {
+  title: string;
+  body: string;
+  icon: React.ReactNode;
+};
+
+function IconCapacity() {
+  return (
+    <svg width="30" height="30" viewBox="0 0 32 32" fill="currentColor" aria-hidden>
+      <circle cx="11.5" cy="11" r="4.6" />
+      <circle cx="23" cy="12.3" r="3.7" />
+      <path d="M11.5 17.2c-4.5 0-8.2 3.2-8.2 7.2v2.2h16.4v-2.2c0-4-3.7-7.2-8.2-7.2Z" />
+      <path d="M23 17.8c-1 0-2 .2-2.8.6 2.3 1.6 3.8 4.2 3.8 7.2v1.6h6.3v-1.9c0-4.1-3.3-7.5-7.3-7.5Z" />
+    </svg>
+  );
+}
+function IconTeam() {
+  return (
+    <svg width="30" height="30" viewBox="0 0 32 32" fill="currentColor" aria-hidden>
+      <circle cx="16" cy="9.5" r="4.4" />
+      <path d="M16 15.5c-5 0-9 3.4-9 7.7V26h18v-2.8c0-4.3-4-7.7-9-7.7Z" />
+    </svg>
+  );
+}
+function IconBar() {
+  return (
+    <svg width="30" height="30" viewBox="0 0 32 32" fill="currentColor" aria-hidden>
+      <path d="M5 5h22l-9 11v8h4a1.5 1.5 0 0 1 0 3H10a1.5 1.5 0 0 1 0-3h4v-8L5 5Z" />
+    </svg>
+  );
+}
+function IconTech() {
+  return (
+    <svg width="30" height="30" viewBox="0 0 32 32" fill="currentColor" aria-hidden>
+      <rect x="2.4" y="5.3" width="27.2" height="18" rx="3.2" />
+      <rect x="13" y="23.3" width="6" height="3.4" />
+      <rect x="8.5" y="26" width="15" height="2.6" rx="1.3" />
+    </svg>
+  );
+}
+
+const FEATURES: Feature[] = [
+  {
+    title: "500m² · 250 standing · 100 seated",
+    body: "A 500 sqm factory loft that adapts to your format — from intimate panels and dinners to 250-person conferences and hackathons.",
+    icon: <IconCapacity />,
+  },
+  {
+    title: "In-house events team",
+    body: "Our experienced team supports you end-to-end, from planning and setup to running the show on the day.",
+    icon: <IconTeam />,
+  },
+  {
+    title: "Bar / kitchen included",
+    body: "An on-site bar and kitchen are part of the space, so catering, drinks and receptions are handled in-house.",
+    icon: <IconBar />,
+  },
+  {
+    title: "High-end tech setup",
+    body: "Professional AV, sound, lighting and streaming gear ready to go for conferences, panels and live productions.",
+    icon: <IconTech />,
+  },
+];
+
+export default function EventFeatures() {
+  return (
+    <section className="w-full bg-paper py-16 md:py-20 lg:py-24">
+      <div className="mx-auto w-full max-w-[800px] px-5">
+        <SectionReveal className="flex flex-col items-center text-center">
+          <h2 className="font-display font-extrabold text-ink text-[30px] sm:text-[36px] lg:text-[40px] leading-[1.1] lg:leading-[44px]">
+            Event Space Features
+          </h2>
+          <p className="mt-3 max-w-[560px] font-body text-[16px] font-medium leading-6 text-muted">
+            Spacious event location adaptable for various event formats with
+            professional support in-house
+          </p>
+        </SectionReveal>
+
+        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
+          {FEATURES.map((f, i) => (
+            <SectionReveal
+              key={f.title}
+              as="article"
+              index={i}
+              step={0.07}
+              y={18}
+              className="flex flex-col gap-2 rounded-3xl bg-white p-5 shadow-card"
+            >
+              <div className="flex items-center gap-2">
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center text-ink">
+                  {f.icon}
+                </span>
+                <h3 className="font-display text-[16px] font-extrabold leading-6 text-ink">
+                  {f.title}
+                </h3>
+              </div>
+              <DottedDivider variant="light" />
+              <p className="font-body text-[16px] leading-6 text-ink">{f.body}</p>
+            </SectionReveal>
+          ))}
+        </div>
+
+        <SectionReveal className="mt-10 flex justify-center">
+          <PillButton href={TYPEFORM_URL} external size="lg">
+            Request Event Space
+          </PillButton>
+        </SectionReveal>
+      </div>
+    </section>
+  );
+}
