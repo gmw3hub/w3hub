@@ -55,7 +55,7 @@ function Row({
   const items = [...slides, ...slides];
 
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-visible">
       <div
         className="flex w-max gap-4"
         style={{
@@ -74,8 +74,8 @@ export default function Marquee() {
   return (
     <section className="w-full overflow-hidden bg-mint py-10 md:py-14">
       <div className="flex flex-col gap-4">
-        <Row slides={ROW_1} duration={45} />
-        <Row slides={ROW_2} duration={52} reverse />
+        <Row slides={ROW_1} duration={80} />
+        <Row slides={ROW_2} duration={92} reverse />
       </div>
     </section>
   );
