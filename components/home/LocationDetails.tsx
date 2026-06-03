@@ -59,14 +59,14 @@ const BUILDING = [
 export default function LocationDetails() {
   return (
     <section className="w-full bg-paper py-16 md:py-20 lg:py-24">
-      <div className="mx-auto max-w-[800px] px-5">
+      <div className="mx-auto max-w-[1136px] px-5 md:px-8">
         <SectionReveal className="mb-10 text-center">
           <h2 className="font-display font-extrabold text-ink text-[30px] sm:text-[36px] lg:text-[40px] leading-[1.1] lg:leading-[44px]">
             Location Details
           </h2>
         </SectionReveal>
 
-        <SectionReveal className="mx-auto grid w-full max-w-[800px] grid-cols-1 overflow-hidden rounded-3xl shadow-[0px_3px_0px_#DDD8D4] ring-1 ring-[#DDD8D4] md:h-[418px] md:grid-cols-2">
+        <SectionReveal className="mx-auto grid w-full max-w-[1080px] grid-cols-1 overflow-hidden rounded-3xl shadow-[0px_3px_0px_#DDD8D4] ring-1 ring-[#DDD8D4] md:h-[418px] md:grid-cols-2">
           {/* Left: building info + public transport */}
           <div className="flex flex-col gap-4 border-b border-[#DDD8D4] bg-white p-2 md:border-b-0 md:border-r">
             <div className="flex flex-1 flex-col gap-2.5 rounded-[19px] p-4">
