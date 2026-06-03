@@ -76,7 +76,10 @@ export default function PartnersSection() {
         }}
       />
       <div className="relative mx-auto max-w-[1136px] px-4 pt-14 sm:px-6 md:pt-20">
-        <div className="relative mx-auto max-w-[1120px] rounded-t-[48px] border-2 border-b-0 border-[#96908D]/50 bg-paper px-6 pb-20 pt-16 md:pt-20">
+        {/* Outer paper frame: 8px padding + rounded-56 (Figma) */}
+        <div className="relative rounded-t-[56px] bg-paper p-2">
+          {/* Inner: continuous curved dashed line + content */}
+          <div className="relative rounded-t-[48px] border-2 border-b-0 border-dashed border-[#96908D]/50 px-6 pb-20 pt-16 md:pt-20">
           {/* Decorative stickers (desktop only) */}
           <Deco
             src="/images/features/building.webp"
@@ -117,12 +120,12 @@ export default function PartnersSection() {
           <SectionReveal className="relative z-10 mt-10 flex justify-center">
             <Link
               href="/about-us"
-              className="group inline-flex items-center gap-3.5 rounded-full bg-[#181A1C] py-[3px] pl-5 pr-[3px] transition-colors hover:bg-black"
+              className="group inline-flex items-center gap-3.5 rounded-full bg-[#181A1C] py-[3px] pl-5 pr-[3px]"
             >
               <span className="font-body text-[16px] font-medium leading-5 text-white">
                 Become a house partner
               </span>
-              <span className="flex h-[34px] w-[34px] items-center justify-center rounded-full bg-white text-[#181A1C]">
+              <span className="flex h-[34px] w-[34px] items-center justify-center rounded-full bg-white text-[#181A1C] transition-colors group-hover:bg-mint">
                 <svg width="7" height="12" viewBox="0 0 7 12" fill="none" aria-hidden>
                   <path
                     d="M1 1l5 5-5 5"
@@ -135,6 +138,7 @@ export default function PartnersSection() {
               </span>
             </Link>
           </SectionReveal>
+          </div>
         </div>
       </div>
     </section>

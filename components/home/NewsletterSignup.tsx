@@ -106,7 +106,7 @@ export default function NewsletterSignup() {
                 <button
                   type="submit"
                   disabled={submitting || status === "success"}
-                  className="group inline-flex items-center justify-center gap-2 rounded-full bg-ink py-2 pl-6 pr-2 text-[16px] font-medium leading-5 text-white transition-colors hover:bg-ink-800 disabled:opacity-70"
+                  className="group inline-flex items-center justify-center gap-2 rounded-full bg-ink py-2 pl-6 pr-2 text-[16px] font-medium leading-5 text-white disabled:opacity-70"
                 >
                   <span>
                     {status === "success"

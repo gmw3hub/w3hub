@@ -169,12 +169,12 @@ function SolutionCard({ s, index }: { s: Solution; index: number }) {
 
         <Link
           href={s.href}
-          className="group inline-flex items-center gap-3.5 self-start rounded-full bg-[#181A1C] py-[3px] pl-5 pr-[3px] transition-colors hover:bg-black"
+          className="group inline-flex items-center gap-3.5 self-start rounded-full bg-[#181A1C] py-[3px] pl-5 pr-[3px]"
         >
           <span className="font-body text-[16px] font-medium leading-5 text-white">
             Learn more
           </span>
-          <span className="flex h-[34px] w-[34px] items-center justify-center rounded-full bg-white text-[#181A1C]">
+          <span className="flex h-[34px] w-[34px] items-center justify-center rounded-full bg-white text-[#181A1C] transition-colors group-hover:bg-mint">
             <Chevron dir="right" />
           </span>
         </Link>

@@ -9,7 +9,7 @@ export default function ArrowCircle({ size = 28, className, invert }: Props) {
     <span
       aria-hidden
       className={
-        "inline-flex items-center justify-center rounded-full " +
+        "inline-flex items-center justify-center rounded-full transition-colors group-hover:bg-mint group-hover:text-black " +
         (invert ? "bg-black text-white" : "bg-white text-black") +
         " " +
         (className ?? "")

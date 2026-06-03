@@ -57,12 +57,12 @@ export default function HostSection() {
                 href="https://w3.group"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group mt-1 inline-flex items-center gap-3.5 self-start rounded-full bg-[#181A1C] py-[3px] pl-5 pr-[3px] transition-colors hover:bg-black"
+                className="group mt-1 inline-flex items-center gap-3.5 self-start rounded-full bg-[#181A1C] py-[3px] pl-5 pr-[3px]"
               >
                 <span className="font-body text-[16px] font-medium leading-5 text-white">
                   Learn about w3.group
                 </span>
-                <span className="flex h-[34px] w-[34px] items-center justify-center rounded-full bg-white text-[#181A1C]">
+                <span className="flex h-[34px] w-[34px] items-center justify-center rounded-full bg-white text-[#181A1C] transition-colors group-hover:bg-mint">
                   <svg width="7" height="12" viewBox="0 0 7 12" fill="none" aria-hidden>
                     <path
                       d="M1 1l5 5-5 5"

@@ -37,12 +37,12 @@ export default function EventsSection() {
                 href="https://lu.ma/w3hub"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-3.5 self-start rounded-full bg-mint pl-5 pr-[3px] py-[3px] hover:bg-[#a6f0b7] transition-colors"
+                className="group inline-flex items-center gap-3.5 self-start rounded-full bg-[#181A1C] pl-5 pr-[3px] py-[3px]"
               >
-                <span className="font-body text-[16px] font-medium text-ink">
+                <span className="font-body text-[16px] font-medium text-white">
                   See all events
                 </span>
-                <span className="inline-flex h-[34px] w-[34px] items-center justify-center rounded-full bg-ink text-white">
+                <span className="inline-flex h-[34px] w-[34px] items-center justify-center rounded-full bg-white text-[#181A1C] transition-colors group-hover:bg-mint">
                   <svg width="7" height="12" viewBox="0 0 7 12" fill="none" aria-hidden>
                     <path
                       d="M1 1l5 5-5 5"
