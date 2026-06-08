@@ -4,12 +4,10 @@ import { Badge } from "@/components/ui/badge";
 
 type SpaceCard = { src: string; label: string };
 
-// Live site uses three lifestyle shots of the space; mapped to the closest
-// existing local photos (gaming/community, sunny lounge, coffee/charitea).
 const CARDS: SpaceCard[] = [
-  { src: "/images/photos/community-networking.jpg", label: "Break the highscore" },
-  { src: "/images/photos/coworking-lounge.png", label: "Chill in the sun" },
-  { src: "/images/photos/event-space-charitea.png", label: "Enjoy a chill coffee" },
+  { src: "/images/community/break-the-highscore.png", label: "Break the highscore" },
+  { src: "/images/community/chill-in-the-sun.png", label: "Chill in the sun" },
+  { src: "/images/community/enjoy-a-chill-coffee.png", label: "Enjoy a chill coffee" },
 ];
 
 export default function CommunitySpace() {

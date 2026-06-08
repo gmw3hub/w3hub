@@ -1,12 +1,10 @@
 import SectionReveal from "@/components/ui/SectionReveal";
 import PillButton from "@/components/ui/PillButton";
-import DottedDivider from "@/components/ui/DottedDivider";
 
 const TYPEFORM_URL = "https://form.typeform.com/to/upEoDN4G";
 
 type Feature = {
   title: string;
-  body: string;
   icon: React.ReactNode;
 };
 
@@ -47,23 +45,19 @@ function IconTech() {
 
 const FEATURES: Feature[] = [
   {
-    title: "500m² · 250 standing · 100 seated",
-    body: "A 500 sqm factory loft that adapts to your format — from intimate panels and dinners to 250-person conferences and hackathons.",
+    title: "500m² · 250 PAX standing · 100 PAX seated",
     icon: <IconCapacity />,
   },
   {
-    title: "In-house events team",
-    body: "Our experienced team supports you end-to-end, from planning and setup to running the show on the day.",
+    title: "In-House events team",
     icon: <IconTeam />,
   },
   {
     title: "Bar / kitchen included",
-    body: "An on-site bar and kitchen are part of the space, so catering, drinks and receptions are handled in-house.",
     icon: <IconBar />,
   },
   {
     title: "High-end tech setup",
-    body: "Professional AV, sound, lighting and streaming gear ready to go for conferences, panels and live productions.",
     icon: <IconTech />,
   },
 ];
@@ -90,18 +84,14 @@ export default function EventFeatures() {
               index={i}
               step={0.07}
               y={18}
-              className="flex flex-col gap-2 rounded-3xl bg-white p-5 shadow-card"
+              className="flex items-center gap-3 rounded-3xl bg-white p-5 shadow-card"
             >
-              <div className="flex items-center gap-2">
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center text-ink">
-                  {f.icon}
-                </span>
-                <h3 className="font-display text-[16px] font-extrabold leading-6 text-ink">
-                  {f.title}
-                </h3>
-              </div>
-              <DottedDivider variant="light" />
-              <p className="font-body text-[16px] leading-6 text-ink">{f.body}</p>
+              <span className="flex h-8 w-8 shrink-0 items-center justify-center text-ink">
+                {f.icon}
+              </span>
+              <h3 className="font-display text-[16px] font-extrabold leading-6 text-ink">
+                {f.title}
+              </h3>
             </SectionReveal>
           ))}
         </div>

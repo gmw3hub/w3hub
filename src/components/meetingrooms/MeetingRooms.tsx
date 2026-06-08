@@ -15,42 +15,28 @@ type Room = {
   features: string[];
 };
 
+const FEATURES = [
+  "For business and private meeting",
+  "Shared amenities and catering possible on request",
+  "30 days flexible cancellation",
+];
+
 const ROOMS: Room[] = [
   {
     title: "Small Meeting Room",
-    image: "/images/photos/meeting-room-glass-door.png",
+    image: "/images/meetingrooms/small-room.png",
     description:
       "Host intimate meetings in our professional space designed for 2-4 people.",
     pax: "2-4 PAX",
-    features: [
-      "For business and private meeting",
-      "Shared amenities and catering possible on request",
-      "30 days flexible cancellation",
-    ],
-  },
-  {
-    title: "Medium Meeting Room",
-    image: "/images/photos/meeting-room-screen.png",
-    description:
-      "Conduct team gatherings in our spacious venue accommodating 8-10 people.",
-    pax: "8-10 PAX",
-    features: [
-      "For business and private meeting",
-      "Shared amenities and catering possible on request",
-      "30 days flexible cancellation",
-    ],
+    features: FEATURES,
   },
   {
     title: "Big Meeting Room",
-    image: "/images/photos/meeting-room-glass-wall.png",
+    image: "/images/meetingrooms/big-room.png",
     description:
-      "Run larger workshops and presentations in our flagship room built for full teams.",
-    pax: "12-16 PAX",
-    features: [
-      "For business and private meeting",
-      "Shared amenities and catering possible on request",
-      "30 days flexible cancellation",
-    ],
+      "Conduct team gatherings in our spacious venue accommodating 8-10 people.",
+    pax: "8-10 PAX",
+    features: FEATURES,
   },
 ];
 
@@ -78,7 +64,7 @@ function RoomCard({ room, index }: { room: Room; index: number }) {
             src={room.image}
             alt={`${room.title} at w3.hub`}
             fill
-            sizes="(min-width: 1200px) 360px, (min-width: 800px) 50vw, 100vw"
+            sizes="(min-width: 1200px) 560px, (min-width: 800px) 50vw, 100vw"
             className="object-cover transition-transform duration-500 ease-out hover:scale-[1.03]"
           />
         </div>
@@ -137,7 +123,7 @@ export default function MeetingRooms() {
           </h2>
         </SectionReveal>
 
-        <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
           {ROOMS.map((room, i) => (
             <RoomCard key={room.title} room={room} index={i} />
           ))}

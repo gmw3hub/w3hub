@@ -67,32 +67,32 @@ function IconClock() {
 const BENEFITS: Benefit[] = [
   {
     title: "Builder Space",
-    body: "Dedicated desks and focus zones built for shipping product alongside other Web3 and AI teams.",
+    body: "Join a community of active developers and innovators collectively advancing Web3 technologies.",
     icon: <IconBuilder />,
   },
   {
     title: "Co-Working",
-    body: "Flex and dedicated desks with high-speed internet, ergonomic setups and all-day coffee.",
+    body: "Experience a productive atmosphere where focus and collaboration create the perfect balance.",
     icon: <IconDesk />,
   },
   {
     title: "Member Events",
-    body: "Members-only meetups, demo days and dinners that connect you to the wider ecosystem.",
+    body: "Participate in regular industry gatherings that foster learning, networking, and innovation.",
     icon: <IconEvents />,
   },
   {
     title: "Community Space",
-    body: "A vibrant lounge to take a break, network and recharge between deep-work sessions.",
+    body: "Connect with like-minded professionals in our thoughtfully designed collaborative environments.",
     icon: <IconCommunity />,
   },
   {
     title: "Guest Policy",
-    body: "Bring collaborators and clients into the space to meet, demo and plan your next move.",
+    body: "Bring colleagues and clients to our space with our flexible and accommodating visitor options.",
     icon: <IconGuest />,
   },
   {
     title: "24/7 Access",
-    body: "Pro members get round-the-clock access to the entire building, whenever inspiration strikes.",
+    body: "Enjoy round-the-clock workspace entry exclusively for our dedicated fix desk membership holders.",
     icon: <IconClock />,
   },
 ];

@@ -1,25 +1,37 @@
+import Image from "next/image";
 import SectionReveal from "@/components/ui/SectionReveal";
 import { Card } from "@/components/ui/card";
 import DottedDivider from "@/components/ui/DottedDivider";
 
-type Member = { name: string; role: string };
+type Member = { name: string; role: string; photo: string };
 
 const TEAM: Member[] = [
-  { name: "Vicktoria Klich", role: "Co-Founder" },
-  { name: "Jonathan Kuhl", role: "Co-Founder" },
-  { name: "Henrik Bredenbals", role: "Co-Founder" },
-  { name: "Kushal Singh", role: "Operations Manager" },
-  { name: "Quinn Wilhelm", role: "Community & Shitposting" },
+  {
+    name: "Quinn Wilhelm",
+    role: "Community & Shitposting",
+    photo: "/images/team/quinn-wilhelm.jpg",
+  },
+  {
+    name: "Kushal Singh",
+    role: "Operations Manager",
+    photo: "/images/team/kushal-singh.png",
+  },
+  {
+    name: "Vicktoria Klich",
+    role: "Co-Founder",
+    photo: "/images/team/vicktoria-klich.jpg",
+  },
+  {
+    name: "Jonathan Kuhl",
+    role: "Co-Founder",
+    photo: "/images/team/jonathan-kuhl.jpg",
+  },
+  {
+    name: "Henrik Bredenbals",
+    role: "Co-Founder",
+    photo: "/images/team/henrik-bredenbals.jpg",
+  },
 ];
-
-function initials(name: string) {
-  return name
-    .split(" ")
-    .map((part) => part[0])
-    .slice(0, 2)
-    .join("")
-    .toUpperCase();
-}
 
 function MemberCard({ member, index }: { member: Member; index: number }) {
   return (
@@ -31,11 +43,14 @@ function MemberCard({ member, index }: { member: Member; index: number }) {
       className="h-full"
     >
       <Card className="group flex h-full flex-col items-center gap-4 p-6 text-center transition-shadow duration-200 hover:shadow-[0px_5px_0px_var(--color-warm-grey)]">
-        <span
-          aria-hidden
-          className="flex h-[88px] w-[88px] items-center justify-center rounded-full bg-mint font-display text-[24px] font-extrabold text-ink transition-transform duration-200 group-hover:scale-105"
-        >
-          {initials(member.name)}
+        <span className="h-[88px] w-[88px] overflow-hidden rounded-full">
+          <Image
+            src={member.photo}
+            alt={member.name}
+            width={88}
+            height={88}
+            className="h-full w-full object-cover transition-transform duration-200 group-hover:scale-105"
+          />
         </span>
 
         <DottedDivider variant="dark-tight" className="h-[5px] w-full" />

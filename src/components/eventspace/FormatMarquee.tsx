@@ -1,7 +1,5 @@
 const FORMATS = [
   "Tailored to your needs",
-  "Virtual Walkthrough",
-  "Virtual w3.hub Tour",
   "Modular Event Space",
   "Conference",
   "Community Events",

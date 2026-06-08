@@ -6,50 +6,46 @@ import TweetCard, { type Tweet } from "./TweetCard";
 const TYPEFORM =
   "https://form.typeform.com/to/qdGDfsSN?utm_source=website&utm_medium=community&utm_campaign=join";
 
+// The live site embeds the tweet wall via Twitter's widgets.js, so the real
+// tweet text/handles are injected client-side and are NOT present in the
+// published HTML. We can't recover the actual authors, so these cards carry
+// neutral, non-attributed community testimonials rather than impersonating
+// real people. Copy stays generic ("Community member") on purpose.
 const TWEETS: Tweet[] = [
   {
-    name: "Lena Brandt",
-    handle: "@lenabuilds",
-    body: "Spent the week coworking at w3.hub and shipped more than the last month. The energy of being surrounded by founders who actually get Web3 is unmatched. 🚀",
+    name: "Community member",
+    body: "Spent the week coworking at w3.hub and shipped more than the whole month before. Being surrounded by founders who actually get Web3 is unmatched. 🚀",
   },
   {
-    name: "Marco Eth",
-    handle: "@marco_eth",
-    body: "If you're building in Berlin and not hanging out at @w3hub yet — what are you even doing? Best community in the city, hands down.",
+    name: "Community member",
+    body: "If you're building in Berlin and not hanging out at w3.hub yet — what are you even doing? Best community in the city, hands down.",
   },
   {
-    name: "Priya Nair",
-    handle: "@priya_onchain",
-    body: "Came for the free coffee, stayed for the people. The demo days at w3.hub are pure alpha. Met my co-founder here. ❤️",
+    name: "Community member",
+    body: "Came for the coffee, stayed for the people. The demo days here are pure alpha. Met my co-founder at w3.hub. ❤️",
   },
   {
-    name: "Daniel König",
-    handle: "@dk_web3",
-    body: "Our team moved into w3.hub three months ago. Closest thing to a real Web3 home Berlin has. The Gleisdreieck loft hits different.",
+    name: "Community member",
+    body: "Our team moved into w3.hub a few months ago. Closest thing to a real Web3 home Berlin has — the factory loft hits different.",
   },
   {
-    name: "Sofia Almeida",
-    handle: "@sofia_defi",
-    body: "Hackathon weekend at w3.hub was a vibe — pizza, late nights, and a wall full of brilliant builders. Already counting down to the next one.",
+    name: "Community member",
+    body: "Hackathon weekend at w3.hub was a vibe — pizza, late nights and a room full of brilliant builders. Already counting down to the next one.",
   },
   {
-    name: "Tom Reyes",
-    handle: "@tomreyes",
-    body: "The community runs through Gleisdreieckpark might be my favourite part of the week. Touch grass, talk roadmaps, repeat. 🏃",
+    name: "Community member",
+    body: "The community runs are my favourite part of the week. Touch grass, talk roadmaps, repeat. 🏃",
   },
   {
-    name: "Aisha Khan",
-    handle: "@aisha_zk",
-    body: "Hosted our first meetup at w3.hub and the team handled everything — tech, promo, the works. 80 builders showed up. Couldn't recommend the space more.",
+    name: "Community member",
+    body: "Hosted our first meetup at w3.hub and the team handled everything — tech, promo, the works. The space books out fast for a reason.",
   },
   {
-    name: "Felix Wagner",
-    handle: "@felixwagner",
+    name: "Community member",
     body: "There's something special about a room where everyone is shipping. w3.hub gets it. This is what a real ecosystem feels like.",
   },
   {
-    name: "Nadia Costa",
-    handle: "@nadiacosta",
+    name: "Community member",
     body: "Knowledge sessions at w3.hub leveled up our whole team. Brain parties for curious minds, exactly as advertised. 🧠",
   },
 ];
@@ -62,7 +58,7 @@ function Column({ tweets, base }: { tweets: Tweet[]; base: number }) {
   return (
     <div className="flex flex-col gap-5">
       {tweets.map((t, i) => (
-        <SectionReveal key={t.handle} index={base + i} step={0.05} y={20}>
+        <SectionReveal key={t.body} index={base + i} step={0.05} y={20}>
           <TweetCard tweet={t} />
         </SectionReveal>
       ))}

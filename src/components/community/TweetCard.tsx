@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export type Tweet = {
   name: string;
-  handle: string;
+  handle?: string;
   body: string;
 };
 
@@ -52,11 +52,13 @@ export default function TweetCard({ tweet }: { tweet: Tweet }) {
           <div className="leading-tight">
             <p className="flex items-center gap-1 font-body text-[15px] font-bold text-ink">
               {tweet.name}
-              <VerifiedMark />
+              {tweet.handle ? <VerifiedMark /> : null}
             </p>
-            <p className="font-body text-[14px] text-slate-violet-500">
-              {tweet.handle}
-            </p>
+            {tweet.handle ? (
+              <p className="font-body text-[14px] text-slate-violet-500">
+                {tweet.handle}
+              </p>
+            ) : null}
           </div>
         </div>
         <XLogo />

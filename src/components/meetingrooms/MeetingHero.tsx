@@ -8,7 +8,7 @@ export default function MeetingHero() {
   return (
     <section className="relative w-full overflow-hidden bg-ink-900 text-white">
       <Image
-        src="/images/photos/meeting-room-glass-wall.png"
+        src="/images/meetingrooms/hero.jpg"
         alt=""
         aria-hidden
         fill
