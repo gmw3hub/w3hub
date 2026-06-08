@@ -8,17 +8,21 @@ export default function MeetingHero() {
   return (
     <section className="relative w-full overflow-hidden bg-ink-900 text-white">
       <Image
-        src="/images/meetingrooms/hero.jpg"
+        src="/images/photos/meeting-room-glass-wall.png"
         alt=""
         aria-hidden
         fill
         priority
         sizes="100vw"
-        className="object-cover opacity-60"
+        className="object-cover"
       />
       <div
         aria-hidden
-        className="absolute inset-0 bg-linear-to-t from-black/75 via-black/45 to-black/40"
+        className="absolute inset-0 bg-linear-to-t from-black/65 via-black/25 to-black/10"
+      />
+      <div
+        aria-hidden
+        className="absolute inset-0 bg-linear-to-r from-black/55 via-black/20 to-transparent"
       />
 
       <div className="relative z-10 mx-auto flex min-h-[520px] w-full max-w-[1136px] flex-col justify-end px-5 pb-16 pt-32 md:min-h-[600px] md:px-8 md:pb-20 md:pt-40 lg:pb-24">
