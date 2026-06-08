@@ -11,25 +11,25 @@ type Tile = {
 
 const TILES: Tile[] = [
   {
-    src: "/images/coworking/tile-highscore.png",
+    src: "/images/coworking/tile-highscore.webp",
     alt: "Arcade machine and lounge seating at w3.hub Berlin",
     label: "Break the highscore",
     className: "md:col-span-2 md:row-span-2",
   },
   {
-    src: "/images/coworking/tile-sun.png",
+    src: "/images/coworking/tile-sun.webp",
     alt: "Sun-filled lounge with sofas and tall windows",
     label: "Chill in the sun",
     className: "",
   },
   {
-    src: "/images/coworking/tile-coffee.png",
+    src: "/images/coworking/tile-coffee.webp",
     alt: "Cosy community lounge with plants and modular sofas",
     label: "Enjoy a chill coffee",
     className: "",
   },
   {
-    src: "/images/photos/coworking-desk-monitors.png",
+    src: "/images/photos/coworking-desk-monitors.webp",
     alt: "Workstations with monitors at w3.hub",
     label: "Take a virtual tour",
     className: "md:col-span-2",

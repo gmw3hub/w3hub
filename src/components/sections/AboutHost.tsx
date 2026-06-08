@@ -20,7 +20,7 @@ export default function AboutHost() {
           <Card className="flex flex-col overflow-hidden p-2 md:flex-row md:items-stretch">
             <div className="relative aspect-16/10 w-full overflow-hidden rounded-2xl md:aspect-auto md:w-[472px] md:shrink-0">
               <Image
-                src="/images/host-w3group.jpg"
+                src="/images/host-w3group.webp"
                 alt="The w3.group team in Berlin"
                 fill
                 sizes="(min-width: 768px) 472px, 100vw"

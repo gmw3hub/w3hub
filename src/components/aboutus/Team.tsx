@@ -9,27 +9,27 @@ const TEAM: Member[] = [
   {
     name: "Quinn Wilhelm",
     role: "Community & Shitposting",
-    photo: "/images/team/quinn-wilhelm.jpg",
+    photo: "/images/team/quinn-wilhelm.webp",
   },
   {
     name: "Kushal Singh",
     role: "Operations Manager",
-    photo: "/images/team/kushal-singh.png",
+    photo: "/images/team/kushal-singh.webp",
   },
   {
     name: "Vicktoria Klich",
     role: "Co-Founder",
-    photo: "/images/team/vicktoria-klich.jpg",
+    photo: "/images/team/vicktoria-klich.webp",
   },
   {
     name: "Jonathan Kuhl",
     role: "Co-Founder",
-    photo: "/images/team/jonathan-kuhl.jpg",
+    photo: "/images/team/jonathan-kuhl.webp",
   },
   {
     name: "Henrik Bredenbals",
     role: "Co-Founder",
-    photo: "/images/team/henrik-bredenbals.jpg",
+    photo: "/images/team/henrik-bredenbals.webp",
   },
 ];
 

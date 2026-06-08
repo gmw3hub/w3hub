@@ -5,7 +5,7 @@ export default function EventHero() {
   return (
     <section className="relative h-[88vh] min-h-[560px] w-full overflow-hidden text-white">
       <Image
-        src="/images/eventspace/hero-venue-lounge.png"
+        src="/images/eventspace/hero-venue-lounge.webp"
         alt=""
         aria-hidden
         fill

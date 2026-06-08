@@ -7,9 +7,9 @@ import DottedDivider from "@/components/ui/DottedDivider";
 type Partner = { src: string; alt: string; w: number; h: number };
 
 const PARTNERS: Partner[] = [
-  { src: "/images/partners/ledger.png", alt: "Ledger", w: 171, h: 59 },
-  { src: "/images/partners/jagermeister.png", alt: "Jägermeister", w: 214, h: 81 },
-  { src: "/images/partners/w3-labs.png", alt: "w3.labs", w: 155, h: 56 },
+  { src: "/images/partners/ledger.webp", alt: "Ledger", w: 171, h: 59 },
+  { src: "/images/partners/jagermeister.webp", alt: "Jägermeister", w: 214, h: 81 },
+  { src: "/images/partners/w3-labs.webp", alt: "w3.labs", w: 155, h: 56 },
 ];
 
 type DecoSpec = { src: string; w: number; h: number; className: string };

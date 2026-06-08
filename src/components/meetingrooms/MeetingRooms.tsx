@@ -24,7 +24,7 @@ const FEATURES = [
 const ROOMS: Room[] = [
   {
     title: "Small Meeting Room",
-    image: "/images/meetingrooms/small-room.png",
+    image: "/images/meetingrooms/small-room.webp",
     description:
       "Host intimate meetings in our professional space designed for 2-4 people.",
     pax: "2-4 PAX",
@@ -32,7 +32,7 @@ const ROOMS: Room[] = [
   },
   {
     title: "Big Meeting Room",
-    image: "/images/meetingrooms/big-room.png",
+    image: "/images/meetingrooms/big-room.webp",
     description:
       "Conduct team gatherings in our spacious venue accommodating 8-10 people.",
     pax: "8-10 PAX",

@@ -4,16 +4,16 @@ import DoodleBackdrop from "@/components/ui/DoodleBackdrop";
 type Slide = { src: string; label: string };
 
 const SLIDES: Slide[] = [
-  { label: "Vibesssssssssssssss", src: "/images/marquee/vibes.jpg" },
-  { label: "Pizza", src: "/images/marquee/pizza.jpg" },
-  { label: "Hackathons", src: "/images/marquee/hackathons.png" },
-  { label: "Community Space", src: "/images/marquee/community-space.png" },
-  { label: "Flowers", src: "/images/marquee/flowers.jpg" },
-  { label: "Meetups", src: "/images/marquee/meetups.png" },
-  { label: "Hairy Friends", src: "/images/marquee/hairy-friends.jpg" },
-  { label: "Demo Days", src: "/images/marquee/demo-days.jpg" },
-  { label: "More Pizza", src: "/images/marquee/more-pizza.jpg" },
-  { label: "Winners", src: "/images/marquee/winners.jpg" },
+  { label: "Vibesssssssssssssss", src: "/images/marquee/vibes.webp" },
+  { label: "Pizza", src: "/images/marquee/pizza.webp" },
+  { label: "Hackathons", src: "/images/marquee/hackathons.webp" },
+  { label: "Community Space", src: "/images/marquee/community-space.webp" },
+  { label: "Flowers", src: "/images/marquee/flowers.webp" },
+  { label: "Meetups", src: "/images/marquee/meetups.webp" },
+  { label: "Hairy Friends", src: "/images/marquee/hairy-friends.webp" },
+  { label: "Demo Days", src: "/images/marquee/demo-days.webp" },
+  { label: "More Pizza", src: "/images/marquee/more-pizza.webp" },
+  { label: "Winners", src: "/images/marquee/winners.webp" },
 ];
 
 // Second row rotates the deck so the two tracks never align column-for-column.

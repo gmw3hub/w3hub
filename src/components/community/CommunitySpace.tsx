@@ -5,9 +5,9 @@ import { Badge } from "@/components/ui/badge";
 type SpaceCard = { src: string; label: string };
 
 const CARDS: SpaceCard[] = [
-  { src: "/images/community/break-the-highscore.png", label: "Break the highscore" },
-  { src: "/images/community/chill-in-the-sun.png", label: "Chill in the sun" },
-  { src: "/images/community/enjoy-a-chill-coffee.png", label: "Enjoy a chill coffee" },
+  { src: "/images/community/break-the-highscore.webp", label: "Break the highscore" },
+  { src: "/images/community/chill-in-the-sun.webp", label: "Chill in the sun" },
+  { src: "/images/community/enjoy-a-chill-coffee.webp", label: "Enjoy a chill coffee" },
 ];
 
 export default function CommunitySpace() {

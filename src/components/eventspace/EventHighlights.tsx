@@ -12,18 +12,18 @@ type Highlight = {
 const HIGHLIGHTS: Highlight[] = [
   {
     title: "SOLANA 24h hackathon",
-    image: "/images/eventspace/highlight-solana-hackathon.png",
-    logo: { src: "/images/partners/solana.png", alt: "Solana", w: 1749, h: 261 },
+    image: "/images/eventspace/highlight-solana-hackathon.webp",
+    logo: { src: "/images/partners/solana.webp", alt: "Solana", w: 1749, h: 261 },
   },
   {
     title: "Celestia x w3.fund Community Event",
-    image: "/images/eventspace/highlight-celestia-community.png",
-    logo: { src: "/images/partners/celestia.png", alt: "Celestia", w: 789, h: 215 },
+    image: "/images/eventspace/highlight-celestia-community.webp",
+    logo: { src: "/images/partners/celestia.webp", alt: "Celestia", w: 789, h: 215 },
   },
   {
     title: "Cardano Hackathon",
-    image: "/images/eventspace/highlight-cardano-hackathon.png",
-    logo: { src: "/images/partners/cardano.png", alt: "Cardano", w: 2000, h: 2000 },
+    image: "/images/eventspace/highlight-cardano-hackathon.webp",
+    logo: { src: "/images/partners/cardano.webp", alt: "Cardano", w: 2000, h: 2000 },
   },
 ];
 
