@@ -7,6 +7,7 @@ import AdditionalSolutions from "@/components/coworking/AdditionalSolutions";
 import CoworkingCta from "@/components/coworking/CoworkingCta";
 import CommunitySpace from "@/components/coworking/CommunitySpace";
 import VirtualTour from "@/components/coworking/VirtualTour";
+import UpcomingEvents from "@/components/coworking/UpcomingEvents";
 import MemberBenefits from "@/components/coworking/MemberBenefits";
 import Location from "@/components/sections/Location";
 import AboutHost from "@/components/sections/AboutHost";
@@ -29,6 +30,7 @@ export default function CoWorkingPage() {
       <CoworkingCta />
       <CommunitySpace />
       <VirtualTour />
+      <UpcomingEvents />
       <MemberBenefits />
       <Location />
       <AboutHost />
