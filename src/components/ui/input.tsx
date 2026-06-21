@@ -18,7 +18,7 @@ const inputVariants = cva(
         // Mirrors the Newsletter form's standalone (mobile) styling exactly;
         // call sites can layer responsive overrides via className (e.g. the
         // newsletter form's `sm:bg-transparent sm:ring-0 sm:focus:ring-0`).
-        pill: "rounded-full bg-paper px-5 py-3 text-[16px] text-ink ring-1 ring-black/6 transition-[background-color,box-shadow] placeholder:text-black/45 focus:bg-white focus:outline-none focus:ring-2 focus:ring-ink/55",
+        pill: "rounded-full bg-paper px-5 py-3 text-[16px] text-ink ring-1 ring-black/6 outline-none transition-[color,box-shadow] placeholder:text-black/45 focus-visible:ring-[3px] focus-visible:ring-ring/50",
       },
     },
     defaultVariants: { variant: "default" },

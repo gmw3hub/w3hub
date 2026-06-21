@@ -3,7 +3,6 @@
 import { useState } from "react";
 import ArrowCircle from "@/components/ui/ArrowCircle";
 import { Input } from "@/components/ui/input";
-import { cn } from "@/lib/utils";
 
 const WEBHOOK_URL = "https://hook.eu1.make.com/8k2nrs83id1yo9pal2ruqiafqgi7f6q7";
 
@@ -12,7 +11,6 @@ type Status = "idle" | "loading" | "success" | "error";
 export default function NewsletterForm() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<Status>("idle");
-  const [focused, setFocused] = useState(false);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -41,12 +39,7 @@ export default function NewsletterForm() {
     <>
       <form
         onSubmit={onSubmit}
-        className={cn(
-          "mt-6 flex w-full flex-col items-stretch gap-2 sm:flex-row sm:items-center sm:rounded-full sm:p-1.5 sm:transition-[background-color,box-shadow]",
-          focused
-            ? "sm:bg-white sm:ring-2 sm:ring-ink/60"
-            : "sm:bg-paper sm:ring-1 sm:ring-black/6"
-        )}
+        className="mt-6 flex w-full flex-col items-stretch gap-2 sm:flex-row sm:items-center sm:rounded-full sm:bg-paper sm:p-1.5 sm:ring-1 sm:ring-black/6 sm:outline-none sm:transition-[color,box-shadow] sm:focus-within:ring-[3px] sm:focus-within:ring-ring/50"
       >
         <label htmlFor="newsletter-email" className="sr-only">
           Email Address
@@ -61,15 +54,10 @@ export default function NewsletterForm() {
             setEmail(e.target.value);
             if (status !== "idle") setStatus("idle");
           }}
-          onFocus={() => setFocused(true)}
-          onBlur={() => setFocused(false)}
           placeholder="Email Address"
           disabled={status === "success"}
           aria-describedby="newsletter-status"
-          className={cn(
-            "flex-1 sm:bg-transparent sm:ring-0",
-            focused && "bg-white ring-2 ring-ink/60"
-          )}
+          className="flex-1 sm:bg-transparent sm:ring-0 sm:focus-visible:ring-0"
         />
         <button
           type="submit"
