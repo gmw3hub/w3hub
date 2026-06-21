@@ -18,7 +18,6 @@ const NAV: NavItem[] = [
     label: "Solutions",
     items: [
       { label: "Work Solutions", href: "/co-working" },
-      { label: "Event Space", href: "/event-space" },
       { label: "Meeting Rooms", href: "/meeting-rooms" },
     ],
   },
@@ -27,7 +26,6 @@ const NAV: NavItem[] = [
     label: "Events",
     items: [
       { label: "Event Space", href: "/event-space" },
-      { label: "Berlin Blockchain Festival", href: "https://blockchainfestival.berlin/" },
       { label: "Event Calendar", href: "/event-calendar" },
     ],
   },
