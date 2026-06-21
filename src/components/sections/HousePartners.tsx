@@ -57,8 +57,8 @@ export default function HousePartners() {
     <section className="relative w-full overflow-hidden bg-paper">
       <DoodleBackdrop />
       <div className="relative mx-auto max-w-[1136px] px-4 pt-14 sm:px-6 md:pt-20">
-        <div className="relative rounded-t-[56px] bg-paper p-2">
-          <div className="relative rounded-t-[48px] border-2 border-b-0 border-dashed border-[#96908D]/50 px-6 pb-20 pt-16 md:pt-20">
+        <div className="relative rounded-t-[56px] bg-paper p-1.5">
+          <div className="relative rounded-t-[50px] border-2 border-b-0 border-dashed border-[#96908D]/50 px-6 pb-20 pt-16 md:pt-20">
             {DECO.map((d) => (
               <Image
                 key={d.src}
