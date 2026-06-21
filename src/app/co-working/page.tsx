@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import CoworkingHero from "@/components/coworking/CoworkingHero";
 import PartnerMarquee from "@/components/coworking/PartnerMarquee";
 import MembershipPlans from "@/components/coworking/MembershipPlans";
+import VibesMarquee from "@/components/sections/VibesMarquee";
 import CommunitySpace from "@/components/coworking/CommunitySpace";
 import MemberBenefits from "@/components/coworking/MemberBenefits";
 import Location from "@/components/sections/Location";
@@ -20,6 +21,7 @@ export default function CoWorkingPage() {
       <CoworkingHero />
       <PartnerMarquee />
       <MembershipPlans />
+      <VibesMarquee />
       <CommunitySpace />
       <MemberBenefits />
       <Location />

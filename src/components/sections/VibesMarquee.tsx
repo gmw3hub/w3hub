@@ -1,5 +1,9 @@
+"use client";
+
 import Image from "next/image";
+import { motion, type Variants } from "framer-motion";
 import DoodleBackdrop from "@/components/ui/DoodleBackdrop";
+import { easeOutSoft } from "@/lib/animations";
 
 type Slide = { src: string; label: string };
 
@@ -20,9 +24,27 @@ const SLIDES: Slide[] = [
 const ROW_1 = SLIDES;
 const ROW_2 = [...SLIDES.slice(5), ...SLIDES.slice(0, 5)];
 
+const trackReveal: Variants = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.07, delayChildren: 0.05 } },
+};
+
+const cardReveal: Variants = {
+  hidden: { opacity: 0, y: 28, scale: 0.95 },
+  show: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.5, ease: easeOutSoft },
+  },
+};
+
 function Card({ slide }: { slide: Slide }) {
   return (
-    <div className="shrink-0 w-[300px] md:w-[350px] rounded-3xl bg-white p-2 shadow-card">
+    <motion.div
+      variants={cardReveal}
+      className="shrink-0 w-[300px] md:w-[350px] rounded-3xl bg-white p-2 shadow-card"
+    >
       <div className="relative h-[214px] md:h-[250px] w-full overflow-hidden rounded-[20px]">
         <Image
           src={slide.src}
@@ -37,7 +59,7 @@ function Card({ slide }: { slide: Slide }) {
           </span>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
@@ -54,16 +76,20 @@ function Row({
   const items = [...slides, ...slides];
   return (
     <div className="overflow-visible">
-      <div
+      <motion.div
         className="flex w-max gap-4"
         style={{
           animation: `${reverse ? "marquee-x-reverse" : "marquee-x"} ${duration}s linear infinite`,
         }}
+        variants={trackReveal}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.1 }}
       >
         {items.map((s, i) => (
           <Card key={s.label + i} slide={s} />
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 }
