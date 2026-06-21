@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import CalendarHero from "@/components/eventcalendar/CalendarHero";
 import CalendarSection from "@/components/eventcalendar/CalendarSection";
 import Newsletter from "@/components/sections/Newsletter";
 import Faq from "@/components/sections/Faq";
@@ -21,7 +20,6 @@ export const metadata: Metadata = {
 export default function EventCalendarPage() {
   return (
     <main className="flex flex-1 flex-col">
-      <CalendarHero />
       <CalendarSection />
       <Newsletter />
       <Faq />
