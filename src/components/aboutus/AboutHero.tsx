@@ -1,7 +1,7 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
-import { Badge } from "@/components/ui/badge";
 import { fadeUp, heroStagger } from "@/lib/animations";
 
 export default function AboutHero() {
@@ -12,20 +12,27 @@ export default function AboutHero() {
       variants={heroStagger}
       className="flex flex-col items-center text-center"
     >
-      <motion.div variants={fadeUp}>
-        <Badge variant="eyebrow-mint">about us</Badge>
-      </motion.div>
-
-      <motion.h1
+      <motion.p
         variants={fadeUp}
-        className="mt-5 font-display font-extrabold text-ink tracking-tight text-[34px] leading-[1.08] sm:text-[44px] md:text-[52px] lg:text-[60px] lg:leading-[64px]"
+        className="font-body text-[16px] font-semibold leading-5 text-[#6d4aff]"
       >
         The Faces Behind
-      </motion.h1>
+      </motion.p>
+
+      <motion.div variants={fadeUp} className="mt-4">
+        <Image
+          src="/images/logos/w3hub-wordmark.webp"
+          alt="w3.hub"
+          width={320}
+          height={85}
+          priority
+          className="h-auto w-[220px] md:w-[280px] lg:w-[320px]"
+        />
+      </motion.div>
 
       <motion.p
         variants={fadeUp}
-        className="mt-6 max-w-[760px] font-body text-[16px] leading-7 font-medium text-ink/80 md:text-[17px]"
+        className="mt-8 max-w-[760px] font-body text-[16px] leading-7 font-medium text-ink/80 md:text-[18px] md:leading-8"
       >
         w3.hub was founded in 2022 as part of w3.group. Today it is the central
         meeting point for Berlin&apos;s Web3, blockchain, crypto and AI
