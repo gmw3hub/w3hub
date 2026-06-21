@@ -69,7 +69,7 @@ export default function Team() {
   return (
     <section className="w-full pb-16 md:pb-20 lg:pb-24">
       <div className="mx-auto max-w-[1136px] px-5 md:px-8">
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 min-[1024px]:grid-cols-4">
+        <div className="mx-auto grid max-w-[920px] grid-cols-1 gap-5 sm:grid-cols-2 min-[900px]:grid-cols-3">
           {TEAM.map((member, i) => (
             <MemberCard key={member.name} member={member} index={i} />
           ))}
