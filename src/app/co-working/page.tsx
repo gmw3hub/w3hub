@@ -3,6 +3,8 @@ import CoworkingHero from "@/components/coworking/CoworkingHero";
 import PartnerMarquee from "@/components/coworking/PartnerMarquee";
 import MembershipPlans from "@/components/coworking/MembershipPlans";
 import VibesMarquee from "@/components/sections/VibesMarquee";
+import AdditionalSolutions from "@/components/coworking/AdditionalSolutions";
+import CoworkingCta from "@/components/coworking/CoworkingCta";
 import CommunitySpace from "@/components/coworking/CommunitySpace";
 import MemberBenefits from "@/components/coworking/MemberBenefits";
 import Location from "@/components/sections/Location";
@@ -22,6 +24,8 @@ export default function CoWorkingPage() {
       <PartnerMarquee />
       <MembershipPlans />
       <VibesMarquee />
+      <AdditionalSolutions />
+      <CoworkingCta />
       <CommunitySpace />
       <MemberBenefits />
       <Location />
