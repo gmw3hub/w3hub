@@ -24,7 +24,7 @@ export default function CoworkingCta() {
         className="absolute inset-0 bg-linear-to-t from-black/55 via-black/15 to-black/10"
       />
 
-      <div className="relative z-10 mx-auto flex h-full max-w-[1400px] flex-col justify-end gap-6 px-5 pb-8 md:px-8 md:pb-10 lg:px-12">
+      <div className="relative z-10 mx-auto flex h-full max-w-[1136px] flex-col justify-end gap-6 px-5 pb-8 md:px-8 md:pb-10">
         <SectionReveal as="div" y={16}>
           <Image
             src="/images/logo-wordmark.svg"

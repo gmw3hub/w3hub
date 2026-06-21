@@ -9,6 +9,7 @@
   /* Fonts (CSS vars set by next/font in layout.tsx) */
   --font-display: var(--font-unbounded);
   --font-body: var(--font-inter);
+  --font-handwriting: var(--font-caveat);
 
   /* Brand */
   --color-accent: #ff4200;
