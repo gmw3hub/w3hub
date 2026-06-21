@@ -1,20 +1,20 @@
 import SectionReveal from "@/components/ui/SectionReveal";
-import DottedDivider from "@/components/ui/DottedDivider";
 
 type Plan = {
   name: string;
+  badge: string;
   price: string;
   unit?: string;
   tagline: string;
   features: string[];
   cta: string;
   href: string;
-  featured?: boolean;
 };
 
 const PLANS: Plan[] = [
   {
     name: "The Club",
+    badge: "bg-[#f3e3c6] text-[#7a5a1f]",
     price: "€180",
     unit: "net / month",
     tagline: "Work from our vibrant Club Lounge during regular business hours.",
@@ -29,6 +29,7 @@ const PLANS: Plan[] = [
   },
   {
     name: "The Pro",
+    badge: "bg-[#cde6f7] text-[#1f5b86]",
     price: "€275",
     unit: "net / month",
     tagline: "Get full 24/7 access to the entire building with premium perks.",
@@ -40,10 +41,10 @@ const PLANS: Plan[] = [
     ],
     cta: "Secure Seat",
     href: "https://w3hub.cobot.me/membership_signup/new?plan_id=e5b792d7e58936ab0af8534ef1a44ede",
-    featured: true,
   },
   {
     name: "Day Pass",
+    badge: "bg-[#e1d7f6] text-[#5a3fa0]",
     price: "€30",
     unit: "net / day",
     tagline: "Drop in for a single day of focused work and community vibes.",
@@ -58,6 +59,7 @@ const PLANS: Plan[] = [
   },
   {
     name: "Office",
+    badge: "bg-[#e9e7e3] text-ink/70",
     price: "Custom",
     tagline: "Establish your team in a private suite customized to your company needs.",
     features: [
@@ -71,21 +73,20 @@ const PLANS: Plan[] = [
   },
 ];
 
-function CheckIcon({ dark }: { dark?: boolean }) {
+function CheckIcon() {
   return (
     <svg
-      width="18"
-      height="18"
-      viewBox="0 0 18 18"
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
       fill="none"
       aria-hidden
-      className={`mt-[3px] shrink-0 ${dark ? "text-mint" : "text-ink"}`}
+      className="mt-[3px] shrink-0 text-ink"
     >
-      <circle cx="9" cy="9" r="9" fill="currentColor" />
       <path
-        d="M5.25 9.25 7.75 11.75 12.75 6.5"
-        stroke={dark ? "#181a1c" : "#fff"}
-        strokeWidth="1.6"
+        d="M3 8.25 6.25 11.5 13 4.5"
+        stroke="currentColor"
+        strokeWidth="1.8"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
@@ -94,53 +95,38 @@ function CheckIcon({ dark }: { dark?: boolean }) {
 }
 
 function PlanCard({ plan }: { plan: Plan }) {
-  const featured = plan.featured;
-  const surface = featured ? "bg-ink-800 text-white" : "bg-white text-ink shadow-card ring-1 ring-warm-grey";
-  const ctaCls = featured
-    ? "bg-mint text-ink hover:bg-white"
-    : "bg-ink-800 text-white hover:bg-ink-900";
-
   return (
-    <article
-      className={`flex h-full flex-col gap-5 rounded-3xl p-6 transition-transform duration-300 hover:-translate-y-1 ${surface}`}
-    >
-      <div className="flex flex-col gap-1">
-        <h3 className="font-display text-[18px] font-extrabold leading-6">
-          {plan.name}
-        </h3>
-        <p className={`flex items-baseline gap-1.5 ${featured ? "text-white" : "text-ink"}`}>
-          <span className="font-display text-[30px] font-extrabold leading-none">
-            {plan.price}
-          </span>
-          {plan.unit && (
-            <span
-              className={`font-body text-[14px] font-medium ${
-                featured ? "text-white/70" : "text-muted"
-              }`}
-            >
-              {plan.unit}
-            </span>
-          )}
-        </p>
-      </div>
-
-      <p
-        className={`font-body text-[15px] leading-6 ${
-          featured ? "text-white/80" : "text-muted"
-        }`}
+    <article className="flex h-full flex-col gap-5 rounded-3xl bg-white p-6 shadow-[0_14px_40px_-18px_rgba(16,20,34,0.18)] ring-1 ring-black/5 transition-transform duration-300 hover:-translate-y-1">
+      <span
+        className={`inline-flex w-fit items-center rounded-full px-3 py-1 font-body text-[13px] font-semibold ${plan.badge}`}
       >
-        {plan.tagline}
+        {plan.name}
+      </span>
+
+      <p className="flex items-baseline gap-1.5 text-ink">
+        <span className="font-display text-[32px] font-extrabold leading-none">
+          {plan.price}
+        </span>
+        {plan.unit && (
+          <span className="font-body text-[14px] font-medium text-muted">
+            {plan.unit}
+          </span>
+        )}
       </p>
 
-      <DottedDivider
-        variant={featured ? "light" : "dark-tight"}
-        className="h-[5px] w-full"
-      />
+      <p className="font-body text-[15px] leading-6 text-muted">{plan.tagline}</p>
 
-      <ul className="flex flex-1 flex-col gap-3">
+      <h4 className="font-display text-[20px] font-extrabold leading-6 text-ink">
+        Features
+      </h4>
+
+      <ul className="flex flex-col gap-3">
         {plan.features.map((f) => (
-          <li key={f} className="flex items-start gap-2.5 font-body text-[15px] leading-6">
-            <CheckIcon dark={featured} />
+          <li
+            key={f}
+            className="flex items-start gap-2.5 font-body text-[15px] leading-6 text-ink"
+          >
+            <CheckIcon />
             <span>{f}</span>
           </li>
         ))}
@@ -150,7 +136,7 @@ function PlanCard({ plan }: { plan: Plan }) {
         href={plan.href}
         target="_blank"
         rel="noopener noreferrer"
-        className={`inline-flex items-center justify-center rounded-full px-6 py-3 text-[16px] font-medium leading-5 transition-colors ${ctaCls}`}
+        className="mt-auto inline-flex w-full items-center justify-center rounded-full bg-mint px-6 py-3.5 text-[15px] font-semibold text-ink transition-colors hover:bg-[#9bf0af]"
       >
         {plan.cta}
       </a>
@@ -172,7 +158,7 @@ export default function MembershipPlans() {
           </p>
         </SectionReveal>
 
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 min-[1024px]:grid-cols-4">
           {PLANS.map((plan, i) => (
             <SectionReveal key={plan.name} index={i} step={0.08} y={20} className="h-full">
               <PlanCard plan={plan} />
