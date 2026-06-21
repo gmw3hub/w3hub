@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import EventHero from "@/components/eventspace/EventHero";
+import VenueMarquee from "@/components/eventspace/VenueMarquee";
 import EventHighlights from "@/components/eventspace/EventHighlights";
-import FormatMarquee from "@/components/eventspace/FormatMarquee";
+import VirtualWalkthrough from "@/components/eventspace/VirtualWalkthrough";
+import ModularEventSpace from "@/components/eventspace/ModularEventSpace";
 import EventFeatures from "@/components/eventspace/EventFeatures";
-import Events from "@/components/sections/Events";
 import Location from "@/components/sections/Location";
-import Newsletter from "@/components/sections/Newsletter";
-import AboutHost from "@/components/sections/AboutHost";
+import Events from "@/components/sections/Events";
 import Faq from "@/components/sections/Faq";
 
 export const metadata: Metadata = {
@@ -24,13 +24,13 @@ export default function EventSpacePage() {
   return (
     <main className="flex flex-1 flex-col">
       <EventHero />
+      <VenueMarquee />
       <EventHighlights />
-      <FormatMarquee />
+      <VirtualWalkthrough />
+      <ModularEventSpace />
       <EventFeatures />
-      <Events />
       <Location />
-      <Newsletter />
-      <AboutHost />
+      <Events />
       <Faq />
     </main>
   );
