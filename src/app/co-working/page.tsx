@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import CoworkingHero from "@/components/coworking/CoworkingHero";
+import PartnerMarquee from "@/components/coworking/PartnerMarquee";
 import MembershipPlans from "@/components/coworking/MembershipPlans";
 import CommunitySpace from "@/components/coworking/CommunitySpace";
 import MemberBenefits from "@/components/coworking/MemberBenefits";
@@ -17,6 +18,7 @@ export default function CoWorkingPage() {
   return (
     <main className="flex flex-1 flex-col">
       <CoworkingHero />
+      <PartnerMarquee />
       <MembershipPlans />
       <CommunitySpace />
       <MemberBenefits />
