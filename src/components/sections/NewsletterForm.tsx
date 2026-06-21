@@ -44,7 +44,7 @@ export default function NewsletterForm() {
         className={cn(
           "mt-6 flex w-full flex-col items-stretch gap-2 sm:flex-row sm:items-center sm:rounded-full sm:p-1.5 sm:transition-[background-color,box-shadow]",
           focused
-            ? "sm:bg-white sm:ring-2 sm:ring-ink/55"
+            ? "sm:bg-white sm:ring-2 sm:ring-ink/60"
             : "sm:bg-paper sm:ring-1 sm:ring-black/6"
         )}
       >
@@ -68,7 +68,7 @@ export default function NewsletterForm() {
           aria-describedby="newsletter-status"
           className={cn(
             "flex-1 sm:bg-transparent sm:ring-0",
-            focused && "bg-white ring-2 ring-ink/55"
+            focused && "bg-white ring-2 ring-ink/60"
           )}
         />
         <button
