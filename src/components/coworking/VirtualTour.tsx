@@ -16,7 +16,7 @@ export default function VirtualTour() {
           </h2>
         </SectionReveal>
 
-        <SectionReveal className="mx-auto max-w-[920px]">
+        <SectionReveal>
           <Card surface="ring-warm" className="overflow-hidden p-2">
             <div className="relative aspect-16/9 w-full overflow-hidden rounded-2xl bg-warm-grey">
               <iframe
