@@ -4,6 +4,8 @@ export type Tweet = {
   name: string;
   handle?: string;
   body: string;
+  timestamp?: string;
+  likes?: number;
 };
 
 function VerifiedMark() {
@@ -40,6 +42,57 @@ function XLogo() {
   );
 }
 
+function HeartIcon() {
+  return (
+    <svg
+      aria-hidden
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      className="shrink-0"
+    >
+      <path
+        fill="#f91880"
+        d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91z"
+      />
+    </svg>
+  );
+}
+
+function ReplyIcon() {
+  return (
+    <svg
+      aria-hidden
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      className="shrink-0 text-slate-violet-500"
+    >
+      <path
+        fill="currentColor"
+        d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01zm8.005-6c-3.317 0-6.005 2.69-6.005 6 0 3.37 2.77 6.08 6.138 6.01l.351-.01h1.761v2.3l5.087-2.81c1.951-1.08 3.163-3.13 3.163-5.36 0-3.39-2.744-6.13-6.129-6.13H9.756z"
+      />
+    </svg>
+  );
+}
+
+function CopyIcon() {
+  return (
+    <svg
+      aria-hidden
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      className="shrink-0 text-slate-violet-500"
+    >
+      <path
+        fill="currentColor"
+        d="M18.36 5.64c-1.95-1.96-5.11-1.96-7.07 0L9.88 7.05 11.3 8.46l1.41-1.41c1.17-1.17 3.07-1.17 4.24 0 1.17 1.17 1.17 3.07 0 4.24l-1.41 1.41 1.41 1.42 1.41-1.42c1.96-1.95 1.96-5.11 0-7.06zm-2.12 3.53L8.83 16.58l-1.41-1.41 7.41-7.41 1.41 1.41zM7.05 14.12l-1.41 1.41c-1.17 1.17-3.07 1.17-4.24 0-1.17-1.17-1.17-3.07 0-4.24l1.41-1.41L1.4 8.46-.02 9.88c-1.95 1.95-1.95 5.11 0 7.06 1.96 1.96 5.12 1.96 7.07 0l1.41-1.41z"
+      />
+    </svg>
+  );
+}
+
 export default function TweetCard({ tweet }: { tweet: Tweet }) {
   const initial = tweet.name.charAt(0).toUpperCase();
   return (
@@ -68,17 +121,35 @@ export default function TweetCard({ tweet }: { tweet: Tweet }) {
         {tweet.body}
       </p>
 
-      <div className="mt-4 flex items-center gap-2 border-t border-dotted border-black/15 pt-3">
-        <Image
-          src="/images/logo-mark.png"
-          alt=""
-          aria-hidden
-          width={16}
-          height={16}
-          className="h-4 w-4 object-contain opacity-80"
-        />
-        <span className="font-body text-[13px] font-medium text-slate-violet-500">
-          on w3.hub
+      {tweet.timestamp ? (
+        <p className="mt-3 font-body text-[13px] text-slate-violet-500">
+          {tweet.timestamp}
+        </p>
+      ) : null}
+
+      <div className="mt-3 flex items-center gap-5 border-t border-dotted border-black/15 pt-3 text-[13px] font-medium text-slate-violet-500">
+        <span className="inline-flex items-center gap-1.5">
+          <HeartIcon />
+          <span>{tweet.likes ?? 0}</span>
+        </span>
+        <span className="inline-flex items-center gap-1.5">
+          <ReplyIcon />
+          <span>Reply</span>
+        </span>
+        <span className="inline-flex items-center gap-1.5">
+          <CopyIcon />
+          <span>Copy link</span>
+        </span>
+        <span className="ml-auto inline-flex items-center gap-1.5">
+          <Image
+            src="/images/logo-mark.png"
+            alt=""
+            aria-hidden
+            width={14}
+            height={14}
+            className="h-3.5 w-3.5 object-contain opacity-80"
+          />
+          <span className="text-slate-violet-500">w3.hub</span>
         </span>
       </div>
     </article>
