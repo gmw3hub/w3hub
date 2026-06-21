@@ -6,6 +6,7 @@ import VibesMarquee from "@/components/sections/VibesMarquee";
 import AdditionalSolutions from "@/components/coworking/AdditionalSolutions";
 import CoworkingCta from "@/components/coworking/CoworkingCta";
 import CommunitySpace from "@/components/coworking/CommunitySpace";
+import VirtualTour from "@/components/coworking/VirtualTour";
 import MemberBenefits from "@/components/coworking/MemberBenefits";
 import Location from "@/components/sections/Location";
 import AboutHost from "@/components/sections/AboutHost";
@@ -27,6 +28,7 @@ export default function CoWorkingPage() {
       <AdditionalSolutions />
       <CoworkingCta />
       <CommunitySpace />
+      <VirtualTour />
       <MemberBenefits />
       <Location />
       <AboutHost />
