@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import CalendarSection from "@/components/eventcalendar/CalendarSection";
 import Newsletter from "@/components/sections/Newsletter";
 import Faq from "@/components/sections/Faq";
-import AboutHost from "@/components/sections/AboutHost";
 
 export const metadata: Metadata = {
   title: "Event Calendar | w3.hub",
@@ -23,7 +22,6 @@ export default function EventCalendarPage() {
       <CalendarSection />
       <Newsletter />
       <Faq />
-      <AboutHost />
     </main>
   );
 }
