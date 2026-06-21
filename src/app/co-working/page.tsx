@@ -10,7 +10,6 @@ import VirtualTour from "@/components/coworking/VirtualTour";
 import UpcomingEvents from "@/components/coworking/UpcomingEvents";
 import MemberBenefits from "@/components/coworking/MemberBenefits";
 import Location from "@/components/sections/Location";
-import AboutHost from "@/components/sections/AboutHost";
 import Faq from "@/components/sections/Faq";
 
 export const metadata: Metadata = {
@@ -33,7 +32,6 @@ export default function CoWorkingPage() {
       <UpcomingEvents />
       <MemberBenefits />
       <Location />
-      <AboutHost />
       <Faq />
     </main>
   );
