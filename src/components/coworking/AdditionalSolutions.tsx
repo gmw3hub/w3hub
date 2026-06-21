@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import SectionReveal from "@/components/ui/SectionReveal";
 import DottedDivider from "@/components/ui/DottedDivider";
 import DoodleBackdrop from "@/components/ui/DoodleBackdrop";
+import DashedFrame from "@/components/ui/DashedFrame";
 import PillButton from "@/components/ui/PillButton";
 
 const BOOK_URL =
@@ -68,7 +69,10 @@ export default function AdditionalSolutions() {
       <DoodleBackdrop />
 
       <div className="relative mx-auto max-w-[1136px] px-4 py-14 sm:px-6 md:py-20">
-        <div className="relative overflow-hidden rounded-[40px] border-2 border-dashed border-[#96908D]/40 bg-paper px-6 py-14 shadow-[0_28px_70px_-34px_rgba(16,20,34,0.22)] md:px-12 md:py-16">
+        <DashedFrame
+          className="shadow-[0_28px_70px_-34px_rgba(16,20,34,0.22)]"
+          innerClassName="relative overflow-hidden px-6 py-14 md:px-12 md:py-16"
+        >
           <div
             aria-hidden
             className="pointer-events-none absolute inset-0 opacity-[0.04]"
@@ -104,7 +108,7 @@ export default function AdditionalSolutions() {
               </PillButton>
             </SectionReveal>
           </div>
-        </div>
+        </DashedFrame>
       </div>
     </section>
   );

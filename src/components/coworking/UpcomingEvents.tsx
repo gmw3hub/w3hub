@@ -1,5 +1,6 @@
 import SectionReveal from "@/components/ui/SectionReveal";
 import DoodleBackdrop from "@/components/ui/DoodleBackdrop";
+import DashedFrame from "@/components/ui/DashedFrame";
 import Chevron from "@/components/ui/Chevron";
 import { Badge } from "@/components/ui/badge";
 
@@ -13,7 +14,10 @@ export default function UpcomingEvents() {
 
       <div className="relative mx-auto max-w-[1136px] px-5 py-14 md:px-8 md:py-20">
         <SectionReveal>
-          <div className="relative flex flex-col overflow-hidden rounded-3xl border border-warm-grey bg-white shadow-card md:flex-row">
+          <DashedFrame
+            className="shadow-card"
+            innerClassName="relative flex flex-col overflow-hidden bg-white md:flex-row"
+          >
             <div className="flex shrink-0 flex-col gap-6 p-6 md:w-[320px] md:p-8">
               <div>
                 <Badge variant="eyebrow-dot">Events</Badge>
@@ -47,7 +51,7 @@ export default function UpcomingEvents() {
                 tabIndex={0}
               />
             </div>
-          </div>
+          </DashedFrame>
         </SectionReveal>
       </div>
     </section>
