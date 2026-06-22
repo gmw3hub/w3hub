@@ -4,7 +4,7 @@ import CommunityInitiatives from "@/components/community/CommunityInitiatives";
 import TwitterWall from "@/components/community/TwitterWall";
 import CommunitySpace from "@/components/coworking/CommunitySpace";
 import VibesMarquee from "@/components/sections/VibesMarquee";
-import Events from "@/components/sections/Events";
+import UpcomingEvents from "@/components/coworking/UpcomingEvents";
 
 export const metadata: Metadata = {
   title: "Community | w3.hub — Berlin's Home of Web3",
@@ -27,7 +27,7 @@ export default function CommunityPage() {
       <TwitterWall />
       <CommunitySpace />
       <VibesMarquee />
-      <Events />
+      <UpcomingEvents />
     </main>
   );
 }
