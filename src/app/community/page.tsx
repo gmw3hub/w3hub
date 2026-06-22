@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import CommunityHero from "@/components/community/CommunityHero";
 import CommunityInitiatives from "@/components/community/CommunityInitiatives";
 import TwitterWall from "@/components/community/TwitterWall";
-import CommunitySpace from "@/components/community/CommunitySpace";
+import CommunitySpace from "@/components/coworking/CommunitySpace";
 import VibesMarquee from "@/components/sections/VibesMarquee";
 import Events from "@/components/sections/Events";
 
