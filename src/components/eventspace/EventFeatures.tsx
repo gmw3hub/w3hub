@@ -1,5 +1,8 @@
 import SectionReveal from "@/components/ui/SectionReveal";
 import PillButton from "@/components/ui/PillButton";
+import DoodleBackdrop from "@/components/ui/DoodleBackdrop";
+import DashedFrame from "@/components/ui/DashedFrame";
+import DottedDivider from "@/components/ui/DottedDivider";
 
 const TYPEFORM_URL = "https://form.typeform.com/to/upEoDN4G";
 
@@ -72,43 +75,63 @@ const FEATURES: Feature[] = [
 
 export default function EventFeatures() {
   return (
-    <section className="w-full bg-paper py-16 md:py-20 lg:py-24">
-      <div className="mx-auto w-full max-w-[1136px] px-5 md:px-8">
-        <SectionReveal className="flex flex-col items-center text-center">
-          <h2 className="font-display font-extrabold text-ink text-[30px] sm:text-[36px] lg:text-[40px] leading-[1.1] lg:leading-[44px]">
-            Event Space Features
-          </h2>
-          <p className="mt-3 max-w-[560px] font-body text-[16px] font-medium leading-6 text-muted">
-            Spacious event location adaptable for various event formats with
-            professional support in-house
-          </p>
-        </SectionReveal>
+    <section className="relative w-full overflow-hidden">
+      <DoodleBackdrop />
 
-        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {FEATURES.map((f, i) => (
-            <SectionReveal
-              key={f.title}
-              as="article"
-              index={i}
-              step={0.07}
-              y={18}
-              className="flex items-center gap-3 rounded-3xl bg-white p-5 shadow-card"
-            >
-              <span className="flex h-8 w-8 shrink-0 items-center justify-center text-ink">
-                {f.icon}
-              </span>
-              <h3 className="font-display text-[16px] font-extrabold leading-6 text-ink">
-                {f.title}
-              </h3>
+      <div className="relative mx-auto max-w-[1136px] px-4 py-14 sm:px-6 md:py-20">
+        <DashedFrame
+          className="shadow-[0_28px_70px_-34px_rgba(16,20,34,0.22)]"
+          innerClassName="relative overflow-hidden px-6 py-14 md:px-12 md:py-16"
+        >
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-0 opacity-[0.04]"
+            style={{
+              backgroundImage: "url(/images/features/bg-doodle.webp)",
+              backgroundRepeat: "repeat",
+              backgroundSize: "500px",
+            }}
+          />
+
+          <div className="relative">
+            <SectionReveal className="mx-auto mb-12 flex max-w-[640px] flex-col items-center text-center">
+              <h2 className="font-display font-extrabold text-ink text-[30px] sm:text-[36px] lg:text-[40px] leading-[1.1] lg:leading-[44px]">
+                Event Space Features
+              </h2>
+              <p className="mt-3 font-body text-[16px] font-medium leading-6 text-muted">
+                Spacious event location adaptable for various event formats with
+                professional support in-house
+              </p>
             </SectionReveal>
-          ))}
-        </div>
 
-        <SectionReveal className="mt-10 flex justify-center">
-          <PillButton href={TYPEFORM_URL} external size="lg">
-            Request Event Space
-          </PillButton>
-        </SectionReveal>
+            <div className="mx-auto grid max-w-[940px] grid-cols-1 gap-5 min-[640px]:grid-cols-2 min-[900px]:grid-cols-3">
+              {FEATURES.map((f, i) => (
+                <SectionReveal
+                  key={f.title}
+                  as="article"
+                  index={i % 3}
+                  step={0.08}
+                  y={20}
+                  className="flex h-full flex-col gap-4 rounded-2xl bg-white p-5 shadow-[0_14px_40px_-22px_rgba(16,20,34,0.22)] ring-1 ring-black/5"
+                >
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center text-ink">
+                    {f.icon}
+                  </span>
+                  <DottedDivider variant="dark-tight" className="h-[5px] w-full" />
+                  <h3 className="font-display text-[18px] font-extrabold leading-6 text-ink">
+                    {f.title}
+                  </h3>
+                </SectionReveal>
+              ))}
+            </div>
+
+            <SectionReveal index={3} step={0.08} className="mt-12 flex justify-center">
+              <PillButton href={TYPEFORM_URL} external size="lg">
+                Request Event Space
+              </PillButton>
+            </SectionReveal>
+          </div>
+        </DashedFrame>
       </div>
     </section>
   );
