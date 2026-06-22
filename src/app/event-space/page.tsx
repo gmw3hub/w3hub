@@ -8,7 +8,7 @@ import VirtualWalkthrough from "@/components/eventspace/VirtualWalkthrough";
 import ModularEventSpace from "@/components/eventspace/ModularEventSpace";
 import EventFeatures from "@/components/eventspace/EventFeatures";
 import Location from "@/components/sections/Location";
-import Events from "@/components/sections/Events";
+import UpcomingEvents from "@/components/coworking/UpcomingEvents";
 import Faq from "@/components/sections/Faq";
 
 export const metadata: Metadata = {
@@ -33,9 +33,9 @@ export default function EventSpacePage() {
       <VirtualWalkthrough />
       <ModularEventSpace />
       <EventFeatures />
-      <Location />
-      <Events />
       <Faq />
+      <Location />
+      <UpcomingEvents />
     </main>
   );
 }

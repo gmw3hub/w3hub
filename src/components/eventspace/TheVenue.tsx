@@ -20,7 +20,7 @@ const PHOTOS: { src: string; alt: string }[] = [
 export default function TheVenue() {
   return (
     <section className="w-full bg-paper py-16 md:py-20 lg:py-24">
-      <div className="mx-auto max-w-[760px] px-5 md:px-8">
+      <div className="mx-auto max-w-[1136px] px-5 md:px-8">
         <SectionReveal>
           <h2 className="font-display font-extrabold text-ink text-[32px] sm:text-[40px] lg:text-[48px] leading-[1.05]">
             The Venue
