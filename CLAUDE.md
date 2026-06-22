@@ -74,6 +74,13 @@ public/
 These exist because this codebase will be heavily AI-edited. Each one prevents a
 specific regression a one-shot edit tends to introduce.
 
+> **Before building or restyling ANY UI, read [`shadcn.md`](./shadcn.md).** It is
+> the design-system playbook for this repo: the brand tokens, the shadcn-based
+> primitives, the "custom vs extend vs restyle" decision rule, the consolidation
+> rule, and the anti-patterns. New work must reuse the existing primitives in
+> `src/components/ui/` and match the current visual style + tokens — do not invent
+> one-off colours, buttons, cards, or shadows.
+
 ### 1. Server-first; client islands only when forced
 Default to server components. Reach for `"use client"` only when the file needs
 one of: `useState`/`useEffect`, event handlers, browser APIs, or framer-motion
