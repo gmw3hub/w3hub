@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import EventHero from "@/components/eventspace/EventHero";
+import TheVenue from "@/components/eventspace/TheVenue";
 import VenueMarquee from "@/components/eventspace/VenueMarquee";
 import EventHighlights from "@/components/eventspace/EventHighlights";
 import VirtualWalkthrough from "@/components/eventspace/VirtualWalkthrough";
@@ -24,6 +25,7 @@ export default function EventSpacePage() {
   return (
     <main className="flex flex-1 flex-col">
       <EventHero />
+      <TheVenue />
       <VenueMarquee />
       <EventHighlights />
       <VirtualWalkthrough />
