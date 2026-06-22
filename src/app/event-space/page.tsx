@@ -31,7 +31,7 @@ export default function EventSpacePage() {
       <ModularEventSpace />
       <EventFeatures />
       <Location />
-      <UpcomingEvents />
+      <UpcomingEvents plain />
     </main>
   );
 }

@@ -7,10 +7,14 @@ import { Badge } from "@/components/ui/badge";
 const LUMA_SRC =
   "https://lu.ma/embed/calendar/cal-K1JcFGP2bDDKmmj/events?compact=true&lt=light";
 
-export default function UpcomingEvents() {
+// `plain` drops the green doodle backdrop (paper background instead) — used
+// where the section sits between other paper sections (e.g. event-space).
+export default function UpcomingEvents({ plain = false }: { plain?: boolean }) {
   return (
-    <section className="relative w-full overflow-hidden">
-      <DoodleBackdrop />
+    <section
+      className={`relative w-full overflow-hidden ${plain ? "bg-paper" : ""}`}
+    >
+      {!plain && <DoodleBackdrop />}
 
       <div className="relative mx-auto max-w-[1136px] px-5 py-14 md:px-8 md:py-20">
         <SectionReveal>
