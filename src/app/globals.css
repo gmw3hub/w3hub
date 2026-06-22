@@ -134,3 +134,41 @@ body {
     transition-duration: 0.001ms !important;
   }
 }
+
+/* react-tweet embeds (community Twitter wall): fill the column and drop the
+   default vertical margin (the grid gap handles spacing). */
+.tweet-wall :where(.react-tweet-theme) {
+  --tweet-container-margin: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* The site is always light — pin react-tweet to the light theme even when the
+   visitor's OS is in dark mode. */
+@media (prefers-color-scheme: dark) {
+  :where(.react-tweet-theme) {
+    --tweet-border: 1px solid rgb(207, 217, 222);
+    --tweet-font-color: rgb(15, 20, 25);
+    --tweet-font-color-secondary: rgb(83, 100, 113);
+    --tweet-bg-color: #fff;
+    --tweet-bg-color-hover: rgb(247, 249, 249);
+    --tweet-color-blue-primary: rgb(29, 155, 240);
+    --tweet-color-blue-primary-hover: rgb(26, 140, 216);
+    --tweet-color-blue-secondary: rgb(0, 111, 214);
+    --tweet-color-blue-secondary-hover: rgba(0, 111, 214, 0.1);
+    --tweet-color-red-primary: rgb(249, 24, 128);
+    --tweet-color-red-primary-hover: rgba(249, 24, 128, 0.1);
+    --tweet-color-green-primary: rgb(0, 186, 124);
+    --tweet-color-green-primary-hover: rgba(0, 186, 124, 0.1);
+    --tweet-twitter-icon-color: rgb(15, 20, 25);
+    --tweet-verified-old-color: rgb(130, 154, 171);
+    --tweet-verified-blue-color: rgb(29, 155, 240);
+    --tweet-skeleton-gradient: linear-gradient(
+      270deg,
+      #fafafa,
+      #eaeaea,
+      #eaeaea,
+      #fafafa
+    );
+  }
+}
