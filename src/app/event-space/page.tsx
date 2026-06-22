@@ -8,7 +8,6 @@ import ModularEventSpace from "@/components/eventspace/ModularEventSpace";
 import EventFeatures from "@/components/eventspace/EventFeatures";
 import Location from "@/components/sections/Location";
 import UpcomingEvents from "@/components/coworking/UpcomingEvents";
-import Faq from "@/components/sections/Faq";
 
 export const metadata: Metadata = {
   title: "Event Space | w3.hub",
@@ -31,7 +30,6 @@ export default function EventSpacePage() {
       <VirtualWalkthrough />
       <ModularEventSpace />
       <EventFeatures />
-      <Faq />
       <Location />
       <UpcomingEvents />
     </main>
