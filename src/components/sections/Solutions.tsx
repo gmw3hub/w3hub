@@ -43,6 +43,16 @@ const SOLUTIONS: Solution[] = [
       "/images/solutions/meeting-3.webp",
     ],
   },
+  {
+    title: "Ecosystem Tours",
+    body: "Bring your corporate, investor or university group inside Berlin's Web3 ecosystem. Curated, insider-led tours connect you to the founders, funds and builders shaping the onchain economy – from a two-hour sneak peek to a multi-day tailor-made programme.",
+    href: "/ecosystem-tours",
+    images: [
+      "/images/photos/event-networking.webp",
+      "/images/photos/community-networking.webp",
+      "/images/photos/event-space-charitea.webp",
+    ],
+  },
 ];
 
 export default function Solutions() {
