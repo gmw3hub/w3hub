@@ -39,7 +39,7 @@ export default function NewsletterForm() {
     <>
       <form
         onSubmit={onSubmit}
-        className="mt-6 flex w-full flex-col items-stretch gap-2 sm:flex-row sm:items-center sm:rounded-full sm:bg-paper sm:p-1.5 sm:ring-1 sm:ring-black/6 sm:outline-none sm:transition-[color,box-shadow] sm:focus-within:ring-[3px] sm:focus-within:ring-ring/50"
+        className="mt-6 flex w-full flex-col items-stretch gap-2 sm:flex-row sm:items-center sm:rounded-full sm:bg-paper sm:p-1.5 sm:ring-1 sm:ring-black/6 sm:outline-none sm:transition-[color,box-shadow] sm:focus-within:ring-[3px] sm:focus-within:ring-mint"
       >
         <label htmlFor="newsletter-email" className="sr-only">
           Email Address
