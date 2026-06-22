@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import EventHero from "@/components/eventspace/EventHero";
 import TheVenue from "@/components/eventspace/TheVenue";
 import VenueVideo from "@/components/eventspace/VenueVideo";
-import VenueMarquee from "@/components/eventspace/VenueMarquee";
 import EventHighlights from "@/components/eventspace/EventHighlights";
 import VirtualWalkthrough from "@/components/eventspace/VirtualWalkthrough";
 import ModularEventSpace from "@/components/eventspace/ModularEventSpace";
@@ -28,7 +27,6 @@ export default function EventSpacePage() {
       <EventHero />
       <TheVenue />
       <VenueVideo />
-      <VenueMarquee />
       <EventHighlights />
       <VirtualWalkthrough />
       <ModularEventSpace />
