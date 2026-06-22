@@ -19,6 +19,7 @@ const NAV: NavItem[] = [
     items: [
       { label: "Work Solutions", href: "/co-working" },
       { label: "Meeting Rooms", href: "/meeting-rooms" },
+      { label: "Ecosystem Tours", href: "/ecosystem-tours" },
     ],
   },
   {

@@ -11,6 +11,7 @@ const COLUMNS: Column[] = [
     items: [
       { label: "Work Solutions", href: "/co-working" },
       { label: "Meeting Rooms", href: "/meeting-rooms" },
+      { label: "Ecosystem Tours", href: "/ecosystem-tours" },
       { label: "Community", href: "/community" },
       { label: "About Us", href: "/about-us" },
     ],
