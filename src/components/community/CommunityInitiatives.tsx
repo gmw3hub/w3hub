@@ -1,5 +1,8 @@
 import Image from "next/image";
 import SectionReveal from "@/components/ui/SectionReveal";
+import PillButton from "@/components/ui/PillButton";
+
+const TYPEFORM = "https://form.typeform.com/to/qdGDfsSN";
 
 type Initiative = {
   title: string;
@@ -75,6 +78,12 @@ export default function CommunityInitiatives() {
             </SectionReveal>
           ))}
         </div>
+
+        <SectionReveal className="mt-10 flex justify-center md:mt-12">
+          <PillButton href={TYPEFORM} external size="lg">
+            Become part of the community
+          </PillButton>
+        </SectionReveal>
       </div>
     </section>
   );
