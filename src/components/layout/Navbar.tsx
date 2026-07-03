@@ -43,7 +43,6 @@ const NAV: NavItem[] = [
       { label: "Newsletter", href: "/newsletter" },
     ],
   },
-  { type: "link", label: "About Us", href: "/about-us" },
 ];
 
 function Caret() {
@@ -102,20 +101,18 @@ export default function Navbar() {
         {/* Center: pill nav (desktop) */}
         <nav
           aria-label="Primary"
-          className="hidden lg:flex items-stretch rounded-full bg-white shadow-[0_8px_32px_-12px_rgba(16,20,34,0.22)] ring-1 ring-black/4 px-2 py-1.5"
+          className="hidden lg:flex items-stretch rounded-full bg-white shadow-[0_8px_32px_-12px_rgba(16,20,34,0.22)] ring-1 ring-black/4 px-3 py-2 gap-1"
         >
-          {NAV.map((item, idx) => {
-            const isLast = idx === NAV.length - 1;
+          {NAV.map((item) => {
             if (item.type === "link") {
               return (
                 <div key={item.label} className="flex items-stretch">
                   <SmartLink
                     href={item.href}
-                    className="px-3.5 py-1.5 text-[14px] font-medium text-ink/85 hover:text-ink transition-colors rounded-full"
+                    className="px-4 py-2 text-[15px] font-medium text-ink/85 hover:bg-paper hover:text-ink transition-colors rounded-full"
                   >
                     {item.label}
                   </SmartLink>
-                  {!isLast && <span className="self-center h-4 w-px bg-black/10" />}
                 </div>
               );
             }
@@ -129,7 +126,7 @@ export default function Navbar() {
               >
                 <button
                   type="button"
-                  className="inline-flex items-center px-3.5 py-1.5 text-[14px] font-medium text-ink/85 hover:text-ink transition-colors rounded-full"
+                  className="inline-flex items-center px-4 py-2 text-[15px] font-medium text-ink/85 hover:bg-paper hover:text-ink transition-colors rounded-full"
                   aria-haspopup="menu"
                   aria-expanded={open}
                   onFocus={() => setOpenMenu(item.label)}
@@ -137,7 +134,6 @@ export default function Navbar() {
                   {item.label}
                   <Caret />
                 </button>
-                {!isLast && <span className="self-center h-4 w-px bg-black/10" />}
                 <AnimatePresence>
                   {open && <DesktopMenu items={item.items} />}
                 </AnimatePresence>
