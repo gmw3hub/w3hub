@@ -27,8 +27,8 @@ export default function EventHeroOverlay() {
           className="mt-4 max-w-[640px] font-body text-[16px] font-medium leading-6 text-white/90 md:mt-5 md:text-[18px] md:leading-7"
         >
           500 sqm factory loft in Berlin Kreuzberg. The leading event location
-          for Web3, crypto, blockchain and AI conferences, hackathons, meetups
-          and panel events.
+          for AI, robotics, quantum and blockchain conferences, hackathons,
+          meetups and demo days.
         </motion.p>
 
         <motion.div variants={fadeUp} className="mt-7 md:mt-8">

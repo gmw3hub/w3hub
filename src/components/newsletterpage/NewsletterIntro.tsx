@@ -11,7 +11,7 @@ export default function NewsletterIntro() {
           </span>
 
           <h1 className="mt-5 font-display text-[34px] font-extrabold leading-[1.05] tracking-tight text-ink md:text-[46px] lg:text-[54px]">
-            Berlin&apos;s Home of Web3
+            The Premiere Builder Club
           </h1>
 
           <div className="mx-auto mt-6 max-w-[280px]">
@@ -21,7 +21,7 @@ export default function NewsletterIntro() {
           <p className="mx-auto mt-6 max-w-[600px] font-body text-[16px] font-medium leading-7 text-muted md:text-[17px]">
             Stay close to the community. Every week we send carefully curated
             updates, event alerts and behind-the-scenes insights straight from
-            the home of Web3 in Berlin.
+            Berlin&apos;s builder community.
           </p>
         </SectionReveal>
       </div>

@@ -5,7 +5,7 @@ import SolutionCard, { type Solution } from "./SolutionCard";
 const SOLUTIONS: Solution[] = [
   {
     title: "Become a member",
-    body: "Become part of Berlin's most vibrant Web3 community. Choose from flexible desks to dedicated workspaces that fit your style. Access cutting-edge facilities and community events where enthusiasts, startups, and creatives meet.",
+    body: "Become part of Berlin's most vibrant builder community. Choose from flexible desks to dedicated workspaces that fit your style. Access cutting-edge facilities and community events where enthusiasts, startups, and creatives meet.",
     href: "/co-working",
     images: [
       "/images/solutions/member-1.webp",
@@ -35,7 +35,7 @@ const SOLUTIONS: Solution[] = [
   },
   {
     title: "Meeting Rooms",
-    body: "Professional spaces available for members and non-members that can book by the day for client meetings, team sessions, or collaborative work. Fully equipped with presentation tools and comfortable seating – your temporary base in Berlin's Web3 hub.",
+    body: "Professional spaces available for members and non-members that can book by the day for client meetings, team sessions, or collaborative work. Fully equipped with presentation tools and comfortable seating – your temporary base in Berlin's innovation hub.",
     href: "/meeting-rooms",
     images: [
       "/images/solutions/meeting-1.webp",

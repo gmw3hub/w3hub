@@ -12,7 +12,7 @@ const FORMATS: Format[] = [
   },
   {
     title: "Community Events",
-    body: "Engaging meetups that strengthen our Web3 ecosystem.",
+    body: "Engaging meetups that strengthen our builder community.",
     image: "/images/eventspace/format-community.webp",
   },
   {

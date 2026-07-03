@@ -30,7 +30,7 @@ export default function AboutHost() {
 
             <div className="flex flex-1 flex-col justify-center gap-4 px-4 py-6 md:px-6 md:py-8">
               <h3 className="font-display font-extrabold text-ink text-[26px] sm:text-[30px] leading-[1.12]">
-                Fueling Web3
+                Fueling frontier tech
                 <br />
                 from Berlin
               </h3>
@@ -39,7 +39,7 @@ export default function AboutHost() {
 
               <p className="font-body text-[16px] leading-6 text-ink">
                 w3.hub is a collaboration between Betahaus, Bauwerk and w3.group.
-                w3.group is the leading Web3 ecosystem in Germany and is comprised
+                w3.group is a leading frontier tech ecosystem in Germany, comprised
                 of an investment arm, an infrastructure provider as well as a media
                 house with strong network effects.
               </p>

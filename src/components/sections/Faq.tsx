@@ -6,7 +6,7 @@ type QA = { q: string; a: string };
 const FAQS: QA[] = [
   {
     q: "What is w3.hub?",
-    a: "w3.hub is Berlin's home for Web3, AI and frontier tech — a coworking and event space at Gleisdreieck Park that brings together founders, builders, investors and community organisers under one roof.",
+    a: "w3.hub is Berlin's innovation & startup hub and builder club for AI, robotics, quantum and blockchain. 1,500 sqm of coworking and event space in a factory loft in Berlin Kreuzberg (Möckernstraße 120).",
   },
   {
     q: "Where is w3.hub located?",
@@ -14,7 +14,7 @@ const FAQS: QA[] = [
   },
   {
     q: "Who uses w3.hub?",
-    a: "Our members are Web3, crypto, blockchain and AI teams — from solo founders and freelancers to small companies and visiting collectives — plus the community organisers who run regular meetups, demo days, hackathons and dinners in our event space.",
+    a: "Founders, engineers and researchers in AI, robotics, quantum and blockchain, plus startups, VCs and creatives from Berlin and abroad.",
   },
   {
     q: "What does a membership cost?",
@@ -22,7 +22,7 @@ const FAQS: QA[] = [
   },
   {
     q: "Can I book w3.hub for an event?",
-    a: "Yes. Our event space is configurable for meetups, workshops, dinners and larger conferences, with full tech setup and optional community promotion. Use the Event Space page to enquire.",
+    a: "Yes. 500 sqm of factory loft for tech conferences, hackathons, meetups, panels and private dinners. Open to members and external clients.",
   },
   {
     q: "Who runs w3.hub?",

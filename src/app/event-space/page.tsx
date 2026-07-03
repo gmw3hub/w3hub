@@ -12,11 +12,11 @@ import UpcomingEvents from "@/components/coworking/UpcomingEvents";
 export const metadata: Metadata = {
   title: "Event Space | w3.hub",
   description:
-    "500 sqm factory loft in Berlin Kreuzberg — the leading event location for Web3, crypto, blockchain and AI conferences, hackathons, meetups and panel events.",
+    "500 sqm factory loft in Berlin Kreuzberg — the leading event location for AI, robotics, quantum and blockchain conferences, hackathons, meetups and demo days.",
   openGraph: {
     title: "Event Space | w3.hub",
     description:
-      "500 sqm factory loft in Berlin Kreuzberg — the leading event location for Web3, crypto, blockchain and AI conferences, hackathons, meetups and panel events.",
+      "500 sqm factory loft in Berlin Kreuzberg — the leading event location for AI, robotics, quantum and blockchain conferences, hackathons, meetups and demo days.",
   },
 };
 

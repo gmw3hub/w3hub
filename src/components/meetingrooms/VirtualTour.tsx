@@ -13,7 +13,7 @@ export default function VirtualTour() {
             Virtual w3.hub Tour
           </h2>
           <p className="max-w-[700px] font-body text-[16px] font-medium leading-6 text-muted">
-            Take a comprehensive virtual tour of Berlin&apos;s premier Web3
+            Take a comprehensive virtual tour of Berlin&apos;s premiere builder
             workspace and experience w3.hub before your visit.
           </p>
         </SectionReveal>

@@ -25,18 +25,29 @@ export default function HeroOverlay() {
           />
         </motion.p>
 
+        <motion.p
+          variants={fadeUp}
+          className="mt-4 md:mt-5 font-body text-[13px] md:text-[14px] font-bold uppercase tracking-[0.14em] text-mint"
+        >
+          The Premiere Builder Club
+        </motion.p>
+
         <motion.h1
           variants={fadeUp}
-          className="mt-3 md:mt-4 font-display font-semibold text-white tracking-tight text-[36px] leading-[1.1] sm:text-[44px] sm:leading-[1.1] md:text-[52px] md:leading-[1.1] lg:text-[60px] lg:leading-[88px]"
+          className="mt-2 font-display font-semibold text-white tracking-tight text-[36px] leading-[1.1] sm:text-[44px] sm:leading-[1.1] md:text-[52px] md:leading-[1.1] lg:text-[60px] lg:leading-[1.05]"
         >
-          Berlin&apos;s Home
+          Berlin&apos;s Innovation
           <br className="hidden sm:block" />
           <span className="sm:hidden"> </span>
-          for Web3, AI and
-          <br className="hidden sm:block" />
-          <span className="sm:hidden"> </span>
-          Frontier Tech
+          &amp; Startup Hub
         </motion.h1>
+
+        <motion.p
+          variants={fadeUp}
+          className="mt-4 max-w-[640px] font-body text-[16px] md:text-[18px] font-medium leading-7 text-white/85"
+        >
+          For builders in AI, Robotics, Quantum &amp; Blockchain.
+        </motion.p>
 
         <motion.div
           variants={fadeUp}

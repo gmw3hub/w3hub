@@ -41,10 +41,10 @@ export default function CoworkingHero() {
           variants={fadeUp}
           className="mt-5 max-w-[640px] font-body text-[16px] font-medium leading-6 text-muted md:text-[17px]"
         >
-          Flex desks, dedicated desks and private offices for Web3, AI and tech
-          teams in Berlin Kreuzberg. High speed internet, meeting rooms,
-          community events and access to one of the most active Web3 and AI
-          networks in Europe.
+          Flex desks, dedicated desks and private offices for AI, robotics,
+          quantum and blockchain teams in Berlin Kreuzberg. High speed internet,
+          meeting rooms, community events and access to one of the most active
+          frontier tech networks in Europe.
         </motion.p>
 
         <motion.div variants={fadeUp} className="mt-8">

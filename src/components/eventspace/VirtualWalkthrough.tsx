@@ -35,7 +35,7 @@ export default function VirtualWalkthrough() {
               </h3>
               <DottedDivider variant="dark-wide" className="mt-4 h-[5px] w-full" />
               <p className="mt-4 max-w-[640px] font-body text-[16px] leading-6 text-muted">
-                Take a comprehensive virtual tour of Berlin&apos;s premier Web3
+                Take a comprehensive virtual tour of Berlin&apos;s premiere builder
                 workspace and experience w3.hub before your visit.
               </p>
             </div>

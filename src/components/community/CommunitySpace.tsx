@@ -20,8 +20,8 @@ export default function CommunitySpace() {
             Hang out in our community Space
           </h2>
           <p className="max-w-[680px] font-body text-[16px] font-medium leading-6 text-muted md:text-[17px]">
-            We are a cornerstone of the Web3 community, fostering collaboration
-            and thriving.
+            We are a cornerstone of Berlin&apos;s startup community, fostering
+            collaboration and growth.
           </p>
         </SectionReveal>
 

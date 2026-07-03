@@ -27,8 +27,8 @@ export default function TheVenue() {
           </h2>
           <p className="mt-4 max-w-[640px] font-body text-[16px] font-medium leading-7 text-muted md:text-[18px]">
             500 sqm factory loft in Berlin Kreuzberg. The leading event location
-            for Web3, crypto, blockchain and AI conferences, hackathons, meetups
-            and panel events.
+            for AI, robotics, quantum and blockchain conferences, hackathons,
+            meetups and demo days.
           </p>
           <div className="mt-7 md:mt-8">
             <PillButton href={TYPEFORM_URL} external size="lg">
