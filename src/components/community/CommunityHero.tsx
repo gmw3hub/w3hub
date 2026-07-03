@@ -21,18 +21,18 @@ export default function CommunityHero() {
           variants={fadeUp}
           className="font-display font-extrabold tracking-tight text-ink text-[36px] leading-[1.08] sm:text-[44px] md:text-[52px] lg:text-[60px] lg:leading-[1.05]"
         >
-          Berlin&apos;s Home
+          Berlin&apos;s Builder
           <br className="hidden md:block" />
           <span className="md:hidden"> </span>
-          of Web3
+          Community
         </motion.h1>
 
         <motion.p
           variants={fadeUp}
           className="mt-5 max-w-[640px] font-body text-[16px] font-medium leading-6 text-muted md:text-[17px]"
         >
-          A cornerstone of the Web3 community, fostering collaboration and
-          thriving in the heart of Berlin.
+          A cornerstone of Berlin&apos;s startup community, fostering collaboration
+          and growth in the heart of Berlin.
         </motion.p>
 
         <motion.div variants={fadeUp} className="mt-8">

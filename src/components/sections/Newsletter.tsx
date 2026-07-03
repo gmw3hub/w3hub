@@ -45,7 +45,7 @@ export default function Newsletter() {
 
               <p className="mt-4 font-body text-[15px] font-medium leading-6 text-muted md:text-[16px]">
                 Every week, you&apos;ll receive carefully curated community updates,
-                event alerts, and behind-the-scenes insights from the home of Web3.
+                event alerts, and behind-the-scenes insights from Berlin&apos;s builder community.
               </p>
 
               <NewsletterForm />

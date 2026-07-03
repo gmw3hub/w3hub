@@ -7,11 +7,11 @@ import VirtualTour from "@/components/meetingrooms/VirtualTour";
 export const metadata: Metadata = {
   title: "Rent Meeting Rooms in Berlin Kreuzberg | w3.hub Coworking",
   description:
-    "Professional meeting rooms in Berlin Kreuzberg (Möckernstraße 120). Bookable for members and guests — ideal for Web3, crypto and AI teams needing a pitch room, board meeting or investor update.",
+    "Professional meeting rooms in Berlin Kreuzberg (Möckernstraße 120). Bookable for members and guests — ideal for AI, robotics, quantum and blockchain teams needing a pitch room, board meeting or investor update.",
   openGraph: {
     title: "Rent Meeting Rooms in Berlin Kreuzberg | w3.hub Coworking",
     description:
-      "Professional meeting rooms in Berlin Kreuzberg (Möckernstraße 120). Bookable for members and guests — ideal for Web3, crypto and AI teams.",
+      "Professional meeting rooms in Berlin Kreuzberg (Möckernstraße 120). Bookable for members and guests — ideal for AI, robotics, quantum and blockchain teams.",
     images: ["/images/og-image.png"],
     type: "website",
   },

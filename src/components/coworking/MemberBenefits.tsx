@@ -67,7 +67,7 @@ function IconClock() {
 const BENEFITS: Benefit[] = [
   {
     title: "Builder Space",
-    body: "Join a community of active developers and innovators collectively advancing Web3 technologies.",
+    body: "Join a community of active developers and innovators collectively advancing frontier technologies.",
     icon: <IconBuilder />,
   },
   {
@@ -106,8 +106,8 @@ export default function MemberBenefits() {
             Benefits of Being a w3.hub Member
           </h2>
           <p className="mt-4 font-body text-[16px] font-medium leading-6 text-muted">
-            We are a cornerstone of the Web3 community, fostering collaboration
-            and thriving.
+            We are a cornerstone of Berlin&apos;s startup community, fostering
+            collaboration and growth.
           </p>
         </SectionReveal>
 

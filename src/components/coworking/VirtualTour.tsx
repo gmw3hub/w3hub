@@ -12,7 +12,7 @@ export default function VirtualTour() {
         <SectionReveal className="mb-8 flex flex-col items-center gap-4 text-center">
           <Badge variant="eyebrow-mint">Take a virtual tour</Badge>
           <h2 className="font-display font-extrabold text-ink text-[30px] sm:text-[36px] lg:text-[40px] leading-[1.1] lg:leading-[44px]">
-            The Premier Web3 Space
+            The Premiere Builder Space
           </h2>
         </SectionReveal>
 
@@ -35,7 +35,7 @@ export default function VirtualTour() {
               </h3>
               <DottedDivider variant="dark-wide" className="mt-4 h-[5px] w-full" />
               <p className="mt-4 max-w-[640px] font-body text-[16px] leading-6 text-muted">
-                Take a comprehensive virtual tour of Berlin&apos;s premier Web3
+                Take a comprehensive virtual tour of Berlin&apos;s premiere builder
                 workspace and experience w3.hub before your visit.
               </p>
             </div>

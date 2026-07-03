@@ -49,13 +49,13 @@ function IconMonitor() {
 
 const BENEFITS: Benefit[] = [
   {
-    title: "Web3 Native Space",
-    body: "Be exclusively surrounded by Web3 professionals and events. Work alongside peers who speak your language.",
+    title: "Frontier Tech Native",
+    body: "Be surrounded by builders in AI, robotics, quantum and blockchain. Work alongside peers who speak your language.",
     icon: <IconBlocks />,
   },
   {
     title: "Bang For Your Buck",
-    body: "w3.hub is more than a space to work: Become part of a thriving ecosystem of web3 innovators and resources.",
+    body: "w3.hub is more than a space to work: Become part of a thriving ecosystem of innovators, startups and resources.",
     icon: <IconCash />,
   },
   {
@@ -65,7 +65,7 @@ const BENEFITS: Benefit[] = [
   },
   {
     title: "Prime Location & Setup",
-    body: "Be productive with our ergonomic work-setup. Events are hosted in our Berlin-style space, perfect for celebrating Web3.",
+    body: "Be productive with our ergonomic work-setup. Events are hosted in our Berlin-style space, perfect for demo days, launches and community nights.",
     icon: <IconMonitor />,
   },
 ];
@@ -112,10 +112,10 @@ export default function Benefits() {
             Berlin&apos;s Premier Coworking &amp; Event
             <br className="hidden md:block" />
             <span className="md:hidden"> </span>
-            Ecosystem for Web3
+            Ecosystem for Frontier Tech
           </h2>
           <p className="mt-3 font-body text-[16px] leading-6 font-medium text-muted">
-            The w3.hub is your gateway to Berlin&apos;s Web3 ecosystem
+            The w3.hub is your gateway to Berlin&apos;s innovation &amp; startup ecosystem
           </p>
         </SectionReveal>
 

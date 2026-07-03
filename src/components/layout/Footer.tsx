@@ -91,7 +91,7 @@ export default function Footer() {
                 />
               </Link>
               <p className="text-[14px] font-semibold leading-5 text-slate-violet-700">
-                Berlin&apos;s Home of Web3
+                The Premiere Builder Club
               </p>
             </div>
 

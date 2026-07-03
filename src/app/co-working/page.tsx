@@ -15,7 +15,7 @@ import Faq from "@/components/sections/Faq";
 export const metadata: Metadata = {
   title: "Co-Working | w3.hub Berlin",
   description:
-    "Flex desks, dedicated desks and private offices for Web3, AI and tech teams in Berlin Kreuzberg. High-speed internet, meeting rooms, community events and access to one of the most active Web3 and AI networks in Europe.",
+    "Flex desks, dedicated desks and private offices for AI, robotics, quantum and blockchain teams in Berlin Kreuzberg. High-speed internet, meeting rooms, community events and access to one of the most active frontier tech networks in Europe.",
 };
 
 export default function CoWorkingPage() {

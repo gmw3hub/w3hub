@@ -35,7 +35,8 @@ export default function MeetingHero() {
           </h1>
           <p className="mt-5 max-w-[620px] font-body text-[16px] leading-6 font-medium text-white/85 md:text-[18px] md:leading-7">
             Professional meeting rooms in Berlin Kreuzberg (Möckernstraße 120).
-            Bookable for members and guests. Great for Web3, crypto and AI teams
+            Bookable for members and guests. Great for AI, robotics, quantum and
+            blockchain teams
             who need a pitch room, a board meeting or an investor update in a top
             location.
           </p>

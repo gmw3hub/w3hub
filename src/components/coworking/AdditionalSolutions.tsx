@@ -89,8 +89,8 @@ export default function AdditionalSolutions() {
                 Additional Solutions
               </h2>
               <p className="mt-4 font-body text-[16px] font-medium leading-6 text-muted">
-                We are a cornerstone of the Web3 community, fostering
-                collaboration and thriving.
+                We are a cornerstone of Berlin&apos;s startup community,
+                fostering collaboration and growth.
               </p>
             </SectionReveal>
 
