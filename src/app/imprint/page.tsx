@@ -30,7 +30,7 @@ export default function ImprintPage() {
       </LegalSection>
 
       <LegalSection title="Geschäftsführung">
-        <p>Henrik Bredenbals</p>
+        <p>Isabell Kruse</p>
       </LegalSection>
 
       <LegalSection title="Streitschlichtung">
