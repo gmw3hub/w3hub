@@ -4,6 +4,7 @@ import LegalPage, { LegalSection } from "@/components/legal/LegalPage";
 export const metadata: Metadata = {
   title: "Imprint | w3.hub",
   description: "Imprint / Impressum of w3.hub GmbH & Co. KG, Berlin.",
+  alternates: { canonical: "/imprint" },
 };
 
 export default function ImprintPage() {

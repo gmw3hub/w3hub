@@ -10,13 +10,25 @@ import Location from "@/components/sections/Location";
 import UpcomingEvents from "@/components/coworking/UpcomingEvents";
 
 export const metadata: Metadata = {
-  title: "Event Space | w3.hub",
+  title: "Tech Event Space Berlin | 500 sqm Factory Loft | w3.hub",
   description:
-    "500 sqm factory loft in Berlin Kreuzberg — the leading event location for AI, robotics, quantum and blockchain conferences, hackathons, meetups and demo days.",
+    "Event location for AI, robotics, quantum and blockchain conferences, hackathons and meetups in Berlin Kreuzberg. 500 sqm listed factory loft at Gleisdreieck. Get a quote.",
+  alternates: { canonical: "/event-space" },
   openGraph: {
-    title: "Event Space | w3.hub",
+    title: "Tech Event Space Berlin | 500 sqm Factory Loft | w3.hub",
     description:
-      "500 sqm factory loft in Berlin Kreuzberg — the leading event location for AI, robotics, quantum and blockchain conferences, hackathons, meetups and demo days.",
+      "Event location for AI, robotics, quantum and blockchain conferences, hackathons and meetups in Berlin Kreuzberg. 500 sqm listed factory loft at Gleisdreieck. Get a quote.",
+    url: "https://w3hub.berlin/event-space",
+    siteName: "w3.hub",
+    images: ["/images/og-image.png"],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tech Event Space Berlin | 500 sqm Factory Loft | w3.hub",
+    description:
+      "Event location for AI, robotics, quantum and blockchain conferences, hackathons and meetups in Berlin Kreuzberg. 500 sqm listed factory loft at Gleisdreieck. Get a quote.",
+    images: ["/images/og-image.png"],
   },
 };
 

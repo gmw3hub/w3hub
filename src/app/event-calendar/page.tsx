@@ -6,11 +6,12 @@ import Faq from "@/components/sections/Faq";
 export const metadata: Metadata = {
   title: "Event Calendar | w3.hub",
   description:
-    "Browse all upcoming events at w3.hub Berlin — meetups, demo days, hackathons and community dinners for Web3, AI and frontier tech, all in one calendar.",
+    "Browse all upcoming events at w3.hub Berlin — meetups, demo days, hackathons and community dinners for AI, robotics, quantum and blockchain, all in one calendar.",
+  alternates: { canonical: "/event-calendar" },
   openGraph: {
     title: "Event Calendar | w3.hub",
     description:
-      "Browse all upcoming events at w3.hub Berlin — meetups, demo days, hackathons and community dinners for Web3, AI and frontier tech.",
+      "Browse all upcoming events at w3.hub Berlin — meetups, demo days, hackathons and community dinners for AI, robotics, quantum and blockchain.",
     images: ["/images/og-image.png"],
     type: "website",
   },

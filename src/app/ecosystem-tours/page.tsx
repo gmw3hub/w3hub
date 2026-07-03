@@ -10,6 +10,7 @@ import EcosystemCta from "@/components/ecosystemtours/EcosystemCta";
 
 export const metadata: Metadata = {
   title: "Ecosystem Tours | w3.hub Berlin",
+  alternates: { canonical: "/ecosystem-tours" },
   description:
     "Curated, insider-led tours of Berlin's Web3, crypto and AI ecosystem. Bring your corporate, investor or university group inside w3.hub at Gleisdreieck Park and meet the founders, funds and builders shaping the onchain economy.",
 };

@@ -25,28 +25,64 @@ const caveat = Caveat({
   display: "swap",
 });
 
+const HOME_TITLE =
+  "w3.hub | Innovation & Startup Hub Berlin – AI, Robotics, Quantum & Blockchain";
+const HOME_DESCRIPTION =
+  "w3.hub is Berlin's innovation & startup hub in Kreuzberg: coworking, private offices and a 500 sqm event loft for AI, robotics, quantum and blockchain builders. Book a tour.";
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://w3hub.berlin"),
-  title: "w3.hub | Web3, AI and Tech Coworking and Event Space Berlin",
-  description:
-    "w3.hub in Berlin Kreuzberg is a coworking and event space for Web3, crypto, blockchain and AI teams. 1,500 sqm factory loft at Gleisdreieck. Book a tour today.",
+  title: HOME_TITLE,
+  description: HOME_DESCRIPTION,
+  alternates: { canonical: "/" },
   openGraph: {
-    title: "w3.hub | Web3, AI and Tech Coworking and Event Space Berlin",
-    description:
-      "w3.hub in Berlin Kreuzberg is a coworking and event space for Web3, crypto, blockchain and AI teams. 1,500 sqm factory loft at Gleisdreieck.",
+    title: HOME_TITLE,
+    description: HOME_DESCRIPTION,
+    url: "https://w3hub.berlin",
+    siteName: "w3.hub",
     images: ["/images/og-image.png"],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "w3.hub | Web3, AI and Tech Coworking and Event Space Berlin",
-    description:
-      "w3.hub in Berlin Kreuzberg is a coworking and event space for Web3, crypto, blockchain and AI teams.",
+    title: HOME_TITLE,
+    description: HOME_DESCRIPTION,
     images: ["/images/og-image.png"],
   },
   icons: {
     icon: "/images/logo-mark.png",
   },
+};
+
+// schema.org LocalBusiness — one organization node reused across the site.
+const ORG_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://w3hub.berlin/#organization",
+  name: "w3.hub",
+  alternateName: "w3hub Berlin – The Premiere Builder Club",
+  description:
+    "Berlin's innovation & startup hub for AI, robotics, quantum and blockchain. Coworking, private offices and a 500 sqm event loft in Berlin Kreuzberg.",
+  url: "https://w3hub.berlin",
+  email: "gm@w3hub.berlin",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Möckernstraße 120",
+    addressLocality: "Berlin",
+    postalCode: "10963",
+    addressCountry: "DE",
+  },
+  geo: { "@type": "GeoCoordinates", latitude: 52.4989, longitude: 13.3808 },
+  sameAs: [
+    "https://de.linkedin.com/company/w3-hub",
+    "https://www.instagram.com/w3.hub/",
+    "https://luma.com/w3hub",
+    "https://x.com/w3_hub",
+  ],
+  foundingDate: "2022",
+  areaServed: "Berlin",
+  keywords:
+    "Startup Hub Berlin, AI Coworking Berlin, Robotics Hub Berlin, Quantum Startup Berlin, Blockchain Event Space Berlin, Tech Event Space Kreuzberg",
 };
 
 export default function RootLayout({
@@ -60,6 +96,10 @@ export default function RootLayout({
       className={`${unbounded.variable} ${inter.variable} ${caveat.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_JSON_LD) }}
+        />
         <Navbar />
         {children}
         <Footer />
