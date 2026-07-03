@@ -5,15 +5,25 @@ import MeetingRooms from "@/components/meetingrooms/MeetingRooms";
 import VirtualTour from "@/components/meetingrooms/VirtualTour";
 
 export const metadata: Metadata = {
-  title: "Rent Meeting Rooms in Berlin Kreuzberg | w3.hub Coworking",
+  title: "Rent Meeting Rooms in Berlin Kreuzberg | w3.hub",
   description:
-    "Professional meeting rooms in Berlin Kreuzberg (Möckernstraße 120). Bookable for members and guests — ideal for AI, robotics, quantum and blockchain teams needing a pitch room, board meeting or investor update.",
+    "Professional meeting rooms in Berlin Kreuzberg (Möckernstraße 120). Book by the day as member or guest. Ideal for pitches, board meetings and workshops.",
+  alternates: { canonical: "/meeting-rooms" },
   openGraph: {
-    title: "Rent Meeting Rooms in Berlin Kreuzberg | w3.hub Coworking",
+    title: "Rent Meeting Rooms in Berlin Kreuzberg | w3.hub",
     description:
-      "Professional meeting rooms in Berlin Kreuzberg (Möckernstraße 120). Bookable for members and guests — ideal for AI, robotics, quantum and blockchain teams.",
+      "Professional meeting rooms in Berlin Kreuzberg (Möckernstraße 120). Book by the day as member or guest. Ideal for pitches, board meetings and workshops.",
+    url: "https://w3hub.berlin/meeting-rooms",
+    siteName: "w3.hub",
     images: ["/images/og-image.png"],
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rent Meeting Rooms in Berlin Kreuzberg | w3.hub",
+    description:
+      "Professional meeting rooms in Berlin Kreuzberg (Möckernstraße 120). Book by the day as member or guest. Ideal for pitches, board meetings and workshops.",
+    images: ["/images/og-image.png"],
   },
 };
 

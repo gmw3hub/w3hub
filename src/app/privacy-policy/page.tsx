@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "Privacy Policy | w3.hub",
   description:
     "How w3.hub collects, uses, and safeguards your personal information when you visit w3hub.berlin.",
+  alternates: { canonical: "/privacy-policy" },
 };
 
 const mail = (
