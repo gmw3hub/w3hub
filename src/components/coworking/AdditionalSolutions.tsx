@@ -104,7 +104,7 @@ export default function AdditionalSolutions() {
 
             <SectionReveal index={3} step={0.08} className="mt-12 flex justify-center">
               <PillButton href={BOOK_URL} external size="lg">
-                Find &amp; Book Ressources
+                Find &amp; Book Resources
               </PillButton>
             </SectionReveal>
           </div>

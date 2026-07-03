@@ -148,7 +148,7 @@ export default function Footer() {
 
             <div className="flex-1 md:pl-4 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-8">
               <p className="text-[12px] font-medium leading-4 text-slate-violet-500">
-                © 2025 w3.hub - All rights reserved
+                © {new Date().getFullYear()} w3.hub - All rights reserved
               </p>
               <ul className="flex items-center gap-6">
                 <li>
