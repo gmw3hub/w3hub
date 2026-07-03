@@ -8,7 +8,7 @@ import { easeOutSoft } from "@/lib/animations";
 type Slide = { src: string; label: string };
 
 const SLIDES: Slide[] = [
-  { label: "Vibesssssssssssssss", src: "/images/marquee/vibes.webp" },
+  { label: "Vibes", src: "/images/marquee/vibes.webp" },
   { label: "Pizza", src: "/images/marquee/pizza.webp" },
   { label: "Hackathons", src: "/images/marquee/hackathons.webp" },
   { label: "Community Space", src: "/images/marquee/community-space.webp" },
