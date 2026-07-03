@@ -13,7 +13,6 @@ const COLUMNS: Column[] = [
       { label: "Meeting Rooms", href: "/meeting-rooms" },
       { label: "Ecosystem Tours", href: "/ecosystem-tours" },
       { label: "Community", href: "/community" },
-      { label: "About Us", href: "/about-us" },
     ],
   },
   {
@@ -28,9 +27,6 @@ const COLUMNS: Column[] = [
     heading: "Companies",
     items: [
       { label: "w3.group", href: "https://w3.group" },
-      { label: "w3.fund", href: "https://www.w3.fund/" },
-      { label: "w3.labs", href: "https://w3labs.xyz" },
-      { label: "w3.vision", href: "https://www.w3.vision/" },
     ],
   },
 ];

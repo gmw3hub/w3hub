@@ -7,7 +7,6 @@ const LOGOS: Logo[] = [
   { src: "/images/partners/near.webp", alt: "NEAR" },
   { src: "/images/partners/google-cloud.webp", alt: "Google Cloud" },
   { src: "/images/partners/solana.webp", alt: "Solana" },
-  { src: "/images/partners/w3-labs.webp", alt: "w3.labs" },
   { src: "/images/partners/base.webp", alt: "Base" },
   { src: "/images/partners/celestia.webp", alt: "Celestia" },
   { src: "/images/partners/ton.webp", alt: "TON" },

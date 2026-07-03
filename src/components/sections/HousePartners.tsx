@@ -9,7 +9,6 @@ type Partner = { src: string; alt: string; w: number; h: number };
 const PARTNERS: Partner[] = [
   { src: "/images/partners/ledger.webp", alt: "Ledger", w: 171, h: 59 },
   { src: "/images/partners/jagermeister.webp", alt: "Jägermeister", w: 214, h: 81 },
-  { src: "/images/partners/w3-labs.webp", alt: "w3.labs", w: 155, h: 56 },
 ];
 
 type DecoSpec = { src: string; w: number; h: number; className: string };
@@ -89,7 +88,7 @@ export default function HousePartners() {
             </SectionReveal>
 
             <SectionReveal className="relative z-10 mt-10 flex justify-center">
-              <PillButton href="/about-us" size="lg">
+              <PillButton href="mailto:gm@w3hub.berlin?subject=House%20Partner%20Inquiry" external size="lg">
                 Become a house partner
               </PillButton>
             </SectionReveal>
