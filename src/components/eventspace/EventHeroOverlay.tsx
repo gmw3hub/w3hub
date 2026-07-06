@@ -26,7 +26,7 @@ export default function EventHeroOverlay() {
           variants={fadeUp}
           className="mt-4 max-w-[640px] font-body text-[16px] font-medium leading-6 text-white/90 md:mt-5 md:text-[18px] md:leading-7"
         >
-          500 sqm factory loft in Berlin Kreuzberg. The leading event location
+          Two 500 sqm factory lofts in Berlin Kreuzberg. The leading event location
           for AI, robotics, quantum and blockchain conferences, hackathons,
           meetups and demo days.
         </motion.p>

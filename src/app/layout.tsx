@@ -36,7 +36,7 @@ const caveat = Caveat({
 const HOME_TITLE =
   "w3.hub | Innovation & Startup Hub Berlin – AI, Robotics, Quantum & Blockchain";
 const HOME_DESCRIPTION =
-  "w3.hub is Berlin's innovation & startup hub in Kreuzberg: coworking, private offices and a 500 sqm event loft for AI, robotics, quantum and blockchain builders. Book a tour.";
+  "w3.hub is Berlin's innovation & startup hub in Kreuzberg: 2,500 sqm of coworking, private offices and two 500 sqm event lofts for AI, robotics, quantum and blockchain builders. Book a tour.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://w3hub.berlin"),
@@ -70,7 +70,7 @@ const ORG_JSON_LD = {
   name: "w3.hub",
   alternateName: "w3hub Berlin – The Premiere Builder Club",
   description:
-    "Berlin's innovation & startup hub for AI, robotics, quantum and blockchain. Coworking, private offices and a 500 sqm event loft in Berlin Kreuzberg.",
+    "Berlin's innovation & startup hub for AI, robotics, quantum and blockchain. 2,500 sqm of coworking, private offices and two 500 sqm event lofts in Berlin Kreuzberg.",
   url: "https://w3hub.berlin",
   email: "gm@w3hub.berlin",
   address: {

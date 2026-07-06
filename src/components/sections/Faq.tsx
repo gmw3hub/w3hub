@@ -6,7 +6,7 @@ type QA = { q: string; a: string };
 const FAQS: QA[] = [
   {
     q: "What is w3.hub?",
-    a: "w3.hub is Berlin's innovation & startup hub and builder club for AI, robotics, quantum and blockchain. 1,500 sqm of coworking and event space in a factory loft in Berlin Kreuzberg (Möckernstraße 120).",
+    a: "w3.hub is Berlin's innovation & startup hub and builder club for AI, robotics, quantum and blockchain. 2,500 sqm of coworking and event space in a factory loft in Berlin Kreuzberg (Möckernstraße 120).",
   },
   {
     q: "Where is w3.hub located?",
@@ -22,7 +22,7 @@ const FAQS: QA[] = [
   },
   {
     q: "Can I book w3.hub for an event?",
-    a: "Yes. 500 sqm of factory loft for tech conferences, hackathons, meetups, panels and private dinners. Open to members and external clients.",
+    a: "Yes. Two 500 sqm event lofts for tech conferences, hackathons, meetups, panels and private dinners, up to 250 guests standing or 100 seated. Open to members and external clients.",
   },
   {
     q: "Who runs w3.hub?",

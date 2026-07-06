@@ -1,4 +1,5 @@
 import Hero from "@/components/sections/Hero";
+import StatsBand from "@/components/sections/StatsBand";
 import FourFrontiers from "@/components/sections/FourFrontiers";
 import Events from "@/components/sections/Events";
 import Benefits from "@/components/sections/Benefits";
@@ -14,6 +15,7 @@ export default function Home() {
   return (
     <main className="flex flex-col flex-1">
       <Hero />
+      <StatsBand />
       <FourFrontiers />
       <Events />
       <Benefits />
