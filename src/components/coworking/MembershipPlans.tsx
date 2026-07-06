@@ -60,10 +60,10 @@ const PLANS: Plan[] = [
   {
     name: "Office",
     badge: "bg-[#e9e7e3] text-ink/70",
-    price: "Custom",
-    tagline: "Establish your team in a private suite customized to your company needs.",
+    price: "On request",
+    tagline: "Private offices for teams of 4 to 12, customised to your company.",
     features: [
-      "Private & secure office space",
+      "Private & secure office for 4 to 12 people",
       "All Pro Membership perks included",
       "6 months minimum commitment",
       "Business registration & mail service",
