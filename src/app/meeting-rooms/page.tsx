@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Location from "@/components/sections/Location";
 import MeetingHero from "@/components/meetingrooms/MeetingHero";
 import MeetingRooms from "@/components/meetingrooms/MeetingRooms";
+import AnswerIntro from "@/components/sections/AnswerIntro";
 import VirtualTour from "@/components/meetingrooms/VirtualTour";
 
 export const metadata: Metadata = {
@@ -31,6 +32,10 @@ export default function MeetingRoomsPage() {
   return (
     <main className="flex flex-1 flex-col">
       <MeetingHero />
+      <AnswerIntro
+        text="Meeting rooms at w3.hub (Möckernstraße 120, Berlin Kreuzberg) can be booked by the day by members and non-members. Equipped for pitches, board meetings and workshops, five minutes from U-Bahn Möckernbrücke."
+        amenities={["av", "rooms", "coffee", "access"]}
+      />
       <MeetingRooms />
       <Location />
       <VirtualTour />
