@@ -1,4 +1,5 @@
 import Hero from "@/components/sections/Hero";
+import FourFrontiers from "@/components/sections/FourFrontiers";
 import Events from "@/components/sections/Events";
 import Benefits from "@/components/sections/Benefits";
 import Solutions from "@/components/sections/Solutions";
@@ -13,6 +14,7 @@ export default function Home() {
   return (
     <main className="flex flex-col flex-1">
       <Hero />
+      <FourFrontiers />
       <Events />
       <Benefits />
       <Solutions />
