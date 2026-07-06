@@ -19,15 +19,17 @@ export default function CoworkingHero() {
         variants={heroStagger}
         className="relative mx-auto flex max-w-[760px] flex-col items-center px-5 text-center md:px-8"
       >
-        <motion.div variants={fadeUp}>
-          <Image
-            src="/images/coworking/hero-building.webp"
-            alt="The w3.hub building in Berlin Kreuzberg"
-            width={300}
-            height={307}
-            priority
-            className="h-auto w-[220px] md:w-[280px] lg:w-[300px]"
-          />
+        <motion.div variants={fadeUp} className="w-full max-w-[640px]">
+          <div className="relative aspect-[16/10] w-full overflow-hidden rounded-3xl bg-warm-grey shadow-card ring-1 ring-black/5">
+            <Image
+              src="/images/photos/coworking-open-floor.webp"
+              alt="Members working at desks in the w3.hub coworking space in Berlin Kreuzberg"
+              fill
+              sizes="(min-width: 768px) 640px, 100vw"
+              priority
+              className="object-cover"
+            />
+          </div>
         </motion.div>
 
         <motion.h1
