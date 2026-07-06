@@ -65,7 +65,7 @@ function IconTech() {
 }
 
 const FEATURES: Feature[] = [
-  { title: "500m²", icon: <IconArea /> },
+  { title: "2×500m²", icon: <IconArea /> },
   { title: "250 PAX standing", icon: <IconStanding /> },
   { title: "100 PAX seated", icon: <IconSeated /> },
   { title: "In-House events team", icon: <IconTeam /> },
