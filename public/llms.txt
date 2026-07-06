@@ -1,0 +1,20 @@
+# w3.hub — The Premiere Builder Club
+
+> w3.hub is Berlin's innovation & startup hub for AI, robotics, quantum and blockchain. 1,500 sqm coworking and event space in a listed factory loft at Möckernstraße 120, 10963 Berlin Kreuzberg (Gleisdreieck). Founded 2022, part of w3.group, operated in partnership with betahaus since 2026.
+
+## Key Facts
+- Coworking memberships: Club €180/month (Mon–Fri 9–17), Pro €275/month (24/7), Day Pass €30, private offices on request
+- Event space: 500 sqm factory loft, 250 pax standing / 100 pax seated, in-house events team, bar/kitchen, full AV setup
+- Meeting rooms bookable by the day for members and guests
+- Location: Möckernstraße 120, 10963 Berlin Kreuzberg, next to Gleisdreieck Park (U1/U7 Möckernbrücke, U2/U3 Gleisdreieck, S1/S2/S25/S26 Anhalter Bahnhof)
+- Community: founders, engineers and researchers in AI, robotics, quantum and blockchain; host of the Berlin Blockchain Festival
+- Contact: gm@w3hub.berlin
+
+## Pages
+- [Home](https://w3hub.berlin/): Overview of the hub, verticals, events and partners
+- [Coworking](https://w3hub.berlin/co-working): Membership plans, pricing, trial day
+- [Event Space](https://w3hub.berlin/event-space): Venue details, capacity, booking
+- [Meeting Rooms](https://w3hub.berlin/meeting-rooms): Day bookings for teams and guests
+- [Ecosystem Tours](https://w3hub.berlin/ecosystem-tours): Guided tours of Berlin's Web3 ecosystem for corporates, investors and delegations
+- [Community](https://w3hub.berlin/community): The builder community, meetups and initiatives
+- [Event Calendar](https://w3hub.berlin/event-calendar): All upcoming events, meetups and hackathons
