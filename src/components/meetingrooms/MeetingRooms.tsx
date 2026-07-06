@@ -16,9 +16,10 @@ type Room = {
 };
 
 const FEATURES = [
-  "For business and private meeting",
-  "Shared amenities and catering possible on request",
-  "30 days flexible cancellation",
+  "Instant online booking",
+  "Screens, fast WiFi & shared amenities",
+  "Catering on request",
+  "Flexible cancellation",
 ];
 
 const ROOMS: Room[] = [
@@ -26,7 +27,7 @@ const ROOMS: Room[] = [
     title: "Small Meeting Room",
     image: "/images/meetingrooms/small-room.webp",
     description:
-      "Host intimate meetings in our professional space designed for 2-4 people.",
+      "Ideal for client meetings, interviews and one-on-ones. A professional space for 2 to 4 people.",
     pax: "2-4 PAX",
     features: FEATURES,
   },
@@ -34,7 +35,7 @@ const ROOMS: Room[] = [
     title: "Big Meeting Room",
     image: "/images/meetingrooms/big-room.webp",
     description:
-      "Conduct team gatherings in our spacious venue accommodating 8-10 people.",
+      "Ideal for workshops, board meetings and investor updates. A spacious room for 8 to 10 people.",
     pax: "8-10 PAX",
     features: FEATURES,
   },
@@ -87,10 +88,10 @@ function RoomCard({ room, index }: { room: Room; index: number }) {
 
           <div className="flex items-baseline gap-2">
             <span className="font-display text-[20px] font-extrabold text-ink">
-              On Request
+              By the hour or day
             </span>
             <span className="font-body text-[14px] font-medium text-muted">
-              · Daily Rates
+              · live rates online
             </span>
           </div>
 
@@ -117,9 +118,9 @@ export default function MeetingRooms() {
     <section className="w-full bg-paper py-16 md:py-20 lg:py-24">
       <div className="mx-auto w-full max-w-[1136px] px-5 md:px-8">
         <SectionReveal className="flex flex-col items-start gap-4">
-          <Badge variant="eyebrow-mint">Tailored to your needs</Badge>
+          <Badge variant="eyebrow-mint">For members &amp; guests</Badge>
           <h2 className="font-display font-extrabold text-ink text-[30px] sm:text-[36px] lg:text-[40px] leading-[1.1] lg:leading-[48px]">
-            Daily Rates
+            Rooms &amp; booking
           </h2>
         </SectionReveal>
 
