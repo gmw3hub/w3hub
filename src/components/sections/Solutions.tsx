@@ -15,7 +15,7 @@ const SOLUTIONS: Solution[] = [
   },
   {
     title: "Office Space",
-    body: "Private, professional environments for your team to thrive. Our office spaces combine privacy with community access, giving you a dedicated space to scale comfortably with flexible terms tailored to growing companies.",
+    body: "Private, professional offices for teams of 4 to 12 people. Combine privacy with full community access and flexible terms, with room to scale as you grow. Pricing on request.",
     href: "/co-working",
     images: [
       "/images/solutions/office-1.webp",

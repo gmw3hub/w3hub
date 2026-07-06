@@ -161,6 +161,13 @@ export default function Footer() {
               <p className="text-[12px] font-medium leading-4 text-slate-violet-500">
                 © {new Date().getFullYear()} w3.hub - All rights reserved
               </p>
+              <p className="text-[12px] font-medium leading-4 text-slate-violet-500">
+                Last updated:{" "}
+                {new Date().toLocaleDateString("en-US", {
+                  month: "long",
+                  year: "numeric",
+                })}
+              </p>
               <ul className="flex items-center gap-6">
                 <li>
                   <Link
