@@ -3,6 +3,7 @@ import StatsBand from "@/components/sections/StatsBand";
 import FourFrontiers from "@/components/sections/FourFrontiers";
 import Events from "@/components/sections/Events";
 import Benefits from "@/components/sections/Benefits";
+import TheSpace from "@/components/sections/TheSpace";
 import Solutions from "@/components/sections/Solutions";
 import VibesMarquee from "@/components/sections/VibesMarquee";
 import HousePartners from "@/components/sections/HousePartners";
@@ -19,6 +20,7 @@ export default function Home() {
       <FourFrontiers />
       <Events />
       <Benefits />
+      <TheSpace />
       <Solutions />
       <VibesMarquee />
       <HousePartners />
