@@ -6,7 +6,7 @@ type Audience = { title: string; body: string; image: string };
 const AUDIENCES: Audience[] = [
   {
     title: "Corporates & innovation teams",
-    body: "Bring your team face to face with the builders redefining finance, ownership and AI — and leave with a concrete onchain agenda.",
+    body: "Bring your team face to face with the builders redefining finance, ownership and AI, and leave with a concrete onchain agenda.",
     image: "/images/photos/event-networking.webp",
   },
   {
@@ -52,7 +52,7 @@ export default function TourAudiences() {
             Who comes on tour
           </h2>
           <p className="mt-4 font-body text-[16px] font-medium leading-6 text-muted">
-            From boardrooms to lecture halls — we tailor the day to what your
+            From boardrooms to lecture halls, we tailor the day to what your
             group needs to take home.
           </p>
         </SectionReveal>

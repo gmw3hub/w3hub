@@ -35,7 +35,7 @@ export default function EcosystemHero() {
         >
           Step inside Europe&apos;s most active Web3, crypto and AI hub. Curated,
           insider-led tours that connect your team to the founders, funds and
-          builders shaping the onchain economy — all from w3.hub, Berlin&apos;s
+          builders shaping the onchain economy. All from w3.hub, Berlin&apos;s
           home of Web3.
         </motion.p>
 

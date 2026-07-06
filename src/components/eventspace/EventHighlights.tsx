@@ -48,7 +48,7 @@ export default function EventHighlights() {
                     >
                       <Image
                         src={src}
-                        alt={`${ev.label} — photo ${j + 1}`}
+                        alt={`${ev.label}, photo ${j + 1}`}
                         fill
                         sizes="(min-width: 800px) 360px, 100vw"
                         className="object-cover"

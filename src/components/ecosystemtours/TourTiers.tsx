@@ -92,7 +92,7 @@ export default function TourTiers() {
             Choose Your Tour
           </h2>
           <p className="mt-4 font-body text-[16px] font-medium leading-6 text-muted">
-            Three starting points — every tour is tailored to your team, so
+            Three starting points. Every tour is tailored to your team, so
             pricing is shared on request once we&apos;ve scoped your visit.
           </p>
         </SectionReveal>

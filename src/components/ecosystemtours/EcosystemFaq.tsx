@@ -10,7 +10,7 @@ const FAQS: QA[] = [
   },
   {
     q: "Who are the tours for?",
-    a: "Corporate and innovation teams, investors and funds, universities and visiting delegations, and public-sector groups — anyone who wants direct, grounded exposure to where Web3, crypto and AI are actually being built.",
+    a: "Corporate and innovation teams, investors and funds, universities and visiting delegations, and public-sector groups. Really, anyone who wants direct, grounded exposure to where Web3, crypto and AI are actually being built.",
   },
   {
     q: "How long does a tour take?",
@@ -22,7 +22,7 @@ const FAQS: QA[] = [
   },
   {
     q: "Can the programme be customised?",
-    a: "Yes. The Tailor-Made format is fully bespoke — workshops, roundtables, investor and partner introductions, optional dinners and external site visits. Even the shorter formats are adapted to your sector and interests.",
+    a: "Yes. The Tailor-Made format is fully bespoke: workshops, roundtables, investor and partner introductions, optional dinners and external site visits. Even the shorter formats are adapted to your sector and interests.",
   },
   {
     q: "How do we book?",
