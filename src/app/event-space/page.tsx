@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import EventHero from "@/components/eventspace/EventHero";
+import AnswerIntro from "@/components/sections/AnswerIntro";
 import TheVenue from "@/components/eventspace/TheVenue";
 import VenueVideo from "@/components/eventspace/VenueVideo";
 import EventHighlights from "@/components/eventspace/EventHighlights";
@@ -36,6 +37,10 @@ export default function EventSpacePage() {
   return (
     <main className="flex flex-1 flex-col">
       <EventHero />
+      <AnswerIntro
+        text="The w3.hub event space in Berlin Kreuzberg offers two 500 sqm lofts for up to 250 guests standing or 100 seated, with an in-house events team, bar and kitchen and a full AV setup. Built for AI, robotics, quantum and blockchain conferences, hackathons and meetups."
+        amenities={["av", "team", "coffee", "rooms"]}
+      />
       <TheVenue />
       <VenueVideo />
       <EventHighlights />

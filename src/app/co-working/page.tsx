@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import CoworkingHero from "@/components/coworking/CoworkingHero";
+import AnswerIntro from "@/components/sections/AnswerIntro";
 import PartnerMarquee from "@/components/coworking/PartnerMarquee";
 import MembershipPlans from "@/components/coworking/MembershipPlans";
 import VibesMarquee from "@/components/sections/VibesMarquee";
@@ -40,6 +41,10 @@ export default function CoWorkingPage() {
   return (
     <main className="flex flex-1 flex-col">
       <CoworkingHero />
+      <AnswerIntro
+        text="Coworking at w3.hub in Berlin Kreuzberg: Club membership €180/month (Mon to Fri, 9 to 17), Pro €275/month (24/7 access, 15h meeting rooms included), Day Pass €30, and private team offices for 4 to 12 people on request. Every plan includes high-speed fiber internet, community events and 30-day cancellation."
+        amenities={["clock", "desk", "rooms", "roaming"]}
+      />
       <PartnerMarquee />
       <MembershipPlans />
       <VibesMarquee />
