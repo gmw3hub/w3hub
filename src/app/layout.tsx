@@ -1,8 +1,16 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Unbounded, Inter, Caveat } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+
+// Umami analytics — cookieless, privacy-friendly. Loads only when both env
+// vars are set (in Vercel), so it's inert until configured.
+//   NEXT_PUBLIC_UMAMI_SRC          e.g. https://cloud.umami.is/script.js
+//   NEXT_PUBLIC_UMAMI_WEBSITE_ID   the website UUID from the Umami dashboard
+const UMAMI_SRC = process.env.NEXT_PUBLIC_UMAMI_SRC;
+const UMAMI_WEBSITE_ID = process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID;
 
 const unbounded = Unbounded({
   variable: "--font-unbounded",
@@ -96,6 +104,13 @@ export default function RootLayout({
       className={`${unbounded.variable} ${inter.variable} ${caveat.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        {UMAMI_SRC && UMAMI_WEBSITE_ID && (
+          <Script
+            src={UMAMI_SRC}
+            data-website-id={UMAMI_WEBSITE_ID}
+            strategy="afterInteractive"
+          />
+        )}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_JSON_LD) }}
