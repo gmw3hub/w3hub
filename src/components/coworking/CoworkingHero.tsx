@@ -44,9 +44,7 @@ export default function CoworkingHero() {
           className="mt-5 max-w-[640px] font-body text-[16px] font-medium leading-6 text-muted md:text-[17px]"
         >
           Flex desks, dedicated desks and private offices for AI, robotics,
-          quantum and blockchain teams in Berlin Kreuzberg. High speed internet,
-          meeting rooms, community events and access to one of the most active
-          frontier tech networks in Europe.
+          quantum and blockchain teams in Berlin Kreuzberg.
         </motion.p>
 
         <motion.div variants={fadeUp} className="mt-8">
