@@ -93,6 +93,17 @@ export default function Footer() {
               <p className="text-[14px] font-semibold leading-5 text-slate-violet-700">
                 The Premiere Builder Club
               </p>
+              <div className="flex flex-col gap-1">
+                <a href="mailto:gm@w3hub.berlin" className={FOOTER_LINK_CLS}>
+                  gm@w3hub.berlin
+                </a>
+                <a href="tel:+4915214912040" className={FOOTER_LINK_CLS}>
+                  +49 152 14912040
+                </a>
+                <SmartLink href="https://cal.com/quinn-w3/15min" className={FOOTER_LINK_CLS}>
+                  Book a tour
+                </SmartLink>
+              </div>
             </div>
 
             <div className="flex-1 md:pl-4 grid grid-cols-2 gap-8 sm:grid-cols-3 lg:flex lg:gap-4">

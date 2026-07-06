@@ -3,6 +3,7 @@ import Script from "next/script";
 import { Unbounded, Inter, Caveat } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
+import ContactStrip from "@/components/layout/ContactStrip";
 import Footer from "@/components/layout/Footer";
 
 // Umami analytics — cookieless, privacy-friendly. Loads only when both env
@@ -73,6 +74,7 @@ const ORG_JSON_LD = {
     "Berlin's innovation & startup hub for AI, robotics, quantum and blockchain. 2,500 sqm of coworking, private offices and two 500 sqm event lofts in Berlin Kreuzberg.",
   url: "https://w3hub.berlin",
   email: "gm@w3hub.berlin",
+  telephone: "+4915214912040",
   address: {
     "@type": "PostalAddress",
     streetAddress: "Möckernstraße 120",
@@ -117,6 +119,7 @@ export default function RootLayout({
         />
         <Navbar />
         {children}
+        <ContactStrip />
         <Footer />
       </body>
     </html>
