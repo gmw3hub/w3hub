@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Location from "@/components/sections/Location";
 import MeetingHero from "@/components/meetingrooms/MeetingHero";
 import MeetingRooms from "@/components/meetingrooms/MeetingRooms";
+import HowItWorks from "@/components/meetingrooms/HowItWorks";
+import MeetingCrossSell from "@/components/meetingrooms/MeetingCrossSell";
 import AnswerIntro from "@/components/sections/AnswerIntro";
 import VirtualTour from "@/components/meetingrooms/VirtualTour";
 
@@ -37,8 +39,10 @@ export default function MeetingRoomsPage() {
         amenities={["av", "rooms", "coffee", "access"]}
       />
       <MeetingRooms />
+      <HowItWorks />
       <Location />
       <VirtualTour />
+      <MeetingCrossSell />
     </main>
   );
 }
