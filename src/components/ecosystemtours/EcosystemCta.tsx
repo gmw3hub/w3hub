@@ -19,7 +19,7 @@ export default function EcosystemCta() {
               Plan your tour
             </h2>
             <p className="mt-4 font-body text-[16px] font-medium leading-6 text-muted">
-              Tell us your goals, group size and dates — we&apos;ll design the
+              Tell us your goals, group size and dates. We&apos;ll design the
               right route through Berlin&apos;s Web3 ecosystem and send you a quote.
             </p>
             <div className="mt-8 flex justify-center">

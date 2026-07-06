@@ -83,7 +83,7 @@ export default function FourFrontiers() {
             One roof. Four frontiers.
           </h2>
           <p className="mt-4 font-body text-[16px] font-medium leading-6 text-muted">
-            w3.hub brings Berlin&apos;s deep tech scene together — four verticals,
+            w3.hub brings Berlin&apos;s deep tech scene together: four verticals,
             one community.
           </p>
         </SectionReveal>

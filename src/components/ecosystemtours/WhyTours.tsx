@@ -9,7 +9,7 @@ type Reason = { title: string; body: string; icon: ReactNode };
 const REASONS: Reason[] = [
   {
     title: "Flexible formats",
-    body: "From a two-hour sneak peek to a multi-day deep dive — shaped around your goals and schedule.",
+    body: "From a two-hour sneak peek to a multi-day deep dive, shaped around your goals and schedule.",
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
         <circle cx="12" cy="12" r="8.5" stroke="currentColor" strokeWidth="1.8" />
@@ -19,7 +19,7 @@ const REASONS: Reason[] = [
   },
   {
     title: "Insider-led",
-    body: "Hosted by the people who actually run Berlin's Web3 scene — not a scripted city walk.",
+    body: "Hosted by the people who actually run Berlin's Web3 scene, not a scripted city walk.",
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
         <circle cx="12" cy="8" r="3.5" fill="currentColor" />
@@ -41,7 +41,7 @@ const REASONS: Reason[] = [
   },
   {
     title: "Inspiring venue",
-    body: "Set inside w3.hub at Gleisdreieck Park — a living, working hub for Web3, AI and frontier tech.",
+    body: "Set inside w3.hub at Gleisdreieck Park, a living, working hub for Web3, AI and frontier tech.",
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
         <path d="M4 20V9.5L12 4l8 5.5V20H4Z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
@@ -94,8 +94,8 @@ export default function WhyTours() {
                 Why a w3.hub Ecosystem Tour
               </h2>
               <p className="mt-4 font-body text-[16px] font-medium leading-6 text-muted">
-                Unparalleled access to the people and projects building Europe&apos;s
-                onchain future — designed, hosted and curated by w3.hub.
+                Direct access to the people and projects building Europe&apos;s
+                onchain future. All designed, hosted and curated by w3.hub.
               </p>
             </SectionReveal>
 

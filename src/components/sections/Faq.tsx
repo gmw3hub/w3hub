@@ -18,7 +18,7 @@ const FAQS: QA[] = [
   },
   {
     q: "What does a membership cost?",
-    a: "Pricing depends on the plan you pick — flex desks, dedicated desks or private offices. Reach out via the membership page for current rates and availability.",
+    a: "Pricing depends on the plan you pick: flex desks, dedicated desks or private offices. Reach out via the membership page for current rates and availability.",
   },
   {
     q: "Can I book w3.hub for an event?",
@@ -26,7 +26,7 @@ const FAQS: QA[] = [
   },
   {
     q: "Who runs w3.hub?",
-    a: "w3.hub is a collaboration between Betahaus, Bauwerk and w3.group — bringing together established coworking expertise and Germany's leading Web3 ecosystem under one roof.",
+    a: "w3.hub is a collaboration between Betahaus, Bauwerk and w3.group, bringing together established coworking expertise and Germany's leading Web3 ecosystem under one roof.",
   },
 ];
 
