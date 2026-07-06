@@ -4,9 +4,9 @@ import SectionReveal from "@/components/ui/SectionReveal";
 type Stat = { value: string; label: string };
 
 const STATS: Stat[] = [
-  { value: "60+", label: "Resident Web3 teams" },
-  { value: "500+", label: "Events hosted a year" },
-  { value: "10,000+", label: "Community members" },
+  { value: "110+", label: "Members: founders, engineers & researchers" },
+  { value: "70+", label: "Events a year" },
+  { value: "15k", label: "In the community network" },
   { value: "1", label: "Roof at Gleisdreieck" },
 ];
 

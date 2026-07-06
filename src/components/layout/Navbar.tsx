@@ -1,10 +1,38 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import SmartLink from "@/components/ui/SmartLink";
 import { dropdownMotion, mobileMenuMotion } from "@/lib/animations";
+
+// Persistent CTA whose label/target adapts to the current page.
+type Cta = { label: string; short: string; href: string };
+const DEFAULT_CTA: Cta = {
+  label: "Book a tour",
+  short: "Book a tour",
+  href: "https://cal.com/quinn-w3/15min",
+};
+const CTA_BY_PATH: Record<string, Cta> = {
+  "/co-working": {
+    label: "Apply for trial day",
+    short: "Trial day",
+    href: "https://form.typeform.com/to/qdGDfsSN",
+  },
+  "/event-space": {
+    label: "Request event space",
+    short: "Enquire",
+    href: "https://form.typeform.com/to/upEoDN4G",
+  },
+  "/meeting-rooms": {
+    label: "Book a room",
+    short: "Book a room",
+    href: "https://w3hub.cobot.me/book/29341a3ea9eb11778694f3c80983ea8e/resources",
+  },
+};
+const ctaFor = (pathname: string | null): Cta =>
+  (pathname && CTA_BY_PATH[pathname]) || DEFAULT_CTA;
 
 type DropItem = { label: string; href: string };
 type NavItem =
@@ -94,10 +122,21 @@ function DesktopMenu({ items }: { items: DropItem[] }) {
 export default function Navbar() {
   const [openMenu, setOpenMenu] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
+  const cta = ctaFor(pathname);
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 pointer-events-none">
       <div className="relative mx-auto max-w-[1400px] px-4 md:px-6 pt-4 md:pt-6 flex items-center justify-center gap-4 pointer-events-auto">
+        {/* Persistent CTA (desktop, left) */}
+        <a
+          href={cta.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden lg:inline-flex absolute left-4 md:left-6 items-center rounded-full bg-ink-800 px-5 py-2.5 text-[14px] font-semibold text-white shadow-[0_8px_32px_-12px_rgba(16,20,34,0.35)] transition-colors hover:bg-ink"
+        >
+          {cta.label}
+        </a>
         {/* Center: pill nav (desktop) */}
         <nav
           aria-label="Primary"
@@ -142,8 +181,16 @@ export default function Navbar() {
           })}
         </nav>
 
-        {/* Hamburger (mobile/tablet) */}
-        <div className="lg:hidden absolute right-4 md:right-6 top-4 md:top-6">
+        {/* CTA + hamburger (mobile/tablet) */}
+        <div className="lg:hidden absolute right-4 md:right-6 top-4 md:top-6 flex items-center gap-2">
+          <a
+            href={cta.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex h-10 items-center rounded-full bg-ink-800 px-4 text-[13px] font-semibold text-white shadow-[0_6px_24px_-8px_rgba(16,20,34,0.3)]"
+          >
+            {cta.short}
+          </a>
           <button
             type="button"
             aria-label={mobileOpen ? "Close menu" : "Open menu"}

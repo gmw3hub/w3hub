@@ -6,6 +6,7 @@ import Events from "@/components/sections/Events";
 import Benefits from "@/components/sections/Benefits";
 import TheSpace from "@/components/sections/TheSpace";
 import Solutions from "@/components/sections/Solutions";
+import Testimonials from "@/components/sections/Testimonials";
 import VibesMarquee from "@/components/sections/VibesMarquee";
 import HousePartners from "@/components/sections/HousePartners";
 import Newsletter from "@/components/sections/Newsletter";
@@ -24,6 +25,7 @@ export default function Home() {
       <Benefits />
       <TheSpace />
       <Solutions />
+      <Testimonials />
       <VibesMarquee />
       <HousePartners />
       <Newsletter />

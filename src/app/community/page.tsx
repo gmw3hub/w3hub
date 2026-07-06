@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import CommunityHero from "@/components/community/CommunityHero";
 import CommunityInitiatives from "@/components/community/CommunityInitiatives";
+import MemberHighlights from "@/components/community/MemberHighlights";
 import TwitterWall from "@/components/community/TwitterWall";
 import CommunitySpace from "@/components/coworking/CommunitySpace";
 import VibesMarquee from "@/components/sections/VibesMarquee";
@@ -25,6 +26,7 @@ export default function CommunityPage() {
     <main className="flex flex-1 flex-col">
       <CommunityHero />
       <CommunityInitiatives />
+      <MemberHighlights />
       <TwitterWall />
       <CommunitySpace />
       <VibesMarquee />
