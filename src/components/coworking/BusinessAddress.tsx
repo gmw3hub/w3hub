@@ -23,7 +23,7 @@ function CheckIcon() {
 
 export default function BusinessAddress() {
   return (
-    <section className="w-full bg-paper py-16 md:py-20 lg:py-24">
+    <section id="virtual-office" className="w-full scroll-mt-24 bg-paper py-16 md:py-20 lg:py-24">
       <div className="mx-auto max-w-[1136px] px-5 md:px-8">
         <SectionReveal>
           <div className="grid grid-cols-1 gap-8 rounded-3xl bg-ink px-6 py-10 shadow-card md:grid-cols-2 md:items-center md:gap-12 md:px-12 md:py-14">

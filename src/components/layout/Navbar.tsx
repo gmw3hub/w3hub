@@ -34,7 +34,8 @@ const CTA_BY_PATH: Record<string, Cta> = {
 const ctaFor = (pathname: string | null): Cta =>
   (pathname && CTA_BY_PATH[pathname]) || DEFAULT_CTA;
 
-type DropItem = { label: string; href: string };
+type SubItem = { label: string; href: string };
+type DropItem = { label: string; href: string; children?: SubItem[] };
 type NavItem =
   | { type: "link"; label: string; href: string }
   | { type: "menu"; label: string; items: DropItem[] };
@@ -45,7 +46,15 @@ const NAV: NavItem[] = [
     type: "menu",
     label: "Solutions",
     items: [
-      { label: "Work Solutions", href: "/co-working" },
+      {
+        label: "Work Solutions",
+        href: "/co-working",
+        children: [
+          { label: "Memberships", href: "/co-working#memberships" },
+          { label: "Offices", href: "/co-working#offices" },
+          { label: "Virtual Offices", href: "/co-working#virtual-office" },
+        ],
+      },
       { label: "Meeting Rooms", href: "/meeting-rooms" },
       { label: "Ecosystem Tours", href: "/ecosystem-tours" },
     ],
@@ -112,6 +121,20 @@ function DesktopMenu({ items }: { items: DropItem[] }) {
             >
               {it.label}
             </SmartLink>
+            {it.children && (
+              <ul className="mb-1 ml-4 flex flex-col border-l border-black/8 pl-1.5">
+                {it.children.map((c) => (
+                  <li key={c.href}>
+                    <SmartLink
+                      href={c.href}
+                      className="block rounded-lg px-3 py-1.5 text-[13px] leading-5 text-ink/60 hover:bg-paper hover:text-ink transition-colors whitespace-nowrap"
+                    >
+                      {c.label}
+                    </SmartLink>
+                  </li>
+                ))}
+              </ul>
+            )}
           </li>
         ))}
       </ul>
@@ -259,6 +282,21 @@ export default function Navbar() {
                             >
                               {sub.label}
                             </SmartLink>
+                            {sub.children && (
+                              <ul className="ml-4 flex flex-col border-l border-black/8 pl-1.5">
+                                {sub.children.map((c) => (
+                                  <li key={c.href}>
+                                    <SmartLink
+                                      href={c.href}
+                                      onClick={() => setMobileOpen(false)}
+                                      className="block rounded-lg px-3 py-2 text-[14px] text-ink/60"
+                                    >
+                                      {c.label}
+                                    </SmartLink>
+                                  </li>
+                                ))}
+                              </ul>
+                            )}
                           </li>
                         )),
                       ],
