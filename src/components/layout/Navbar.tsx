@@ -163,7 +163,7 @@ export default function Navbar() {
         {/* Center: pill nav (desktop) */}
         <nav
           aria-label="Primary"
-          className="hidden lg:flex items-stretch rounded-full bg-white shadow-[0_8px_32px_-12px_rgba(16,20,34,0.22)] ring-1 ring-black/4 px-3 py-2 gap-1"
+          className="hidden min-[720px]:flex items-stretch rounded-full bg-white shadow-[0_8px_32px_-12px_rgba(16,20,34,0.22)] ring-1 ring-black/4 px-2 py-1.5 gap-0.5 lg:px-3 lg:py-2 lg:gap-1"
         >
           {NAV.map((item) => {
             if (item.type === "link") {
@@ -171,7 +171,7 @@ export default function Navbar() {
                 <div key={item.label} className="flex items-stretch">
                   <SmartLink
                     href={item.href}
-                    className="px-4 py-2 text-[15px] font-medium text-ink/85 hover:bg-paper hover:text-ink transition-colors rounded-full"
+                    className="px-3 py-1.5 text-[14px] lg:px-4 lg:py-2 lg:text-[15px] font-medium text-ink/85 hover:bg-paper hover:text-ink transition-colors rounded-full"
                   >
                     {item.label}
                   </SmartLink>
@@ -188,7 +188,7 @@ export default function Navbar() {
               >
                 <button
                   type="button"
-                  className="inline-flex items-center px-4 py-2 text-[15px] font-medium text-ink/85 hover:bg-paper hover:text-ink transition-colors rounded-full"
+                  className="inline-flex items-center px-3 py-1.5 text-[14px] lg:px-4 lg:py-2 lg:text-[15px] font-medium text-ink/85 hover:bg-paper hover:text-ink transition-colors rounded-full"
                   aria-haspopup="menu"
                   aria-expanded={open}
                   onFocus={() => setOpenMenu(item.label)}
@@ -204,8 +204,8 @@ export default function Navbar() {
           })}
         </nav>
 
-        {/* CTA + hamburger (mobile/tablet) */}
-        <div className="lg:hidden absolute right-4 md:right-6 top-4 md:top-6 flex items-center gap-2">
+        {/* CTA + hamburger (mobile only) */}
+        <div className="min-[720px]:hidden absolute right-4 top-4 flex items-center gap-2">
           <a
             href={cta.href}
             target="_blank"
