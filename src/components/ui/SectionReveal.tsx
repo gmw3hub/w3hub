@@ -6,6 +6,7 @@ import { easeOutSoft, fadeUp } from "@/lib/animations";
 
 type Props = {
   children: ReactNode;
+  id?: string;
   className?: string;
   style?: CSSProperties;
   delay?: number;
@@ -20,6 +21,7 @@ type Props = {
 
 export default function SectionReveal({
   children,
+  id,
   className,
   style,
   delay = 0,
@@ -48,6 +50,7 @@ export default function SectionReveal({
       : fadeUp);
   return (
     <MotionTag
+      id={id}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount }}

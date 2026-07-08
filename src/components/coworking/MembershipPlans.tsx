@@ -146,7 +146,7 @@ function PlanCard({ plan }: { plan: Plan }) {
 
 export default function MembershipPlans() {
   return (
-    <section className="w-full bg-paper py-16 md:py-20 lg:py-24">
+    <section id="memberships" className="w-full scroll-mt-24 bg-paper py-16 md:py-20 lg:py-24">
       <div className="mx-auto max-w-[1136px] px-5 md:px-8">
         <SectionReveal className="mx-auto mb-12 max-w-[760px] text-center">
           <h2 className="font-display font-extrabold text-ink text-[30px] sm:text-[36px] lg:text-[40px] leading-[1.1] lg:leading-[44px]">
@@ -160,7 +160,14 @@ export default function MembershipPlans() {
 
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 min-[1024px]:grid-cols-4">
           {PLANS.map((plan, i) => (
-            <SectionReveal key={plan.name} index={i} step={0.08} y={20} className="h-full">
+            <SectionReveal
+              key={plan.name}
+              id={plan.name === "Office" ? "offices" : undefined}
+              index={i}
+              step={0.08}
+              y={20}
+              className={`h-full ${plan.name === "Office" ? "scroll-mt-24" : ""}`}
+            >
               <PlanCard plan={plan} />
             </SectionReveal>
           ))}
