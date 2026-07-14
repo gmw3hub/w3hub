@@ -17,9 +17,9 @@ export const TRUSTED_BRANDS: Brand[] = [
   { name: "Bybit", logo: "/images/brands/bybit.png", compact: true },
   { name: "Consensys", logo: "/images/brands/consensys.webp" },
   { name: "Circle", logo: "/images/brands/circle.png" },
-  { name: "OpenAI" },
-  { name: "Anthropic" },
-  { name: "Intercom" },
+  { name: "OpenAI", logo: "/images/brands/openai.webp" },
+  { name: "Anthropic", logo: "/images/brands/anthropic.png" },
+  { name: "Intercom", logo: "/images/brands/intercom.png" },
   // BBF partners / speakers (yellow — double-check before relying on any single one)
   { name: "Kraken" },
   { name: "Coinbase" },
