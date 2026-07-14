@@ -39,7 +39,7 @@ function TramIcon() {
 const BULLET_CLS = "mt-[10px] h-1 w-1 shrink-0 rounded-full bg-muted-3";
 
 const BUILDING = [
-  "3 floors, 500sqm each",
+  "5 floors, 2,500 sqm total",
   "Historic building constructed in 1905",
   "Renovated in 2022",
   "Located at Gleisdreieck Park",
