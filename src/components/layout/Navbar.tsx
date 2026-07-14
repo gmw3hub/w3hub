@@ -65,12 +65,8 @@ const NAV: NavItem[] = [
     items: [
       { label: "Event Space", href: "/event-space" },
       { label: "Event Calendar", href: "/event-calendar" },
+      { label: "Berlin Blockchain Festival", href: "https://blockchainfestival.berlin/" },
     ],
-  },
-  {
-    type: "link",
-    label: "Berlin Blockchain Festival",
-    href: "https://blockchainfestival.berlin/",
   },
   {
     type: "menu",
