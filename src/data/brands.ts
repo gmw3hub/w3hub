@@ -1,20 +1,22 @@
 // Brands that have hosted events, partnered or spoken at w3.hub.
 // Sourced from the event pipeline / BBF / w3.pizza records in Notion.
 //
-// To show a real logo instead of the text wordmark: drop a file in
-// public/images/brands/ and set `logo: "/images/brands/<file>.webp"`.
-// Keep logos single-colour / dark for a consistent wall.
-export type Brand = { name: string; logo?: string };
+// The "Trusted by" wall shows ONLY brands that have a `logo` set — no text
+// wordmarks. To add one: drop the file in public/images/brands/ and set
+// `logo: "/images/brands/<file>.svg"` on that brand below.
+// `compact: true` for square/padded logos that need extra height to match
+// the visual weight of the wide wordmark logos.
+export type Brand = { name: string; logo?: string; compact?: boolean };
 
 export const TRUSTED_BRANDS: Brand[] = [
   // Confirmed event hosts / partners (green)
-  { name: "SAP" },
-  { name: "KPMG" },
-  { name: "Bitpanda" },
-  { name: "Bitvavo" },
-  { name: "Bybit" },
-  { name: "Consensys" },
-  { name: "Circle" },
+  { name: "SAP", logo: "/images/brands/sap.svg" },
+  { name: "KPMG", logo: "/images/brands/kpmg.png", compact: true },
+  { name: "Bitpanda", logo: "/images/brands/bitpanda.svg" },
+  { name: "Bitvavo", logo: "/images/brands/bitvavo.png" },
+  { name: "Bybit", logo: "/images/brands/bybit.png", compact: true },
+  { name: "Consensys", logo: "/images/brands/consensys.webp" },
+  { name: "Circle", logo: "/images/brands/circle.png" },
   { name: "OpenAI" },
   { name: "Anthropic" },
   { name: "Intercom" },
