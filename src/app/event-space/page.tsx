@@ -7,7 +7,7 @@ import EventHighlights from "@/components/eventspace/EventHighlights";
 import VirtualWalkthrough from "@/components/eventspace/VirtualWalkthrough";
 import ModularEventSpace from "@/components/eventspace/ModularEventSpace";
 import EventFeatures from "@/components/eventspace/EventFeatures";
-import EventClients from "@/components/eventspace/EventClients";
+import TrustedBy from "@/components/sections/TrustedBy";
 import EventPackages from "@/components/eventspace/EventPackages";
 import EventFaq from "@/components/eventspace/EventFaq";
 import EventCrossSell from "@/components/eventspace/EventCrossSell";
@@ -67,7 +67,7 @@ export default function EventSpacePage() {
         text="The w3.hub event space in Berlin Kreuzberg offers two 500 sqm lofts for up to 250 guests standing or 100 seated, with an in-house events team, bar and kitchen and a full AV setup. Built for AI, robotics, quantum and blockchain conferences, hackathons and meetups."
         amenities={["av", "team", "coffee", "rooms"]}
       />
-      <EventClients />
+      <TrustedBy label="Trusted for events by" />
       <TheVenue />
       <VenueVideo />
       <EventHighlights />
