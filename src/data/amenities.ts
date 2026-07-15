@@ -14,12 +14,11 @@ export const AMENITIES: Amenity[] = [
   { key: "bike", title: "Showers & bike parking", desc: "Showers on site, plenty of bike parking out front." },
   { key: "access", title: "Step-free access", desc: "Accessible entry throughout (no on-site car parking)." },
   { key: "mail", title: "Business address & printing", desc: "Company registration, mail service and on-site printing." },
-  { key: "roaming", title: "Global roaming", desc: "Work from betahaus locations 2× per month (Pro)." },
 ];
 
 // Per-page highlight rows: the four most relevant amenity keys per offer.
 export const AMENITY_HIGHLIGHTS: Record<string, string[]> = {
-  coworking: ["clock", "desk", "rooms", "roaming"],
+  coworking: ["clock", "desk", "rooms", "wifi"],
   events: ["av", "team", "coffee", "rooms"],
   meetingrooms: ["av", "rooms", "coffee", "access"],
 };

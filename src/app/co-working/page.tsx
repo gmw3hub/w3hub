@@ -44,7 +44,7 @@ export default function CoWorkingPage() {
       <CoworkingHero />
       <AnswerIntro
         text="Coworking at w3.hub in Berlin Kreuzberg: Club membership €180/month (Mon to Fri, 9 to 17), Pro €275/month (24/7 access, 15h meeting rooms included), Day Pass €30, and private team offices for 4 to 12 people on request."
-        amenities={["clock", "desk", "rooms", "roaming"]}
+        amenities={["clock", "desk", "rooms", "wifi"]}
       />
       <PartnerMarquee />
       <MembershipPlans />
