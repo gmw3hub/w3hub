@@ -38,7 +38,6 @@ export default function AboutHost() {
               <DottedDivider variant="dark-wide" className="h-[5px] w-full" />
 
               <p className="font-body text-[16px] leading-6 text-ink">
-                w3.hub is a collaboration between Betahaus, Bauwerk and w3.group.
                 w3.group is a leading frontier tech ecosystem in Germany, comprised
                 of an investment arm, an infrastructure provider as well as a media
                 house with strong network effects.

@@ -68,12 +68,6 @@ const PATHS: Record<string, React.ReactNode> = {
       <path d="M4 7l8 6 8-6" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
     </>
   ),
-  roaming: (
-    <>
-      <circle cx="12" cy="12" r="8.5" stroke="currentColor" strokeWidth="1.7" />
-      <path d="M3.5 12h17M12 3.5c2.5 2.3 2.5 14.7 0 17M12 3.5c-2.5 2.3-2.5 14.7 0 17" stroke="currentColor" strokeWidth="1.5" />
-    </>
-  ),
 };
 
 export default function AmenityIcon({ name, className }: { name: string; className?: string }) {

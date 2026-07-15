@@ -36,7 +36,7 @@ const PLANS: Plan[] = [
     features: [
       "24/7 Full Access to the entire building",
       "15 hours of Meeting Rooms included",
-      "Global Roaming (2x/month at betahaus)",
+      "High-speed fiber & community events",
       "30 days flexible cancellation",
     ],
     cta: "Secure Seat",

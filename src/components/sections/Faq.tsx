@@ -26,7 +26,7 @@ const FAQS: QA[] = [
   },
   {
     q: "Who runs w3.hub?",
-    a: "w3.hub is a collaboration between Betahaus, Bauwerk and w3.group, bringing together established coworking expertise and Germany's leading Web3 ecosystem under one roof.",
+    a: "w3.hub is operated by w3.group, a leading frontier tech ecosystem in Germany, comprising an investment arm, an infrastructure provider and a media house.",
   },
 ];
 
