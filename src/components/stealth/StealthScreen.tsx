@@ -19,19 +19,19 @@ function remaining(): T {
 }
 
 const pad = (n: number) => String(n).padStart(2, "0");
+
+const NUM =
+  "font-mono text-[46px] font-bold leading-none tabular-nums text-[#ff2e2e] [text-shadow:0_0_22px_rgba(255,46,46,0.55),0_0_4px_rgba(255,46,46,0.9)] sm:text-[68px] md:text-[84px]";
 const SEP =
-  "font-display text-[44px] font-extrabold leading-none text-white/25 sm:text-[64px] md:text-[80px]";
+  "font-mono text-[46px] font-bold leading-none text-[#ff2e2e]/35 sm:text-[68px] md:text-[84px]";
 
 function Unit({ value, label }: { value: string; label: string }) {
   return (
-    <div className="flex flex-col items-center gap-2">
-      <span
-        suppressHydrationWarning
-        className="font-display text-[44px] font-extrabold leading-none tabular-nums text-white sm:text-[64px] md:text-[80px]"
-      >
+    <div className="flex flex-col items-center gap-2.5">
+      <span suppressHydrationWarning className={NUM}>
         {value}
       </span>
-      <span className="font-body text-[11px] font-medium uppercase tracking-[0.22em] text-white/40 sm:text-[12px]">
+      <span className="font-mono text-[10px] font-medium uppercase tracking-[0.35em] text-[#46f89a]/45 sm:text-[11px]">
         {label}
       </span>
     </div>
@@ -51,8 +51,27 @@ export default function StealthScreen() {
   }, []);
 
   return (
-    <div className="fixed inset-0 z-[9999] flex flex-col items-center justify-center gap-14 overflow-hidden bg-black px-6 text-center md:gap-16">
-      <div className="flex items-start gap-5 sm:gap-8 md:gap-12">
+    <div className="fixed inset-0 z-[9999] flex flex-col items-center justify-center gap-12 overflow-hidden bg-black px-6 text-center md:gap-16">
+      {/* scanlines */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0"
+        style={{
+          backgroundImage:
+            "repeating-linear-gradient(rgba(255,255,255,0.04) 0px, rgba(255,255,255,0.04) 1px, transparent 1px, transparent 3px)",
+        }}
+      />
+      {/* red glow */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(52% 42% at 50% 42%, rgba(255,46,46,0.11), rgba(0,0,0,0) 70%)",
+        }}
+      />
+
+      <div className="relative flex items-start gap-4 sm:gap-7 md:gap-10">
         <Unit value={String(t.d)} label="Days" />
         <span className={SEP}>:</span>
         <Unit value={pad(t.h)} label="Hours" />
@@ -62,15 +81,22 @@ export default function StealthScreen() {
         <Unit value={pad(t.s)} label="Seconds" />
       </div>
 
-      <p className="max-w-[680px] font-body text-[18px] font-medium leading-8 text-white/85 sm:text-[22px]">
+      <p className="relative max-w-[640px] font-mono text-[16px] leading-7 text-[#46f89a] sm:text-[19px]">
+        <span className="opacity-55">&gt; </span>
         w3.hub is becoming part of something much bigger
+        <span
+          aria-hidden
+          className="ml-1 inline-block animate-[blink_1.1s_step-end_infinite] motion-reduce:animate-none"
+        >
+          ▮
+        </span>
       </p>
 
       <a
         href={TYPEFORM}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-[16px] font-semibold text-black transition-colors hover:bg-white/85"
+        className="relative inline-flex items-center rounded-md border border-[#46f89a]/70 px-8 py-3.5 font-mono text-[15px] font-semibold tracking-wide text-[#46f89a] transition-colors hover:bg-[#46f89a] hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#46f89a]"
       >
         Ship happens
       </a>
