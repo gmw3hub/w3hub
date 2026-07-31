@@ -105,9 +105,15 @@ export default function StealthScreen() {
         href={TYPEFORM}
         target="_blank"
         rel="noopener noreferrer"
-        className="relative inline-flex items-center rounded-md border border-[#46f89a]/70 px-8 py-3.5 font-mono text-[15px] font-semibold tracking-wide text-[#46f89a] transition-colors hover:bg-[#46f89a] hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#46f89a]"
+        className="group relative inline-flex cursor-pointer items-center gap-2.5 rounded-md bg-[#46f89a] px-9 py-4 font-mono text-[15px] font-bold tracking-wide text-black transition duration-200 animate-[ctaGlow_2.4s_ease-in-out_infinite] hover:-translate-y-0.5 hover:bg-[#5cffad] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#46f89a] motion-reduce:animate-none"
       >
         Ship happens
+        <span
+          aria-hidden
+          className="transition-transform duration-200 group-hover:translate-x-0.5"
+        >
+          →
+        </span>
       </a>
     </div>
   );

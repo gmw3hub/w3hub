@@ -137,6 +137,17 @@ body {
   }
 }
 
+/* Gentle breathing glow for the stealth CTA. */
+@keyframes ctaGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(70, 248, 154, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 36px rgba(70, 248, 154, 0.6);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
