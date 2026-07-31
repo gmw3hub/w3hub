@@ -3,7 +3,7 @@ import StealthScreen from "@/components/stealth/StealthScreen";
 
 export const metadata: Metadata = {
   title: "w3.hub",
-  description: "w3.hub is becoming part of something much bigger.",
+  description: "w3.hub is transitioning into [redacted].",
   robots: { index: false, follow: false },
 };
 
