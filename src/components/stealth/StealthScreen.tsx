@@ -81,9 +81,12 @@ export default function StealthScreen() {
         <Unit value={pad(t.s)} label="Seconds" />
       </div>
 
-      <p className="relative max-w-[640px] font-mono text-[16px] leading-7 text-[#46f89a] sm:text-[19px]">
+      <p className="relative max-w-[640px] font-mono text-[16px] leading-8 text-[#46f89a] sm:text-[19px]">
         <span className="opacity-55">&gt; </span>
-        w3.hub is becoming part of something much bigger
+        w3.hub is transitioning into{" "}
+        <span className="rounded-[3px] bg-[rgba(255,46,46,0.13)] px-1.5 py-0.5 text-[#ff2e2e] [text-shadow:0_0_10px_rgba(255,46,46,0.6)]">
+          [redacted]
+        </span>
         <span
           aria-hidden
           className="ml-1 inline-block animate-[blink_1.1s_step-end_infinite] motion-reduce:animate-none"
