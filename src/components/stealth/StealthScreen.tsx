@@ -84,8 +84,14 @@ export default function StealthScreen() {
       <p className="relative max-w-[640px] font-mono text-[16px] leading-8 text-[#46f89a] sm:text-[19px]">
         <span className="opacity-55">&gt; </span>
         w3.hub is transitioning into{" "}
-        <span className="rounded-[3px] bg-[rgba(255,46,46,0.13)] px-1.5 py-0.5 text-[#ff2e2e] [text-shadow:0_0_10px_rgba(255,46,46,0.6)]">
-          [redacted]
+        <span className="whitespace-nowrap text-[#ff2e2e] [text-shadow:0_0_10px_rgba(255,46,46,0.6)]">
+          [
+          <span
+            role="img"
+            aria-label="redacted"
+            className="mx-[2px] inline-block h-[0.92em] w-[7ch] align-middle rounded-[2px] bg-[#0b0b0b] shadow-[inset_0_0_0_1px_rgba(255,46,46,0.4),0_0_12px_rgba(255,46,46,0.28)]"
+          />
+          ]
         </span>
         <span
           aria-hidden
