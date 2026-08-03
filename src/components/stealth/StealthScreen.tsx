@@ -21,9 +21,10 @@ function remaining(): T {
 const pad = (n: number) => String(n).padStart(2, "0");
 
 const NUM =
-  "font-mono text-[46px] font-bold leading-none tabular-nums text-[#ff2e2e] [text-shadow:0_0_22px_rgba(255,46,46,0.55),0_0_4px_rgba(255,46,46,0.9)] sm:text-[68px] md:text-[84px]";
+  "font-mono text-[56px] font-bold leading-none tabular-nums text-[#ff2e2e] [text-shadow:0_0_22px_rgba(255,46,46,0.55),0_0_4px_rgba(255,46,46,0.9)] sm:text-[58px] md:text-[84px]";
+// Separators only show in the sm+ inline row; on mobile the units form a 2x2 grid.
 const SEP =
-  "font-mono text-[46px] font-bold leading-none text-[#ff2e2e]/35 sm:text-[68px] md:text-[84px]";
+  "hidden font-mono text-[58px] font-bold leading-none text-[#ff2e2e]/35 sm:block md:text-[84px]";
 
 function Unit({ value, label }: { value: string; label: string }) {
   return (
@@ -31,7 +32,7 @@ function Unit({ value, label }: { value: string; label: string }) {
       <span suppressHydrationWarning className={NUM}>
         {value}
       </span>
-      <span className="font-mono text-[10px] font-medium uppercase tracking-[0.35em] text-[#46f89a]/45 sm:text-[11px]">
+      <span className="font-mono text-[10px] font-medium uppercase tracking-[0.3em] text-[#46f89a]/45 sm:text-[11px] sm:tracking-[0.35em]">
         {label}
       </span>
     </div>
@@ -71,7 +72,7 @@ export default function StealthScreen() {
         }}
       />
 
-      <div className="relative flex items-start gap-4 sm:gap-7 md:gap-10">
+      <div className="relative grid grid-cols-2 justify-items-center gap-x-12 gap-y-8 sm:flex sm:items-start sm:gap-7 md:gap-10">
         <Unit value={String(t.d)} label="Days" />
         <span className={SEP}>:</span>
         <Unit value={pad(t.h)} label="Hours" />
