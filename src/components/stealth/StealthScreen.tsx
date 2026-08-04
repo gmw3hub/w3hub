@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 // Countdown target: 28 Aug 2026, 19:00 Berlin (CEST, UTC+2) = 17:00 UTC.
@@ -110,6 +111,13 @@ export default function StealthScreen() {
       >
         Ship happens
       </a>
+
+      <Link
+        href="/stealth/imprint"
+        className="absolute bottom-5 left-1/2 -translate-x-1/2 font-mono text-[11px] tracking-wide text-[#46f89a]/40 underline-offset-4 transition-colors hover:text-[#46f89a]/75 hover:underline"
+      >
+        Impressum
+      </Link>
     </div>
   );
 }

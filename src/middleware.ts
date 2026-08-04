@@ -11,7 +11,10 @@ export function middleware(req: NextRequest) {
   const flag = process.env.STEALTH_MODE;
   const active = flag === "on" || (flag !== "off" && Date.now() >= ACTIVATION_MS);
 
-  if (active && req.nextUrl.pathname !== "/stealth") {
+  // Everything routes to the stealth screen except the stealth pages
+  // themselves (/stealth and /stealth/imprint — the latter keeps the legally
+  // required imprint reachable while in stealth).
+  if (active && !req.nextUrl.pathname.startsWith("/stealth")) {
     const url = req.nextUrl.clone();
     url.pathname = "/stealth";
     return NextResponse.rewrite(url);
