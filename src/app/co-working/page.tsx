@@ -27,14 +27,14 @@ export const metadata: Metadata = {
     description: DESCRIPTION,
     url: "https://w3hub.berlin/co-working",
     siteName: "w3.hub",
-    images: ["/images/og-image.png"],
+    images: ["/images/og-image.jpg"],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: TITLE,
     description: DESCRIPTION,
-    images: ["/images/og-image.png"],
+    images: ["/images/og-image.jpg"],
   },
 };
 

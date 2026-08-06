@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: "Community | w3.hub — Berlin's Builder Community",
     description:
       "A cornerstone of Berlin's startup community, fostering collaboration and growth. Read the best posts about w3.hub and join the community in Berlin.",
-    images: ["/images/og-image.png"],
+    images: ["/images/og-image.jpg"],
     type: "website",
   },
 };

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: "Newsletter | w3.hub — The Premiere Builder Club",
     description:
       "Sign up for the w3.hub community newsletter — curated community updates, event alerts and behind-the-scenes insights from Berlin's builder community.",
-    images: ["/images/og-image.png"],
+    images: ["/images/og-image.jpg"],
     type: "website",
   },
   twitter: {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     title: "Newsletter | w3.hub — The Premiere Builder Club",
     description:
       "Sign up for the w3.hub community newsletter — curated updates from Berlin's builder community.",
-    images: ["/images/og-image.png"],
+    images: ["/images/og-image.jpg"],
   },
 };
 
