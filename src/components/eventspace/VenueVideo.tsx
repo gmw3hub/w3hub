@@ -13,7 +13,7 @@ export default function VenueVideo() {
         muted
         loop
         playsInline
-        poster="/images/og-image.png"
+        poster="/images/hero-poster.jpg"
         aria-hidden
       >
         <source src="/videos/hero.webm" type="video/webm" />
