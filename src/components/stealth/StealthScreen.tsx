@@ -73,6 +73,23 @@ export default function StealthScreen() {
         }}
       />
 
+      {/* escape hatch to the previous site (drops the /hidden preview cookie) */}
+      <a
+        href="/hidden"
+        className="group absolute right-4 top-4 inline-flex items-center font-mono text-[12px] tracking-wide text-[#46f89a]/55 transition-colors hover:text-[#46f89a] sm:right-6 sm:top-6 sm:text-[13px]"
+      >
+        <span className="opacity-60 transition-opacity group-hover:opacity-100">&gt;</span>
+        <span className="ml-1.5 underline-offset-4 group-hover:underline">
+          enter legacy site
+        </span>
+        <span
+          aria-hidden
+          className="ml-1 inline-block animate-[blink_1.1s_step-end_infinite] motion-reduce:animate-none"
+        >
+          ▮
+        </span>
+      </a>
+
       <div className="relative grid grid-cols-2 justify-items-center gap-x-12 gap-y-8 sm:flex sm:items-start sm:gap-7 md:gap-10">
         <Unit value={String(t.d)} label="Days" />
         <span className={SEP}>:</span>
