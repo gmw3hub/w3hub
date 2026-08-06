@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: "Event Calendar | w3.hub",
     description:
       "Browse all upcoming events at w3.hub Berlin — meetups, demo days, hackathons and community dinners for AI, robotics, quantum and blockchain.",
-    images: ["/images/og-image.png"],
+    images: ["/images/og-image.jpg"],
     type: "website",
   },
 };

@@ -43,7 +43,7 @@ export const metadata: Metadata = {
       "Event location for AI, robotics, quantum and blockchain conferences, hackathons and meetups in Berlin Kreuzberg. Two 500 sqm listed factory lofts at Gleisdreieck, up to 250 guests. Get a quote.",
     url: "https://w3hub.berlin/event-space",
     siteName: "w3.hub",
-    images: ["/images/og-image.png"],
+    images: ["/images/og-image.jpg"],
     type: "website",
   },
   twitter: {
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     title: "Tech Event Space Berlin | Factory Loft, up to 250 Guests | w3.hub",
     description:
       "Event location for AI, robotics, quantum and blockchain conferences, hackathons and meetups in Berlin Kreuzberg. Two 500 sqm listed factory lofts at Gleisdreieck, up to 250 guests. Get a quote.",
-    images: ["/images/og-image.png"],
+    images: ["/images/og-image.jpg"],
   },
 };
 

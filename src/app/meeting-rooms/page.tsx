@@ -18,7 +18,7 @@ export const metadata: Metadata = {
       "Professional meeting rooms in Berlin Kreuzberg (Möckernstraße 120). Book by the day as member or guest. Ideal for pitches, board meetings and workshops.",
     url: "https://w3hub.berlin/meeting-rooms",
     siteName: "w3.hub",
-    images: ["/images/og-image.png"],
+    images: ["/images/og-image.jpg"],
     type: "website",
   },
   twitter: {
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title: "Rent Meeting Rooms in Berlin Kreuzberg | w3.hub",
     description:
       "Professional meeting rooms in Berlin Kreuzberg (Möckernstraße 120). Book by the day as member or guest. Ideal for pitches, board meetings and workshops.",
-    images: ["/images/og-image.png"],
+    images: ["/images/og-image.jpg"],
   },
 };
 

@@ -49,14 +49,14 @@ export const metadata: Metadata = {
     description: HOME_DESCRIPTION,
     url: "https://w3hub.berlin",
     siteName: "w3.hub",
-    images: ["/images/og-image.png"],
+    images: ["/images/og-image.jpg"],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: HOME_TITLE,
     description: HOME_DESCRIPTION,
-    images: ["/images/og-image.png"],
+    images: ["/images/og-image.jpg"],
   },
   icons: {
     icon: "/images/logo-mark.png",
