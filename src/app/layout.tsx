@@ -5,6 +5,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import ContactStrip from "@/components/layout/ContactStrip";
 import Footer from "@/components/layout/Footer";
+import CircuitLaunchModal from "@/components/circuit/CircuitLaunchModal";
 
 // Umami analytics — cookieless, privacy-friendly. Loads only when both env
 // vars are set (in Vercel), so it's inert until configured.
@@ -121,6 +122,7 @@ export default function RootLayout({
         {children}
         <ContactStrip />
         <Footer />
+        <CircuitLaunchModal />
       </body>
     </html>
   );
