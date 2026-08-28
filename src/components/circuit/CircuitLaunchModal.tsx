@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 
 // Circuit goes live 1 Sep 2026, 11:00 Berlin (CEST, UTC+2) = 09:00 UTC.
 const LAUNCH_MS = Date.UTC(2026, 8, 1, 9, 0, 0);
-const NOTIFY_URL = "https://form.typeform.com/to/n0ZQue8s";
+const CIRCUIT_URL = "https://circuit.berlin/";
 const STORAGE_KEY = "circuit_launch_dismissed";
 
 type T = { d: number; h: number; m: number; s: number };
@@ -136,12 +136,13 @@ export default function CircuitLaunchModal() {
         </div>
 
         <a
-          href={NOTIFY_URL}
+          href={CIRCUIT_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-7 inline-flex w-full items-center justify-center rounded-full bg-accent px-6 py-3.5 text-[15px] font-semibold text-white transition-transform hover:-translate-y-0.5"
+          className="mt-7 inline-flex w-full items-center justify-center gap-1.5 rounded-full bg-accent px-6 py-3.5 text-[15px] font-semibold text-white transition-transform hover:-translate-y-0.5"
         >
-          Get notified
+          Visit circuit.berlin
+          <span aria-hidden>↗</span>
         </a>
         <button
           onClick={close}
