@@ -4,10 +4,17 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
 // Circuit goes live 1 Sep 2026, 11:00 Berlin (CEST, UTC+2) = 09:00 UTC.
+// Before this the popup teases the launch with a countdown; from this moment
+// on it switches to the "w3.hub is now part of Circuit" message.
 const LAUNCH_MS = Date.UTC(2026, 8, 1, 9, 0, 0);
 const CIRCUIT_URL = "https://circuit.berlin/";
-const STORAGE_KEY = "circuit_launch_dismissed";
 
+// Separate dismissal keys so a visitor who dismissed the teaser still sees the
+// post-launch message once.
+const KEY_TEASER = "circuit_launch_dismissed";
+const KEY_JOINED = "circuit_joined_dismissed";
+
+type Phase = "teaser" | "joined";
 type T = { d: number; h: number; m: number; s: number };
 
 function remaining(): T {
@@ -37,30 +44,47 @@ function Tile({ value, label }: { value: string; label: string }) {
 
 export default function CircuitLaunchModal() {
   const pathname = usePathname();
-  const [open, setOpen] = useState(false);
+  const [phase, setPhase] = useState<Phase | null>(null);
   const [t, setT] = useState<T>(() => remaining());
 
-  // Decide whether to show: not on the stealth screen, before launch, and not
-  // previously dismissed. Open shortly after load so it doesn't fight the
-  // first paint.
+  // Decide whether/what to show. `?popup=teaser|joined` forces a phase for
+  // previewing and ignores the dismissal flag.
   useEffect(() => {
     if (pathname?.startsWith("/stealth")) return;
-    if (Date.now() >= LAUNCH_MS) return;
-    let dismissed = false;
-    try {
-      dismissed = localStorage.getItem(STORAGE_KEY) === "1";
-    } catch {
-      // localStorage unavailable (private mode etc.) — just show it.
+
+    const forced = new URLSearchParams(window.location.search).get("popup");
+    const p: Phase =
+      forced === "teaser" || forced === "joined"
+        ? forced
+        : Date.now() < LAUNCH_MS
+          ? "teaser"
+          : "joined";
+
+    if (!forced) {
+      const key = p === "teaser" ? KEY_TEASER : KEY_JOINED;
+      let dismissed = false;
+      try {
+        dismissed = localStorage.getItem(key) === "1";
+      } catch {
+        // localStorage unavailable (private mode etc.) — just show it.
+      }
+      if (dismissed) return;
     }
-    if (dismissed) return;
-    const id = setTimeout(() => setOpen(true), 700);
+
+    const id = setTimeout(() => setPhase(p), 700);
     return () => clearTimeout(id);
   }, [pathname]);
 
-  // Tick the countdown and lock body scroll while open.
+  // Tick the countdown only while the teaser is showing.
   useEffect(() => {
-    if (!open) return;
+    if (phase !== "teaser") return;
     const id = setInterval(() => setT(remaining()), 1000);
+    return () => clearInterval(id);
+  }, [phase]);
+
+  // Lock body scroll and wire Esc while open.
+  useEffect(() => {
+    if (!phase) return;
     const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     const onKey = (e: KeyboardEvent) => {
@@ -68,22 +92,24 @@ export default function CircuitLaunchModal() {
     };
     window.addEventListener("keydown", onKey);
     return () => {
-      clearInterval(id);
       document.body.style.overflow = prev;
       window.removeEventListener("keydown", onKey);
     };
-  }, [open]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [phase]);
 
   function close() {
     try {
-      localStorage.setItem(STORAGE_KEY, "1");
+      localStorage.setItem(phase === "joined" ? KEY_JOINED : KEY_TEASER, "1");
     } catch {
       // ignore
     }
-    setOpen(false);
+    setPhase(null);
   }
 
-  if (!open) return null;
+  if (!phase) return null;
+
+  const joined = phase === "joined";
 
   return (
     <div
@@ -115,25 +141,41 @@ export default function CircuitLaunchModal() {
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
           </span>
-          Launching soon
+          {joined ? "Now live" : "Launching soon"}
         </div>
 
-        <h2
-          id="circuit-launch-title"
-          className="mt-4 font-display text-[30px] font-bold leading-tight text-ink"
-        >
-          Circuit goes live
-        </h2>
-        <p className="mt-2 text-[15px] leading-6 text-muted">
-          September 1, 2026 · 11:00 AM CET
-        </p>
+        {joined ? (
+          <>
+            <h2
+              id="circuit-launch-title"
+              className="mt-4 font-display text-[26px] font-bold leading-tight text-ink"
+            >
+              w3.hub is now part of Circuit
+            </h2>
+            <p className="mt-3 text-[15px] leading-6 text-muted">
+              Everything we build continues at Circuit. Come see what&rsquo;s next.
+            </p>
+          </>
+        ) : (
+          <>
+            <h2
+              id="circuit-launch-title"
+              className="mt-4 font-display text-[30px] font-bold leading-tight text-ink"
+            >
+              Circuit goes live
+            </h2>
+            <p className="mt-2 text-[15px] leading-6 text-muted">
+              September 1, 2026 · 11:00 AM CET
+            </p>
 
-        <div className="mt-6 flex items-stretch justify-center gap-2">
-          <Tile value={String(t.d)} label="Days" />
-          <Tile value={pad(t.h)} label="Hours" />
-          <Tile value={pad(t.m)} label="Min" />
-          <Tile value={pad(t.s)} label="Sec" />
-        </div>
+            <div className="mt-6 flex items-stretch justify-center gap-2">
+              <Tile value={String(t.d)} label="Days" />
+              <Tile value={pad(t.h)} label="Hours" />
+              <Tile value={pad(t.m)} label="Min" />
+              <Tile value={pad(t.s)} label="Sec" />
+            </div>
+          </>
+        )}
 
         <a
           href={CIRCUIT_URL}
@@ -141,7 +183,7 @@ export default function CircuitLaunchModal() {
           rel="noopener noreferrer"
           className="mt-7 inline-flex w-full items-center justify-center gap-1.5 rounded-full bg-accent px-6 py-3.5 text-[15px] font-semibold text-white transition-transform hover:-translate-y-0.5"
         >
-          Visit circuit.berlin
+          {joined ? "Explore Circuit" : "Visit circuit.berlin"}
           <span aria-hidden>↗</span>
         </a>
         <button
